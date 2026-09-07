@@ -30,6 +30,7 @@ mindmap
         "Command - Undo Redo stacks"
     "03 System Designs"
       "Infrastructure"
+        "Version Control System - Mini Git"
         "Logging Framework - Log4j"
         "In Memory Cache - LRU, LFU, FIFO"
         "Rate Limiter - 5 Algorithms"
@@ -72,6 +73,7 @@ lld/
 │       └── command/                                  — Behavioral: Command Pattern (Undo/Redo)
 └── 03_system_designs/
     ├── infrastructure/
+    │   ├── version_control_system/                   — LLD: Version Control System (Mini-Git)
     │   ├── logging_framework/                        — LLD: Log4j Logging Framework
     │   ├── cache/                                    — LLD: In-Memory Cache (O(1) Eviction)
     │   └── rate_limiter/                             — LLD: Rate Limiter (Token/Leaky Bucket, Sliding Log/Counter)
@@ -119,6 +121,7 @@ lld/
 ### 3. Full System Designs — [`03_system_designs/`](03_system_designs/)
 
 #### Infrastructure & Storage ([`infrastructure/`](03_system_designs/infrastructure/))
+- **Version Control System (Mini-Git)** ([`version_control_system/`](03_system_designs/infrastructure/version_control_system/)): Content-addressable Object Database (Blobs, Trees, Commits, Tags), Staging Index, Branching, Checkout, and Commit DAG Log Traversal.
 - **Logging Framework** ([`logging_framework/`](03_system_designs/infrastructure/logging_framework/)): Log4j-style filtering pipeline with Chain of Responsibility, Formatters, and Async Appenders.
 - **In-Memory Cache** ([`cache/`](03_system_designs/infrastructure/cache/)): Production $O(1)$ cache supporting pluggable LRU, LFU, FIFO eviction policies and thread-safe TTL.
 - **Distributed Rate Limiter** ([`rate_limiter/`](03_system_designs/infrastructure/rate_limiter/)): High-throughput rate limiter implementing 5 core algorithms (Token Bucket, Leaky Bucket, Fixed Window, Sliding Window Log, and Sliding Window Counter) with multithreaded thread safety.
