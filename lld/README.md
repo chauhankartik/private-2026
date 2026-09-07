@@ -122,21 +122,31 @@ lld/
 ### 3. Full System Designs — [`03_system_designs/`](03_system_designs/)
 
 #### Infrastructure & Storage ([`infrastructure/`](03_system_designs/infrastructure/))
-- **Version Control System (Mini-Git)** ([`version_control_system/`](03_system_designs/infrastructure/version_control_system/)): Content-addressable Object Database (Blobs, Trees, Commits, Tags), Staging Index, Branching, Checkout, and Commit DAG Log Traversal.
-- **Logging Framework** ([`logging_framework/`](03_system_designs/infrastructure/logging_framework/)): Log4j-style filtering pipeline with Chain of Responsibility, Formatters, and Async Appenders.
-- **In-Memory Cache** ([`cache/`](03_system_designs/infrastructure/cache/)): Production $O(1)$ cache supporting pluggable LRU, LFU, FIFO eviction policies and thread-safe TTL.
-- **Distributed Rate Limiter** ([`rate_limiter/`](03_system_designs/infrastructure/rate_limiter/)): High-throughput rate limiter implementing 5 core algorithms (Token Bucket, Leaky Bucket, Fixed Window, Sliding Window Log, and Sliding Window Counter) with multithreaded thread safety.
+- **Version Control System (Mini-Git)** ([`version_control_system/`](03_system_designs/infrastructure/version_control_system/)): Content-addressable Object Database (Blobs, Trees, Commits, Tags), Staging Index, Branching, Checkout, and Commit DAG Log Traversal.  
+  📄 **1-Page Revision Card:** [`00_OnePage_Revision.pdf`](03_system_designs/infrastructure/version_control_system/00_OnePage_Revision.pdf)
+- **Logging Framework** ([`logging_framework/`](03_system_designs/infrastructure/logging_framework/)): Log4j-style filtering pipeline with Chain of Responsibility, Formatters, and Async Appenders.  
+  📄 **1-Page Revision Card:** [`00_OnePage_Revision.pdf`](03_system_designs/infrastructure/logging_framework/00_OnePage_Revision.pdf)
+- **In-Memory Cache** ([`cache/`](03_system_designs/infrastructure/cache/)): Production $O(1)$ cache supporting pluggable LRU, LFU, FIFO eviction policies and thread-safe TTL.  
+  📄 **1-Page Revision Card:** [`00_OnePage_Revision.pdf`](03_system_designs/infrastructure/cache/00_OnePage_Revision.pdf)
+- **Distributed Rate Limiter** ([`rate_limiter/`](03_system_designs/infrastructure/rate_limiter/)): High-throughput rate limiter implementing 5 core algorithms (Token Bucket, Leaky Bucket, Fixed Window, Sliding Window Log, and Sliding Window Counter) with multithreaded thread safety.  
+  📄 **1-Page Revision Card:** [`00_OnePage_Revision.pdf`](03_system_designs/infrastructure/rate_limiter/00_OnePage_Revision.pdf)
 
 #### Resource & Reservation Systems ([`resource_booking/`](03_system_designs/resource_booking/))
-- **Parking Lot System** ([`parking_lot/`](03_system_designs/resource_booking/parking_lot/)): Multi-floor vehicle-to-spot matching, Strategy-based fee calculation, and real-time display boards.
-- **Movie Booking System** ([`movie_booking_system/`](03_system_designs/resource_booking/movie_booking_system/)): BookMyShow / Fandango engine featuring `ReentrantLock` fine-grained seat locking, TTL auto-expiration worker, coupon strategies, and payment integration.
-- **Elevator Control System** ([`elevator_system/`](03_system_designs/resource_booking/elevator_system/)): Multi-elevator control system implementing the LOOK / SCAN Elevator algorithm, state transitions (`MOVING_UP`, `MOVING_DOWN`, `DOOR_OPEN`), and real-time floor display indicators.
+- **Parking Lot System** ([`parking_lot/`](03_system_designs/resource_booking/parking_lot/)): Multi-floor vehicle-to-spot matching, Strategy-based fee calculation, and real-time display boards.  
+  📄 **1-Page Revision Card:** [`00_OnePage_Revision.pdf`](03_system_designs/resource_booking/parking_lot/00_OnePage_Revision.pdf)
+- **Movie Booking System** ([`movie_booking_system/`](03_system_designs/resource_booking/movie_booking_system/)): BookMyShow / Fandango engine featuring `ReentrantLock` fine-grained seat locking, TTL auto-expiration worker, coupon strategies, and payment integration.  
+  📄 **1-Page Revision Card:** [`00_OnePage_Revision.pdf`](03_system_designs/resource_booking/movie_booking_system/00_OnePage_Revision.pdf)
+- **Elevator Control System** ([`elevator_system/`](03_system_designs/resource_booking/elevator_system/)): Multi-elevator control system implementing the LOOK / SCAN Elevator algorithm, state transitions (`MOVING_UP`, `MOVING_DOWN`, `DOOR_OPEN`), and real-time floor display indicators.  
+  📄 **1-Page Revision Card:** [`00_OnePage_Revision.pdf`](03_system_designs/resource_booking/elevator_system/00_OnePage_Revision.pdf)
 
 #### Finance & Expense Management ([`finance/`](03_system_designs/finance/))
-- **Expense Sharing System** ([`splitwise/`](03_system_designs/finance/splitwise/)): Splitwise engine supporting Equal, Exact, and Percentage splits, user balance tracking, and the Min Cash Flow graph algorithm for debt simplification.
+- **Expense Sharing System** ([`splitwise/`](03_system_designs/finance/splitwise/)): Splitwise engine supporting Equal, Exact, and Percentage splits, user balance tracking, and the Min Cash Flow graph algorithm for debt simplification.  
+  📄 **1-Page Revision Card:** [`00_OnePage_Revision.pdf`](03_system_designs/finance/splitwise/00_OnePage_Revision.pdf)
 
 #### Concurrency & Scheduling ([`concurrency_scheduling/`](03_system_designs/concurrency_scheduling/))
-- **OS Task Scheduler** ([`task_scheduler/`](03_system_designs/concurrency_scheduling/task_scheduler/)): CPU process scheduler implementing FCFS, SJF, SRTF, Round-Robin, Priority, and Multi-Level Feedback Queue (MLFQ).
+- **OS Task Scheduler** ([`task_scheduler/`](03_system_designs/concurrency_scheduling/task_scheduler/)): CPU process scheduler implementing FCFS, SJF, SRTF, Round-Robin, Priority, and Multi-Level Feedback Queue (MLFQ).  
+  📄 **1-Page Revision Card:** [`00_OnePage_Revision.pdf`](03_system_designs/concurrency_scheduling/task_scheduler/00_OnePage_Revision.pdf)
+
 
 ---
 
