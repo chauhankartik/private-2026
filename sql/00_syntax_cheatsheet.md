@@ -388,3 +388,5 @@ COMMIT;                       -- persist both changes atomically
 - `02_medium.sql` — Window functions, CTEs, subqueries, self-joins
 - `03_hard.sql` — Recursive CTEs, complex window frames, EXPLAIN analysis
 - `04_google_level.sql` — Classic Google SQL interview scenarios
+- `05_faang_staff_interview_patterns.sql` — Gaps & Islands, User Sessionization, Cohort Retention, Recursive CTE Trees, Exact Medians, Overlapping Intervals
+
