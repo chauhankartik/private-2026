@@ -19,8 +19,15 @@ Welcome to the **2026 Software Engineering Master Study Repository**. This repos
   * Arrays, Two Pointers, Sliding Window, Linked Lists, Stacks, Queues, Hashing, Trees, Graphs, Dynamic Programming, and Line Sweep algorithms.
 * **[`interviewbit/`](interviewbit/)** — Real-world interview coding problem practice collections.
 
-### 2. Core Java & Concurrency Masterclass
+### 2. Core Java, Generics & Concurrency Masterclass
 * **[`java/`](java/)** — Deep-dive Java language internals: Collections, Memory Model, Reflection, Generics, and Interfaces.
+* **[`java/generics/`](java/generics/README.md)** — Comprehensive Java Generics Study Suite:
+  * Basics & Bounded Types (`01_basics.java`)
+  * Wildcards & PECS (`02_wildcards_pecs.java`)
+  * Advanced Generic Patterns (`03_advanced.java`)
+  * Type Erasure & Synthetic Bridge Methods (`04_type_erasure_bridge_methods.java`)
+  * Reflection & Super Type Tokens (`05_reflection_type_tokens.java`)
+  * Project Valhalla Primitive Generics Preview (`06_project_valhalla_preview.md`)
 * **[`java/concurrency/`](java/concurrency/README.md)** — Comprehensive Java Concurrency & Multithreading Study Suite:
   * Threads & Monitors (`01_threads_sync.java`)
   * Locks & Executors (`02_locks_executors.java`)
@@ -41,7 +48,7 @@ Welcome to the **2026 Software Engineering Master Study Repository**. This repos
 * **[`lld/`](lld/README.md)** — Object-Oriented Analysis & Low-Level Design:
   * **[`01_foundations`](lld/01_foundations)** — SOLID principles, OOP abstraction, and encapsulation.
   * **[`02_design_patterns`](lld/02_design_patterns)** — Complete Gang of Four (GoF) Creational, Structural, and Behavioral design patterns.
-  * **[`03_system_designs`](lld/03_system_designs)** — Interactive case studies: Elevator System, LRU Cache, Parking Lot, Vending Machine, and ATM System.
+  * **[`03_system_designs`](lld/03_system_designs)** — Interactive case studies: Elevator System, LRU Cache, Parking Lot, Vending Machine, ATM System, and 9 1-Page PDF Revision Cards.
 
 ### 5. High-Level System Design (HLD)
 * **[`hld/`](hld/README.md)** — Staff-level High-Level System Design & Architecture:
