@@ -18,18 +18,20 @@ mindmap
         "Dependency Inversion - DIP"
     "02 Design Patterns"
       "Creational"
-        "Singleton"
-        "Factory Method and Abstract Factory"
-        "Builder"
+        "Singleton - Thread Safe Instance"
+        "Factory - Subclass Instantiation"
+        "Builder - Fluent Immutability"
       "Structural"
         "Decorator - Dynamic wrapper"
         "Facade - Unified interface"
         "Adapter - Interface compatibility"
+        "Composite - Tree structure"
       "Behavioral"
         "Observer - Event notification"
         "State - State machine transitions"
-        "Strategy - Pluggable algorithms"
-        "Chain of Responsibility - Filtering pipeline"
+        "Strategy - Interchangeable algorithms"
+        "Chain of Responsibility - Pipelines"
+        "Command - Undo Redo stacks"
     "03 System Designs"
       "Infrastructure and Storage"
         "Logging Framework - Log4j pipeline"
@@ -52,11 +54,12 @@ mindmap
 | Problem Category | Key Characteristics | Recommended Primary Patterns | Secondary / Supporting Patterns | Benchmark Problems in Repo |
 |---|---|---|---|---|
 | **01. Foundations** | Core OOP Principles & Refactoring | SOLID, Clean Architecture | Interfaces, Inheritance vs Composition | [`solid/`](01_foundations/solid/) |
-| **02. Structural Patterns** | Dynamic Wrapping & Subsystem Simplification | Decorator, Facade | Proxy, Adapter | [`decorator/`](02_design_patterns/structural/decorator/), [`facade/`](02_design_patterns/structural/facade/) |
-| **03. Behavioral Patterns** | Event Notifications & State Machine Transitions | Observer, State | Strategy, Command | [`observer/`](02_design_patterns/behavioral/observer/), [`state/`](02_design_patterns/behavioral/state/) |
-| **04. Infrastructure & Utilities** | High-Throughput Pipelines & Extensible Processing | Chain of Responsibility, Strategy, Observer | Builder, Singleton | [`logging_framework/`](03_system_designs/infrastructure/logging_framework/), [`cache/`](03_system_designs/infrastructure/cache/) |
-| **05. Resource & Booking Systems** | Physical/Digital Reservations & Fine-grained Locking | Facade, Strategy, State | Factory Method, ReentrantLock | [`parking_lot/`](03_system_designs/resource_booking/parking_lot/), [`movie_booking_system/`](03_system_designs/resource_booking/movie_booking_system/) |
-| **06. Concurrency & Scheduling** | Multithreading, Queueing & CPU/Task Dispatching | Strategy, Command | PriorityQueue, ConcurrentHashMap | [`task_scheduler/`](03_system_designs/concurrency_scheduling/task_scheduler/) |
+| **02. Creational Patterns** | Object Instantiation & Immutability | Singleton, Factory, Builder | Prototype, Object Pool | [`singleton/`](02_design_patterns/creational/singleton/), [`factory/`](02_design_patterns/creational/factory/), [`builder/`](02_design_patterns/creational/builder/) |
+| **03. Structural Patterns** | Dynamic Wrapping & Subsystem Simplification | Decorator, Facade, Adapter, Composite | Proxy, Bridge | [`decorator/`](02_design_patterns/structural/decorator/), [`facade/`](02_design_patterns/structural/facade/), [`adapter/`](02_design_patterns/structural/adapter/), [`composite/`](02_design_patterns/structural/composite/) |
+| **04. Behavioral Patterns** | Event Notifications, Pipelines & State Machine Transitions | Observer, State, Strategy, Chain of Responsibility, Command | Mediator, Memento, Iterator | [`observer/`](02_design_patterns/behavioral/observer/), [`state/`](02_design_patterns/behavioral/state/), [`strategy/`](02_design_patterns/behavioral/strategy/), [`chain_of_responsibility/`](02_design_patterns/behavioral/chain_of_responsibility/), [`command/`](02_design_patterns/behavioral/command/) |
+| **05. Infrastructure & Utilities** | High-Throughput Pipelines & Extensible Processing | Chain of Responsibility, Strategy, Observer | Builder, Singleton | [`logging_framework/`](03_system_designs/infrastructure/logging_framework/), [`cache/`](03_system_designs/infrastructure/cache/) |
+| **06. Resource & Booking Systems** | Physical/Digital Reservations & Fine-grained Locking | Facade, Strategy, State | Factory Method, ReentrantLock | [`parking_lot/`](03_system_designs/resource_booking/parking_lot/), [`movie_booking_system/`](03_system_designs/resource_booking/movie_booking_system/) |
+| **07. Concurrency & Scheduling** | Multithreading, Queueing & CPU/Task Dispatching | Strategy, Command | PriorityQueue, ConcurrentHashMap | [`task_scheduler/`](03_system_designs/concurrency_scheduling/task_scheduler/) |
 
 ---
 
@@ -64,55 +67,25 @@ mindmap
 
 ```
                       Do you need to create complex objects?
-                                  │
-                       ┌──────────┴──────────┐
-                      YES                   NO
-                       │                     │
-                       ▼                     ▼
-          ┌─────────────────────┐   Are you processing events or algorithm logic?
-          │ Factory / Builder   │            │
-          └─────────────────────┘   ┌────────┴────────┐
-                                   YES               NO
-                                    │                 │
-                                    ▼                 ▼
-                       ┌─────────────────────────┐   Are you wrapping or simplifying subsystems?
-                       │ Strategy / Observer /   │            │
-                       │ Chain of Responsibility │   ┌────────┴────────┐
-                       └─────────────────────────┘  YES               NO
-                                                     │                 │
-                                                     ▼                 ▼
-                                         ┌─────────────────────┐   ┌───────────────────────────┐
-                                         │ Decorator / Facade  │   │ State / Concurrent Lock   │
-                                         └─────────────────────┘   └───────────────────────────┘
-```
-
----
-
-## 📂 Reorganized Directory Mapping
-
-```
-lld/
-├── 00_LLD_MindMap.md                         <-- You are here
-├── 01_foundations/
-│   └── solid/                                <-- SOLID Principles (SRP, OCP, LSP, ISP, DIP)
-├── 02_design_patterns/
-│   ├── structural/
-│   │   ├── decorator/                        <-- Structural: Dynamic wrapping / Coffee shop / I/O
-│   │   └── facade/                           <-- Structural: Unified system entrance
-│   └── behavioral/
-│       ├── observer/                         <-- Behavioral: Push/Pull event-driven notifications
-│       └── state/                            <-- Behavioral: Finite state machine transitions
-└── 03_system_designs/
-    ├── infrastructure/
-    │   ├── logging_framework/                <-- Infrastructure: Log4j pipeline (Chain, Formatter, Appender)
-    │   ├── cache/                            <-- Infrastructure: O(1) Cache with LRU/LFU/FIFO + TTL
-    │   └── rate_limiter/                     <-- Infrastructure: Rate Limiter (Token Bucket, Leaky Bucket, Sliding Window)
-    ├── resource_booking/
-    │   ├── parking_lot/                      <-- Reservation: Parking floor, spot matching & fee strategy
-    │   ├── movie_booking_system/             <-- Reservation: BookMyShow (SeatLockManager TTL, Payment)
-    │   └── elevator_system/                  <-- Reservation: Multi-Elevator Control System (LOOK/SCAN Algorithm)
-    ├── finance/
-    │   └── splitwise/                        <-- Finance: Splitwise (Equal/Exact/%, Min Cash Flow Graph Debt Simplifier)
-    └── concurrency_scheduling/
-        └── task_scheduler/                   <-- Concurrency: CPU Dispatcher & MLFQ Scheduling Algorithms
+                                   │
+                        ┌──────────┴──────────┐
+                       YES                   NO
+                        │                     │
+                        ▼                     ▼
+           ┌─────────────────────┐   Are you processing events or algorithm logic?
+           │ Factory / Builder / │            │
+           │ Singleton           │   ┌────────┴────────┐
+           └─────────────────────┘  YES               NO
+                                     │                 │
+                                     ▼                 ▼
+                        ┌─────────────────────────┐   Are you wrapping or simplifying subsystems?
+                        │ Strategy / Observer /   │            │
+                        │ Chain of Responsibility │   ┌────────┴────────┐
+                        │ / Command               │  YES               NO
+                        └─────────────────────────┘   │                 │
+                                                      ▼                 ▼
+                                          ┌─────────────────────┐   ┌───────────────────────────┐
+                                          │ Decorator / Facade  │   │ State / Concurrent Lock   │
+                                          │ / Adapter /Composite│   │                           │
+                                          └─────────────────────┘   └───────────────────────────┘
 ```

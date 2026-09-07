@@ -1,6 +1,6 @@
-# Low-Level Design (LLD) — Google Interview Preparation
+# Low-Level Design (LLD) — Google & Staff Software Engineering
 
-> **Goal:** Master object-oriented design principles, design patterns, and production-grade system design implementations for Google & Amazon interviews.
+> **Goal:** Master object-oriented design principles, Gang of Four (GoF) design patterns, and production-grade system design implementations for Google, Amazon, Meta, and Staff/Senior Software Engineering interviews.
 
 ---
 
@@ -13,12 +13,21 @@ mindmap
       "SOLID Principles"
         "SRP, OCP, LSP, ISP, DIP"
     "02 Design Patterns"
+      "Creational Patterns"
+        "Singleton - Single instance"
+        "Factory - Object creation"
+        "Builder - Fluent construction"
       "Structural Patterns"
         "Decorator - Dynamic behavior"
         "Facade - Subsystem entrance"
+        "Adapter - Interface bridge"
+        "Composite - Tree hierarchies"
       "Behavioral Patterns"
         "Observer - Event driven"
         "State - State machine"
+        "Strategy - Interchangeable algorithms"
+        "Chain of Responsibility - Pipelines"
+        "Command - Undo Redo stacks"
     "03 System Designs"
       "Infrastructure"
         "Logging Framework - Log4j"
@@ -46,12 +55,21 @@ lld/
 ├── 01_foundations/
 │   └── solid/                                        — SOLID Principles (The Foundation)
 ├── 02_design_patterns/
+│   ├── creational/
+│   │   ├── singleton/                                — Creational: Double-Checked, Bill Pugh & Enum Singleton
+│   │   ├── factory/                                  — Creational: Factory Method & Abstract Factory
+│   │   └── builder/                                  — Creational: Builder Pattern with Fluent API
 │   ├── structural/
 │   │   ├── decorator/                                — Structural: Decorator Pattern
-│   │   └── facade/                                   — Structural: Facade Pattern
+│   │   ├── facade/                                   — Structural: Facade Pattern
+│   │   ├── adapter/                                  — Structural: Adapter Pattern (Legacy Integration)
+│   │   └── composite/                                — Structural: Composite Pattern (Tree Structures)
 │   └── behavioral/
 │       ├── observer/                                 — Behavioral: Observer Pattern
-│       └── state/                                    — Behavioral: State Pattern
+│       ├── state/                                    — Behavioral: State Pattern
+│       ├── strategy/                                 — Behavioral: Strategy Pattern
+│       ├── chain_of_responsibility/                  — Behavioral: Chain of Responsibility (Middleware)
+│       └── command/                                  — Behavioral: Command Pattern (Undo/Redo)
 └── 03_system_designs/
     ├── infrastructure/
     │   ├── logging_framework/                        — LLD: Log4j Logging Framework
@@ -72,20 +90,29 @@ lld/
 ## 📚 Categorized Modules & Code Maps
 
 ### 1. Foundations — [`01_foundations/`](01_foundations/)
-
 - **SOLID Principles** ([`solid/`](01_foundations/solid/)): The 5 foundational OOP principles ([SRP](01_foundations/solid/01_S_SingleResponsibility.java), [OCP](01_foundations/solid/02_O_OpenClosed.java), [LSP](01_foundations/solid/03_L_LiskovSubstitution.java), [ISP](01_foundations/solid/04_I_InterfaceSegregation.java), [DIP](01_foundations/solid/05_D_DependencyInversion.java)).
 
 ---
 
 ### 2. Design Patterns — [`02_design_patterns/`](02_design_patterns/)
 
+#### Creational Patterns ([`creational/`](02_design_patterns/creational/))
+- **Singleton Pattern** ([`singleton/`](02_design_patterns/creational/singleton/)): Thread-safe lazy initialization (Double-Checked, Bill Pugh, Enum).
+- **Factory & Abstract Factory Pattern** ([`factory/`](02_design_patterns/creational/factory/)): Decoupled product instantiation across product families.
+- **Builder Pattern** ([`builder/`](02_design_patterns/creational/builder/)): Step-by-step immutable object construction with fluent chaining.
+
 #### Structural Patterns ([`structural/`](02_design_patterns/structural/))
 - **Decorator Pattern** ([`decorator/`](02_design_patterns/structural/decorator/)): Attach dynamic behavior without modifying class definitions.
 - **Facade Pattern** ([`facade/`](02_design_patterns/structural/facade/)): Unified interface simplifying complex subsystem interactions.
+- **Adapter Pattern** ([`adapter/`](02_design_patterns/structural/adapter/)): Bridge incompatible 3rd-party interfaces with standard system contracts.
+- **Composite Pattern** ([`composite/`](02_design_patterns/structural/composite/)): Represent hierarchical tree structures uniformly.
 
 #### Behavioral Patterns ([`behavioral/`](02_design_patterns/behavioral/))
 - **Observer Pattern** ([`observer/`](02_design_patterns/behavioral/observer/)): Event-driven push/pull notifications across systems.
 - **State Pattern** ([`state/`](02_design_patterns/behavioral/state/)): Finite state machine transitions for domain entities.
+- **Strategy Pattern** ([`strategy/`](02_design_patterns/behavioral/strategy/)): Interchangeable runtime algorithm encapsulation.
+- **Chain of Responsibility Pattern** ([`chain_of_responsibility/`](02_design_patterns/behavioral/chain_of_responsibility/)): Pipeline filtering middleware handlers.
+- **Command Pattern** ([`command/`](02_design_patterns/behavioral/command/)): First-class request objects supporting Undo/Redo stacks.
 
 ---
 
@@ -113,24 +140,25 @@ lld/
 
 ```
                       Do you need to create complex objects?
-                                  │
-                       ┌──────────┴──────────┐
-                      YES                   NO
-                       │                     │
-                       ▼                     ▼
-          ┌─────────────────────┐   Are you processing events or algorithm logic?
-          │ Factory / Builder   │            │
-          └─────────────────────┘   ┌────────┴────────┐
-                                   YES               NO
-                                    │                 │
-                                    ▼                 ▼
-                       ┌─────────────────────────┐   Are you wrapping or simplifying subsystems?
-                       │ Strategy / Observer /   │            │
-                       │ Chain of Responsibility │   ┌────────┴────────┐
-                       └─────────────────────────┘  YES               NO
-                                                     │                 │
-                                                     ▼                 ▼
-                                         ┌─────────────────────┐   ┌───────────────────────────┐
-                                         │ Decorator / Facade  │   │ State / Concurrent Lock   │
-                                         └─────────────────────┘   └───────────────────────────┘
+                                   │
+                        ┌──────────┴──────────┐
+                       YES                   NO
+                        │                     │
+                        ▼                     ▼
+           ┌─────────────────────┐   Are you processing events or algorithm logic?
+           │ Factory / Builder / │            │
+           │ Singleton           │   ┌────────┴────────┐
+           └─────────────────────┘  YES               NO
+                                     │                 │
+                                     ▼                 ▼
+                        ┌─────────────────────────┐   Are you wrapping or simplifying subsystems?
+                        │ Strategy / Observer /   │            │
+                        │ Chain of Responsibility │   ┌────────┴────────┐
+                        │ / Command               │  YES               NO
+                        └─────────────────────────┘   │                 │
+                                                      ▼                 ▼
+                                          ┌─────────────────────┐   ┌───────────────────────────┐
+                                          │ Decorator / Facade  │   │ State / Concurrent Lock   │
+                                          │ / Adapter /Composite│   │                           │
+                                          └─────────────────────┘   └───────────────────────────┘
 ```
