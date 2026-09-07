@@ -41,7 +41,8 @@ mindmap
       "RocksDB State Stores"
 ```
 
-👉 **Full Mind Map & Taxonomy:** [`00_Kafka_MindMap.md`](00_Kafka_MindMap.md)
+👉 **Full Mind Map & Taxonomy:** [`00_Kafka_MindMap.md`](00_Kafka_MindMap.md)  
+📚 **Recommended Books & References:** [`00_Recommended_Books_and_Resources.md`](00_Recommended_Books_and_Resources.md)
 
 ---
 

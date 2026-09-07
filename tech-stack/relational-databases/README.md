@@ -37,7 +37,8 @@ mindmap
       "Table Bloat & pg_repack"
 ```
 
-👉 **Full Mind Map & Taxonomy:** [`00_RelationalDB_MindMap.md`](00_RelationalDB_MindMap.md)
+👉 **Full Mind Map & Taxonomy:** [`00_RelationalDB_MindMap.md`](00_RelationalDB_MindMap.md)  
+📚 **Recommended Books & References:** [`00_Recommended_Books_and_Resources.md`](00_Recommended_Books_and_Resources.md)
 
 ---
 

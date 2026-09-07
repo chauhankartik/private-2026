@@ -27,7 +27,8 @@ mindmap
       "Ch 12 - Future of Data Systems - Unbundling DBs"
 ```
 
-👉 **Full Mind Map & Taxonomy Guide:** [`00_DDIA_MindMap.md`](00_DDIA_MindMap.md)
+👉 **Full Mind Map & Taxonomy Guide:** [`00_DDIA_MindMap.md`](00_DDIA_MindMap.md)  
+📚 **Recommended Companion Books & Papers:** [`00_Recommended_Books_and_Resources.md`](00_Recommended_Books_and_Resources.md)
 
 ---
 

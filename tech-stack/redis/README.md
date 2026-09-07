@@ -40,7 +40,8 @@ mindmap
       "Lua Server Side Scripts"
 ```
 
-👉 **Full Mind Map & Taxonomy:** [`00_Redis_MindMap.md`](00_Redis_MindMap.md)
+👉 **Full Mind Map & Taxonomy:** [`00_Redis_MindMap.md`](00_Redis_MindMap.md)  
+📚 **Recommended Books & References:** [`00_Recommended_Books_and_Resources.md`](00_Recommended_Books_and_Resources.md)
 
 ---
 

@@ -44,7 +44,8 @@ mindmap
       "FSMonitor Daemon"
 ```
 
-👉 **Full Mind Map & Taxonomy:** [`00_Git_MindMap.md`](00_Git_MindMap.md)
+👉 **Full Mind Map & Taxonomy:** [`00_Git_MindMap.md`](00_Git_MindMap.md)  
+📚 **Recommended Books & References:** [`00_Recommended_Books_and_Resources.md`](00_Recommended_Books_and_Resources.md)
 
 ---
 
