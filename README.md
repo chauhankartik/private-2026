@@ -7,7 +7,7 @@ Welcome to the **2026 Software Engineering Master Study Repository**. This repos
 ## 1. Master Study Plan & Roadmap
 
 * **[2026 Master Study Plan (12-Week Intensive Curriculum)](STUDY_PLAN_2026.md)**  
-  A structured 12-week preparation roadmap organizing all 9 repository domain modules into a phased curriculum covering Data Structures & Algorithms, Java Internals, Advanced SQL, Low-Level System Design (LLD), Distributed Systems Theory, and 16 Infrastructure Tech-Stack deep dives.
+  A structured 12-week preparation roadmap organizing all repository domain modules into a phased curriculum covering Data Structures & Algorithms, Java Internals, Advanced SQL, Low-Level System Design (LLD), High-Level System Design (HLD), Distributed Systems Theory, and 16 Infrastructure Tech-Stack deep dives.
 
 ---
 
@@ -24,9 +24,9 @@ Welcome to the **2026 Software Engineering Master Study Repository**. This repos
 * **[`concurrency/`](concurrency/)** — Lock-free concurrent primitives, multithreading synchronization, and thread pool execution patterns.
 
 ### 3. Database Querying & SQL Masterclass
-* **[`sql/`](sql/)** — Comprehensive SQL query benchmark and reference:
-  * **[`00_syntax_cheatsheet.md`](sql/00_syntax_cheatsheet.md)** — Syntax reference (Window functions, CTEs, Joins, Aggregations).
-  * **[`01_easy.sql`](sql/01_easy.sql)**, **[`02_medium.sql`](sql/02_medium.sql)**, **[`03_hard.sql`](sql/03_hard.sql)**, **[`04_google_level.sql`](sql/04_google_level.sql)** — Graded SQL problems.
+* **[`sql/`](sql/README.md)** — Comprehensive SQL query benchmark and reference:
+  * **[`00_syntax_cheatsheet.md`](sql/00_syntax_cheatsheet.md)**, **[`00_SQL_MindMap.md`](sql/00_SQL_MindMap.md)**, **[`00_Recommended_Books_and_Resources.md`](sql/00_Recommended_Books_and_Resources.md)**
+  * **[`01_easy.sql`](sql/01_easy.sql)**, **[`02_medium.sql`](sql/02_medium.sql)**, **[`03_hard.sql`](sql/03_hard.sql)**, **[`04_google_level.sql`](sql/04_google_level.sql)**, **[`05_faang_staff_interview_patterns.sql`](sql/05_faang_staff_interview_patterns.sql)**.
 
 ### 4. Low-Level System Design (LLD)
 * **[`lld/`](lld/README.md)** — Object-Oriented Analysis & Low-Level Design:
@@ -34,34 +34,22 @@ Welcome to the **2026 Software Engineering Master Study Repository**. This repos
   * **[`02_design_patterns`](lld/02_design_patterns)** — Complete Gang of Four (GoF) Creational, Structural, and Behavioral design patterns.
   * **[`03_system_designs`](lld/03_system_designs)** — Interactive case studies: Elevator System, LRU Cache, Parking Lot, Vending Machine, and ATM System.
 
-### 5. Distributed Systems & Data-Intensive Architecture
-* **[`ddia_book_study/`](ddia_book_study/README.md)** — Comprehensive deep dive based on *Designing Data-Intensive Applications* (DDIA):
-  * **[`part1_foundations`](ddia_book_study/part1_foundations)**, **[`part2_distributed_data`](ddia_book_study/part2_distributed_data)**, **[`part3_derived_data`](ddia_book_study/part3_derived_data)**.
-* **[`distributed-systems/`](distributed-systems/README.md)** — Staff-level distributed systems theory:
-  * **[`01_foundations`](distributed-systems/01_foundations)** (CAP, PACELC, Vector Clocks)
-  * **[`02_consensus_and_coordination`](distributed-systems/02_consensus_and_coordination)** (Raft & Paxos Consensus)
-  * **[`03_partitioning_and_sharding`](distributed-systems/03_partitioning_and_sharding)** (Consistent Hashing, vnodes)
-  * **[`04_replication_and_storage`](distributed-systems/04_replication_and_storage)** (Leaderless / Multi-Leader Replication)
-  * **[`05_distributed_transactions`](distributed-systems/05_distributed_transactions)** (2PC, 3PC, Saga Pattern)
+### 5. High-Level System Design (HLD)
+* **[`hld/`](hld/README.md)** — Staff-level High-Level System Design & Architecture:
+  * **[`01_system_design_interview_framework.md`](hld/01_system_design_interview_framework.md)** — 4-Step Framework & Back-of-the-Envelope Capacity Estimation.
+  * **[`02_distributed_id_generator_snowflake.md`](hld/02_distributed_id_generator_snowflake.md)** — Distributed Unique ID Generator (Twitter Snowflake).
+  * **[`03_distributed_rate_limiter.md`](hld/03_distributed_rate_limiter.md)** — Distributed Rate Limiter (Token Bucket / Sliding Window).
+  * **[`04_url_shortener_tinyurl.md`](hld/04_url_shortener_tinyurl.md)** — Scalable URL Shortener (TinyURL / KGS).
+  * **[`05_distributed_web_crawler.md`](hld/05_distributed_web_crawler.md)** — Distributed Web Crawler (URL Frontier / SimHash).
+  * **[`06_chat_messaging_system_whatsapp.md`](hld/06_chat_messaging_system_whatsapp.md)** — Real-Time Chat System (WhatsApp / WebSockets).
+  * **[`07_video_streaming_youtube.md`](hld/07_video_streaming_youtube.md)** — Video Streaming Platform (YouTube / ABR HLS).
 
-### 6. Infrastructure Tech-Stack Deep Dives
-* **[`tech-stack/`](tech-stack/README.md)** — 16 staff-level technology study guides:
-  1. **[Redis & In-Memory Data Structures](tech-stack/redis/README.md)**
-  2. **[Relational Databases (PostgreSQL / MySQL)](tech-stack/relational-databases/README.md)**
-  3. **[JDBC (Java Database Connectivity)](tech-stack/jdbc/README.md)**
-  4. **[MongoDB & Document Databases](tech-stack/mongodb/README.md)**
-  5. **[Apache Cassandra & ScyllaDB](tech-stack/cassandra/README.md)**
-  6. **[Elasticsearch & Apache Lucene](tech-stack/elasticsearch/README.md)**
-  7. **[Distributed Object Storage (Amazon S3 / Ceph / MinIO)](tech-stack/object-storage/README.md)**
-  8. **[Apache Kafka & Distributed Streaming](tech-stack/kafka/README.md)**
-  9. **[API Gateways, Reverse Proxies & Load Balancers](tech-stack/gateways-proxies-loadbalancers/README.md)**
-  10. **[Docker & Containerization Architecture](tech-stack/docker/README.md)**
-  11. **[Kubernetes & Container Orchestration](tech-stack/kubernetes/README.md)**
-  12. **[Git Architecture & Distributed Version Control](tech-stack/git/README.md)**
-  13. **[Spring Boot Microservices & Core Framework](tech-stack/spring-boot/README.md)**
-  14. **[Grafana Observability & Metrics Dashboarding](tech-stack/grafana/README.md)**
-  15. **[Splunk Enterprise Log Management](tech-stack/splunk/README.md)**
-  16. **[Hibernate & Java Persistence API (JPA)](tech-stack/hibernate/README.md)**
+### 6. Distributed Systems & Data-Intensive Architecture
+* **[`ddia_book_study/`](ddia_book_study/README.md)** — Comprehensive deep dive based on *Designing Data-Intensive Applications* (DDIA).
+* **[`distributed-systems/`](distributed-systems/README.md)** — Staff-level distributed systems theory (CAP, Raft/Paxos, Sharding, Replication, 2PC).
+
+### 7. Infrastructure Tech-Stack Deep Dives
+* **[`tech-stack/`](tech-stack/README.md)** — 16 staff-level technology study guides (Redis, Postgres, JDBC, Mongo, Cassandra, ES, S3, Kafka, Gateways, Docker, K8s, Git, Spring Boot, Grafana, Splunk, Hibernate).
 
 ---
 
