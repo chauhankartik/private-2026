@@ -35,6 +35,13 @@ Welcome to the **2026 Software Engineering Master Study Repository**. This repos
   * NIO.2 Path, Files & WatchService (`04_nio2_path_files_watchservice.java`)
   * Concurrent File Locks & Async I/O (`05_file_locking_async_io.java`)
   * Object Serialization & Security (`06_serialization_deep_dive.java`)
+* **[`java/functional/`](java/functional/README.md)** — Comprehensive Java Functional Programming & Stream API Study Suite:
+  * Built-in & Custom Functional Interfaces (`01_functional_interfaces_lambdas.java`)
+  * Stream API Foundations & Lazy Execution (`02_stream_api_foundations.java`)
+  * Advanced Streams, FlatMap & Collectors (`03_advanced_streams_flatmap_collectors.java`)
+  * Custom Collector & Parallel Spliterator (`04_custom_collector_spliterator.java`)
+  * Monadic Optional Composition (`05_optional_monadic_composition.java`)
+  * Functional Design Patterns (`06_functional_design_patterns.java`)
 * **[`java/concurrency/`](java/concurrency/README.md)** — Comprehensive Java Concurrency & Multithreading Study Suite:
   * Threads & Monitors (`01_threads_sync.java`)
   * Locks & Executors (`02_locks_executors.java`)

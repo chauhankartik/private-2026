@@ -50,10 +50,11 @@ mindmap
   * Line Sweep algorithms for interval overlap and geometry problems (`dsa/linesweep`).
 * **Deliverable:** Complete graph traversal & DP state formulation exercises.
 
-#### Week 3: Java Core Internals, File I/O, Concurrency & FAANG SQL Masterclass
-* **Target Modules:** [`java/`](java/), [`java/generics/`](java/generics/README.md), [`java/io/`](java/io/README.md), [`java/concurrency/`](java/concurrency/README.md), [`sql/`](sql/README.md)
+#### Week 3: Java Core Internals, Functional Programming, File I/O, Concurrency & FAANG SQL Masterclass
+* **Target Modules:** [`java/`](java/), [`java/generics/`](java/generics/README.md), [`java/collections/`](java/collections/README.md), [`java/functional/`](java/functional/README.md), [`java/io/`](java/io/README.md), [`java/concurrency/`](java/concurrency/README.md), [`sql/`](sql/README.md)
 * **Focus Topics:**
-  * Java Memory Model (`java/memorymodel`), Reflection (`java/reflection`), Generics (`java/generics/README.md`), & Collections (`java/collections`).
+  * Java Memory Model (`java/memorymodel`), Reflection (`java/reflection`), Generics (`java/generics/README.md`), & Collections (`java/collections/README.md`).
+  * Functional Programming & Stream API (`java/functional/README.md`): Functional Interfaces, Lambdas & `invokedynamic`, Stream execution pipeline, Collectors (`groupingBy`, `partitioningBy`), Custom `Collector` / `Spliterator`, Monadic `Optional`, & FP design patterns.
   * Modern Java File I/O & NIO.2 (`java/io/README.md`): Streams vs Channels, `MappedByteBuffer` (`mmap`), Kernel Zero-Copy (`transferTo`/`sendfile`), POSIX permissions, `WatchService`, `FileLock`, & Deserialization Security.
   * Threading primitives: Locks, ReentrantLock, Virtual Threads (`java/concurrency/06_virtual_threads_loom.java`), Lock-Free Atomics (`07_lock_free_atomics_aba.java`), Synchronizers (`08_synchronizers_phaser_barrier.java`), ForkJoin Pool (`09_forkjoin_work_stealing.java`), & Flow Reactive Streams (`10_reactive_streams_flow.java`).
   * Advanced SQL syntax (`sql/00_syntax_cheatsheet.md`), Window Functions (`ROW_NUMBER`, `DENSE_RANK`, `ROWS BETWEEN`), & FAANG Staff SQL Interview Patterns (`sql/05_faang_staff_interview_patterns.sql`):
