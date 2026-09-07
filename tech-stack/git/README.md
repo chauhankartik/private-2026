@@ -35,7 +35,7 @@ mindmap
       "git gc Garbage Collection"
     "06 Advanced Diagnostics"
       "git reflog Safety Net"
-      "git bisect O(log N) Binary Search"
+      "git bisect Logarithmic Binary Search"
       "git worktree Parallel Worktrees"
       "Git Hooks - Automation"
     "07 Monorepo Scaling"
