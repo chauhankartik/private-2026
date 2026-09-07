@@ -8,27 +8,27 @@
 ```
 Iterable<E>
  └── Collection<E>
-      ├── List<E>          — Ordered, allows duplicates, index-based access
-      │    ├── ArrayList
-      │    ├── LinkedList   (also implements Deque)
-      │    └── Vector       (legacy, synchronized — avoid)
-      │         └── Stack   (legacy — use ArrayDeque instead)
+      ├── SequencedCollection<E>   (Java 21+ Unified Ordered Hierarchy)
+      │    ├── List<E>          — Ordered, allows duplicates, index-based access
+      │    │    ├── ArrayList
+      │    │    ├── LinkedList   (also implements Deque)
+      │    │    └── Vector       (legacy, synchronized — avoid)
+      │    │         └── Stack   (legacy — use ArrayDeque instead)
+      │    ├── Deque<E>         — Double-ended queue
+      │    │    ├── ArrayDeque   (preferred for stack/queue)
+      │    │    └── LinkedList
+      │    └── SequencedSet<E>  — Ordered Set preserving iteration
+      │         ├── LinkedHashSet (insertion order)
+      │         └── SortedSet / TreeSet (comparator order)
       │
-      ├── Set<E>           — No duplicates
-      │    ├── HashSet             (unordered)
-      │    ├── LinkedHashSet       (insertion order)
-      │    └── TreeSet             (sorted, NavigableSet)
-      │
-      └── Queue<E>         — FIFO ordering
-           ├── PriorityQueue       (min-heap)
-           └── Deque<E>            — Double-ended queue
-                ├── ArrayDeque     (preferred for stack/queue)
-                └── LinkedList
+      └── Set<E>           — No duplicates
+           └── HashSet             (unordered)
 
 Map<K,V>               — Key-value pairs (NOT part of Collection)
+ ├── SequencedMap<K,V> (Java 21+ Sequenced Key-Value Mapping)
+ │    ├── LinkedHashMap             (insertion/access order)
+ │    └── SortedMap / TreeMap       (sorted keys, NavigableMap)
  ├── HashMap                   (unordered)
- ├── LinkedHashMap             (insertion/access order)
- ├── TreeMap                   (sorted keys, NavigableMap)
  ├── Hashtable                 (legacy, synchronized — avoid)
  └── ConcurrentHashMap         (thread-safe, high throughput)
 ```
