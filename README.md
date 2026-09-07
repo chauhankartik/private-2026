@@ -19,9 +19,18 @@ Welcome to the **2026 Software Engineering Master Study Repository**. This repos
   * Arrays, Two Pointers, Sliding Window, Linked Lists, Stacks, Queues, Hashing, Trees, Graphs, Dynamic Programming, and Line Sweep algorithms.
 * **[`interviewbit/`](interviewbit/)** — Real-world interview coding problem practice collections.
 
-### 2. Core Java & Concurrency
-* **[`java/`](java/)** — Deep-dive Java language internals: Collections, Memory Model, Reflection, Generics, Interfaces, and Producer-Consumer models.
-* **[`concurrency/`](concurrency/)** — Lock-free concurrent primitives, multithreading synchronization, and thread pool execution patterns.
+### 2. Core Java & Concurrency Masterclass
+* **[`java/`](java/)** — Deep-dive Java language internals: Collections, Memory Model, Reflection, Generics, and Interfaces.
+* **[`java/concurrency/`](java/concurrency/README.md)** — Comprehensive Java Concurrency & Multithreading Study Suite:
+  * Threads & Monitors (`01_threads_sync.java`)
+  * Locks & Executors (`02_locks_executors.java`)
+  * CompletableFuture Pipelines (`03_completablefuture.java`)
+  * Concurrent Collections (`04_concurrent_collections.java`)
+  * Java 21+ Virtual Threads & Loom (`06_virtual_threads_loom.java` / `06_virtual_threads_loom.md`)
+  * Lock-Free Atomics & ABA Problem (`07_lock_free_atomics_aba.java`)
+  * Advanced Synchronizers (`08_synchronizers_phaser_barrier.java`)
+  * ForkJoin Work-Stealing Pool (`09_forkjoin_work_stealing.java`)
+  * Reactive Flow API (`10_reactive_streams_flow.java`)
 
 ### 3. Database Querying & SQL Masterclass
 * **[`sql/`](sql/README.md)** — Comprehensive SQL query benchmark and reference:
