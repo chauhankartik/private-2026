@@ -57,6 +57,8 @@ lld/
     │   ├── parking_lot/                              — LLD: Parking Lot System
     │   ├── movie_booking_system/                     — LLD: Movie Booking System (BookMyShow)
     │   └── elevator_system/                          — LLD: Elevator Control System (LOOK Algorithm)
+    ├── finance/
+    │   └── splitwise/                                — LLD: Expense Sharing System (Splitwise)
     └── concurrency_scheduling/
         └── task_scheduler/                           — LLD: OS CPU Task Scheduler (MLFQ)
 ```
@@ -94,6 +96,9 @@ lld/
 - **Parking Lot System** ([`parking_lot/`](03_system_designs/resource_booking/parking_lot/)): Multi-floor vehicle-to-spot matching, Strategy-based fee calculation, and real-time display boards.
 - **Movie Booking System** ([`movie_booking_system/`](03_system_designs/resource_booking/movie_booking_system/)): BookMyShow / Fandango engine featuring `ReentrantLock` fine-grained seat locking, TTL auto-expiration worker, coupon strategies, and payment integration.
 - **Elevator Control System** ([`elevator_system/`](03_system_designs/resource_booking/elevator_system/)): Multi-elevator control system implementing the LOOK / SCAN Elevator algorithm, state transitions (`MOVING_UP`, `MOVING_DOWN`, `DOOR_OPEN`), and real-time floor display indicators.
+
+#### Finance & Expense Management ([`finance/`](03_system_designs/finance/))
+- **Expense Sharing System** ([`splitwise/`](03_system_designs/finance/splitwise/)): Splitwise engine supporting Equal, Exact, and Percentage splits, user balance tracking, and the Min Cash Flow graph algorithm for debt simplification.
 
 #### Concurrency & Scheduling ([`concurrency_scheduling/`](03_system_designs/concurrency_scheduling/))
 - **OS Task Scheduler** ([`task_scheduler/`](03_system_designs/concurrency_scheduling/task_scheduler/)): CPU process scheduler implementing FCFS, SJF, SRTF, Round-Robin, Priority, and Multi-Level Feedback Queue (MLFQ).

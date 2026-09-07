@@ -54,6 +54,11 @@ mindmap
           State (Elevator & Door states)
           Strategy (LOOK/SCAN Elevator Algorithm)
           Observer (Display indicators)
+      Finance & Expense Management
+        Splitwise Expense Sharing
+          Strategy (Equal/Exact/Percentage splits)
+          Min Cash Flow (Graph Debt Simplification)
+          Facade (SplitwiseService)
       Concurrency & Scheduling
         OS Task Scheduler
           PriorityQueue (Min-Heap FCFS/SJF/RR)
@@ -126,6 +131,8 @@ lld/
     │   ├── parking_lot/                      <-- Reservation: Parking floor, spot matching & fee strategy
     │   ├── movie_booking_system/             <-- Reservation: BookMyShow (SeatLockManager TTL, Payment)
     │   └── elevator_system/                  <-- Reservation: Multi-Elevator Control System (LOOK/SCAN Algorithm)
+    ├── finance/
+    │   └── splitwise/                        <-- Finance: Splitwise (Equal/Exact/%, Min Cash Flow Graph Debt Simplifier)
     └── concurrency_scheduling/
         └── task_scheduler/                   <-- Concurrency: CPU Dispatcher & MLFQ Scheduling Algorithms
 ```
