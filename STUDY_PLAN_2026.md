@@ -1,6 +1,6 @@
 # Master Study Plan 2026: Staff & Principal Software Engineer Preparation
 
-Welcome to the **2026 Master Study Plan**. This comprehensive preparation roadmap synthesizes all technical modules across this repository into a structured **12-Week Intensive Curriculum** designed for Staff Software Engineers, Senior Systems Architects, and Tech Leads preparing for top-tier system design, algorithms, and infrastructure engineering interviews.
+Welcome to the **2026 Master Study Plan**. This comprehensive preparation roadmap synthesizes all technical modules across this repository into a structured **12-Week Intensive Curriculum** designed for Staff Software Engineers, Senior Systems Architects, and Tech Leads preparing for top-tier system design, algorithms, infrastructure, and database engineering interviews.
 
 ---
 
@@ -12,17 +12,18 @@ mindmap
     Phase 1 Core Foundations
       Data Structures and Algorithms dsa
       Advanced Java Internals java
-      SQL Query Masterclass sql
-    Phase 2 Low Level Design LLD
-      SOLID Principles and Clean Code
+      SQL Query Masterclass and FAANG Patterns sql
+    Phase 2 System Design LLD and HLD
+      SOLID Principles and Clean Architecture
       GoF Design Patterns lld
-      Production Object Oriented Systems
+      High Level System Design HLD
+      4 Step Framework and Capacity Math
     Phase 3 Distributed Systems Theory
       Designing Data Intensive Applications ddia
       Consensus Raft Paxos distributed systems
-      Sharding Replication Transactions
+      Sharding Replication 2PC Transactions
     Phase 4 Infrastructure Tech Stack
-      Data Tier Storage Engines
+      Data Tier Redis Postgres JDBC Storage
       Streaming Kafka Edge Gateways
       Containers Orchestration Kubernetes
 ```
@@ -49,17 +50,18 @@ mindmap
   * Line Sweep algorithms for interval overlap and geometry problems (`dsa/linesweep`).
 * **Deliverable:** Complete graph traversal & DP state formulation exercises.
 
-#### Week 3: Java Core Internals, Concurrency & Advanced SQL
-* **Target Modules:** [`java/`](java/), [`concurrency/`](concurrency/), [`sql/`](sql/)
+#### Week 3: Java Core Internals, Concurrency & FAANG SQL Masterclass
+* **Target Modules:** [`java/`](java/), [`concurrency/`](concurrency/), [`sql/`](sql/README.md)
 * **Focus Topics:**
   * Java Memory Model (`java/memorymodel`), Garbage Collection tuning, Reflection (`java/reflection`), Generics (`java/generics`), & Collections (`java/collections`).
   * Threading primitives: Locks, ReentrantLock, CAS, Volatile, & Producer-Consumer patterns (`java/producerconsumer`, `concurrency/`).
-  * Advanced SQL syntax (`sql/00_syntax_cheatsheet.md`), Window Functions (`ROW_NUMBER`, `DENSE_RANK`), CTEs, & Google-level query patterns (`sql/01_easy.sql` to `sql/04_google_level.sql`).
-* **Deliverable:** Master Java concurrency primitives and solve all 4 levels of SQL benchmark queries.
+  * Advanced SQL syntax (`sql/00_syntax_cheatsheet.md`), Window Functions (`ROW_NUMBER`, `DENSE_RANK`, `ROWS BETWEEN`), & FAANG Staff SQL Interview Patterns (`sql/05_faang_staff_interview_patterns.sql`):
+    * Gaps & Islands, User Sessionization (30-min threshold), Cohort Retention, Recursive CTE Org Trees, Exact Medians, & Overlapping Intervals.
+* **Deliverable:** Master Java concurrency primitives and solve all 6 FAANG Staff SQL interview patterns.
 
 ---
 
-### Phase 2: Low-Level System Design (LLD) & Design Patterns (Weeks 4–6)
+### Phase 2: System Design — Low-Level (LLD) & High-Level (HLD) (Weeks 4–7)
 
 #### Week 4: Object-Oriented Analysis, Design Principles & SOLID
 * **Target Modules:** [`lld/README.md`](lld/README.md), [`lld/01_foundations`](lld/01_foundations)
@@ -72,44 +74,50 @@ mindmap
 #### Week 5: Gang of Four (GoF) Design Patterns in Practice
 * **Target Modules:** [`lld/02_design_patterns`](lld/02_design_patterns)
 * **Focus Topics:**
-  * **Creational Patterns:** Singleton, Factory Method, Abstract Factory, Builder, Prototype.
-  * **Structural Patterns:** Adapter, Composite, Proxy, Decorator, Facade, Bridge, Flyweight.
-  * **Behavioral Patterns:** Strategy, Observer, Command, State, Chain of Responsibility, Iterator, Mediator, Template Method.
+  * **Creational:** Singleton, Factory Method, Abstract Factory, Builder, Prototype.
+  * **Structural:** Adapter, Composite, Proxy, Decorator, Facade, Bridge, Flyweight.
+  * **Behavioral:** Strategy, Observer, Command, State, Chain of Responsibility, Iterator, Mediator, Template Method.
 * **Deliverable:** Implement GoF design patterns in production-grade Java code without boilerplate.
 
-#### Week 6: Production LLD Case Studies & Interactive Systems
+#### Week 6: Low-Level System Design (LLD) Production Systems
 * **Target Modules:** [`lld/03_system_designs`](lld/03_system_designs)
 * **Focus Topics:**
   * Elevator System Design, LRU Cache, Parking Lot, Vending Machine, ATM System, Rate Limiter, & Logging Framework.
   * Concurrency safety, thread-safe data structures, lock granularities, and error handling in LLD implementations.
 * **Deliverable:** End-to-end implementation of 5 full LLD interview systems.
 
+#### Week 7: High-Level System Design (HLD) Framework & Core Architectures
+* **Target Modules:** [`hld/`](hld/README.md), [`hld/01_system_design_interview_framework.md`](hld/01_system_design_interview_framework.md) to [`hld/07_video_streaming_youtube.md`](hld/07_video_streaming_youtube.md)
+* **Focus Topics:**
+  * **The 4-Step System Design Interview Framework:** Scope clarification, 99.99% availability math, QPS, 5-year storage capacity math, and 80/20 RAM cache sizing.
+  * **System Design 1:** Distributed Unique ID Generator (Twitter Snowflake - 64-bit layout, timestamp epoch, worker bits, clock drift safeguards) (`hld/02_distributed_id_generator_snowflake.md`).
+  * **System Design 2:** Distributed Rate Limiter (Token Bucket vs Sliding Window Counter, Redis + Lua scripts) (`hld/03_distributed_rate_limiter.md`).
+  * **System Design 3:** Scalable URL Shortener (TinyURL / Base62 vs KGS + ZooKeeper) (`hld/04_url_shortener_tinyurl.md`).
+  * **System Design 4:** Distributed Web Crawler (URL Frontier priority/politeness queues, SimHash deduplication) (`hld/05_distributed_web_crawler.md`).
+  * **System Design 5:** Real-Time Chat System (WhatsApp / WebSockets, Cassandra history, Redis presence) (`hld/06_chat_messaging_system_whatsapp.md`).
+  * **System Design 6:** Video Streaming Platform (YouTube / ABR HLS, Transcoding DAG pipeline, Multi-CDN edge delivery) (`hld/07_video_streaming_youtube.md`).
+* **Deliverable:** Master back-of-the-envelope calculations and architect 6 end-to-end HLD systems.
+
 ---
 
-### Phase 3: Distributed Systems Theory & Data-Intensive Architecture (Weeks 7–9)
+### Phase 3: Distributed Systems Theory & Data-Intensive Architecture (Weeks 8–9)
 
-#### Week 7: Foundations of Data-Intensive Applications (DDIA Part 1 & 2)
-* **Target Modules:** [`ddia_book_study/`](ddia_book_study/README.md), [`ddia_book_study/part1_foundations`](ddia_book_study/part1_foundations), [`ddia_book_study/part2_distributed_data`](ddia_book_study/part2_distributed_data)
+#### Week 8: Foundations of Data-Intensive Applications & Consensus (DDIA)
+* **Target Modules:** [`ddia_book_study/`](ddia_book_study/README.md), [`distributed-systems/`](distributed-systems/README.md), [`distributed-systems/01_foundations`](distributed-systems/01_foundations), [`distributed-systems/02_consensus_and_coordination`](distributed-systems/02_consensus_and_coordination)
 * **Focus Topics:**
-  * Data Models & Query Languages (Relational, Document, Graph).
-  * Storage Engines: B-Trees vs LSM-Trees (WAL, Memtable, SSTable).
+  * Data Models & Storage Engines: B-Trees vs LSM-Trees (WAL, Memtable, SSTable).
   * Encoding Formats: Protocol Buffers, Avro, Thrift, JSON/BSON.
-  * Single-Leader, Multi-Leader, & Leaderless Replication (Dynamo-style quorums).
-* **Deliverable:** Complete reading and notes for DDIA Parts 1 & 2.
-
-#### Week 8: Distributed Systems Consensus, Coordination & Partitioning
-* **Target Modules:** [`distributed-systems/`](distributed-systems/README.md), [`distributed-systems/01_foundations`](distributed-systems/01_foundations), [`distributed-systems/02_consensus_and_coordination`](distributed-systems/02_consensus_and_coordination), [`distributed-systems/03_partitioning_and_sharding`](distributed-systems/03_partitioning_and_sharding)
-* **Focus Topics:**
   * CAP Theorem, PACELC, Vector Clocks, & Logical vs Physical Time (Lamport Timestamps, TrueTime).
   * Distributed Consensus: Raft Protocol (Leader Election, Log Replication) & Paxos.
   * Partitioning & Sharding: Range-based vs Hash-based (Consistent Hashing, Murmur3, Token Rings, vnodes).
-* **Deliverable:** Master Raft state transitions and consistent hashing algorithm mechanics.
+* **Deliverable:** Complete Raft state transitions and consistent hashing algorithm mechanics.
 
-#### Week 9: Distributed Transactions & Derived Data (DDIA Part 3)
+#### Week 9: Distributed Transactions, Replication & Derived Data
 * **Target Modules:** [`distributed-systems/04_replication_and_storage`](distributed-systems/04_replication_and_storage), [`distributed-systems/05_distributed_transactions`](distributed-systems/05_distributed_transactions), [`ddia_book_study/part3_derived_data`](ddia_book_study/part3_derived_data)
 * **Focus Topics:**
   * Two-Phase Commit (2PC) & Three-Phase Commit (3PC) Protocols.
   * Saga Pattern (Choreography vs Orchestration) for microservices.
+  * Single-Leader, Multi-Leader, & Leaderless Replication (Dynamo-style quorums).
   * Batch Processing (MapReduce, Spark) & Stream Processing (Kafka Streams, Flink).
 * **Deliverable:** Compare 2PC vs Saga trade-offs across microservices boundaries.
 
@@ -117,22 +125,22 @@ mindmap
 
 ### Phase 4: Staff-Level Infrastructure & Tech-Stack Mastery (Weeks 10–12)
 
-#### Week 10: In-Memory, Relational & Document Data Engines
+#### Week 10: In-Memory, Relational, Driver & Document Data Engines
 * **Target Modules:** [`tech-stack/redis/`](tech-stack/redis/README.md), [`tech-stack/relational-databases/`](tech-stack/relational-databases/README.md), [`tech-stack/jdbc/`](tech-stack/jdbc/README.md), [`tech-stack/hibernate/`](tech-stack/hibernate/README.md), [`tech-stack/mongodb/`](tech-stack/mongodb/README.md)
 * **Focus Topics:**
   * Redis single-threaded event loop, RESP protocol, data structures, sentinel, cluster sharding.
   * PostgreSQL/MySQL MVCC, WAL, B-Tree indexes, query optimization (`EXPLAIN ANALYZE`).
-  * JDBC Driver Types 1–4, HikariCP `ConcurrentBag`, `PreparedStatement` compilation, `ResultSet` streaming.
+  * JDBC Driver Types 1–4, HikariCP `ConcurrentBag` & `FastList`, `PreparedStatement` compilation, `ResultSet` streaming.
   * Hibernate/JPA N+1 select problem, first/second-level caching, dirty checking.
   * MongoDB WiredTiger B-Tree/cache, Replica Set Raft consensus, Oplog, Sharding balancer.
-* **Deliverable:** Deep-dive operational mastery of relational and document databases.
+* **Deliverable:** Deep-dive operational mastery of relational, driver, and document databases.
 
-#### Week 11: NoSQL Wide-Column, Search, Storage & Messaging
+#### Week 11: NoSQL Wide-Column, Search, Object Storage & Messaging
 * **Target Modules:** [`tech-stack/cassandra/`](tech-stack/cassandra/README.md), [`tech-stack/elasticsearch/`](tech-stack/elasticsearch/README.md), [`tech-stack/object-storage/`](tech-stack/object-storage/README.md), [`tech-stack/kafka/`](tech-stack/kafka/README.md), [`tech-stack/gateways-proxies-loadbalancers/`](tech-stack/gateways-proxies-loadbalancers/README.md)
 * **Focus Topics:**
   * Cassandra masterless P2P ring, Gossip, $\Phi$ Accrual, LSM engine, SSTables, Bloom filters, $R+W>N$ quorums.
   * Elasticsearch Lucene inverted index, FST, FOR/Roaring posting lists, 2-phase search, DocValues vs Fielddata, 32GB JVM heap limit.
-  * Object Storage (S3/Ceph/MinIO) flat namespace, CRUSH algorithm, Reed-Solomon Erasure Coding ($K+M$), Multipart uploads, WORM locks.
+  * Distributed Object Storage (S3/Ceph/MinIO) flat namespace, CRUSH algorithm, Reed-Solomon Erasure Coding ($K+M$), Multipart uploads, WORM locks.
   * Kafka distributed log segments, Zero-Copy transfer, consumer group rebalancing, ISR replicas.
   * Gateways & Proxies: NGINX, HAProxy, Envoy, Layer 4 vs Layer 7 load balancing algorithms, TLS termination.
 * **Deliverable:** Master wide-column stores, full-text search, object storage, & messaging backbones.
@@ -160,7 +168,7 @@ mindmap
  | Duration | Focus Activity                                                         |
  +----------+------------------------------------------------------------------------+
  | 45 Mins  | Theory & Architecture Reading (Module Chapters / Whitepapers)          |
- | 75 Mins  | Hands-on Coding / Problem Solving / Diagramming (DSA / LLD / SQL)      |
+ | 75 Mins  | Hands-on Coding / Problem Solving / Diagramming (DSA / LLD / HLD / SQL)|
  | 40 Mins  | Operational Diagnostics & System Trade-off Analysis                   |
  | 20 Mins  | Review & Flashcard / Notes Consolidation                               |
  +-----------------------------------------------------------------------------------+
@@ -174,9 +182,10 @@ mindmap
 | :--- | :--- | :--- |
 | **[`dsa/`](dsa/README.md)** | Algorithms & Data Structures | Graph/Linear Masterclasses, Arrays, DP, Line Sweep, Trees, Hashing |
 | **[`java/`](java/) & [`concurrency/`](concurrency/)** | Java Core & Concurrency | Collections, Memory Model, Reflection, Generics, Locks, Producer-Consumer |
-| **[`sql/`](sql/)** | SQL Query Benchmark | Easy, Medium, Hard, Google-level query problems & Syntax Cheatsheet |
-| **[`lld/`](lld/README.md)** | Low-Level System Design | SOLID Foundations, GoF Design Patterns, 5 Production Systems |
+| **[`sql/`](sql/README.md)** | SQL Query Masterclass | Easy, Medium, Hard, Google-level, & FAANG Staff Interview Patterns (`05_faang_staff_interview_patterns.sql`) |
+| **[`lld/`](lld/README.md)** | Low-Level System Design | SOLID Foundations, GoF Design Patterns, 5 Production LLD Systems |
+| **[`hld/`](hld/README.md)** | High-Level System Design | 4-Step Framework, Estimation Math, 6 System Design Architectures (Snowflake, Rate Limiter, TinyURL, Web Crawler, Chat, YouTube) |
 | **[`ddia_book_study/`](ddia_book_study/README.md)** | Data-Intensive Applications | Storage Engines, Replication, Sharding, Batch/Stream Processing |
 | **[`distributed-systems/`](distributed-systems/README.md)** | Distributed Systems Theory | Raft/Paxos Consensus, Consistent Hashing, 2PC Transactions, CAP |
-| **[`tech-stack/`](tech-stack/README.md)** | Infrastructure Tech-Stack | 16 Modules (Redis, Postgres, JDBC, Mongo, Cassandra, ES, S3, Kafka, K8s, etc.) |
+| **[`tech-stack/`](tech-stack/README.md)** | Infrastructure Tech-Stack | 16 Modules (Redis, Postgres, JDBC, Mongo, Cassandra, ES, Object Storage, Kafka, K8s, etc.) |
 | **[`interviewbit/`](interviewbit/)** | Problem Practice Sets | Real-world interview coding problem collections |
