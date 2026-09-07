@@ -48,7 +48,8 @@ mindmap
       "Saga Pattern"
 ```
 
-👉 **Full Mind Map & Taxonomy Guide:** [`00_MindMap_and_Taxonomy.md`](00_MindMap_and_Taxonomy.md)
+👉 **Full Mind Map & Taxonomy Guide:** [`00_MindMap_and_Taxonomy.md`](00_MindMap_and_Taxonomy.md)  
+👉 **Curated Reading List & Landmark Papers:** [`00_Recommended_Books_and_Papers.md`](00_Recommended_Books_and_Papers.md)
 
 ---
 
@@ -57,6 +58,7 @@ mindmap
 ```
 distributed-systems/
 ├── 00_MindMap_and_Taxonomy.md               — Interactive Mind Map, Trade-off Matrix & Decision Trees
+├── 00_Recommended_Books_and_Papers.md       — Curated Reading List & Landmark Papers
 ├── 01_foundations/                          — Foundational Theorems & Time Models
 │   ├── cap_theorem/                         — CAP vs PACELC Theorem Deep-Dive & DB Classifications
 │   ├── consistency_models/                  — Linearizability vs Eventual Consistency Benchmarks
@@ -116,6 +118,8 @@ distributed-systems/
 ---
 
 ## 📚 Master Reading & Paper Reference List
+
+👉 **Full Curated Book Breakdown:** [`00_Recommended_Books_and_Papers.md`](00_Recommended_Books_and_Papers.md)
 
 | Topic | Landmark Papers / Literature | Real-World System Implementations |
 |---|---|---|
