@@ -7,51 +7,35 @@
 ## 🧠 Interactive Distributed Systems Mind Map
 
 ```mermaid
-mindmap
-  root((Distributed Systems))
-    01 Foundations
-      CAP Theorem & PACELC
-      Consistency Models
-        Linearizability
-        Sequential Consistency
-        Causal Consistency
-        Eventual Consistency
-      Time & Ordering
-        Lamport Timestamps
-        Vector Clocks
-        TrueTime (Google Spanner)
-    02 Consensus & Coordination
-      Raft Consensus
-        Leader Election
-        Log Replication
-        Safety Guarantees
-      Paxos Protocol
-        Basic Paxos
-        Multi-Paxos
-      Distributed Locking
-        Chubby / Zookeeper
-        Redlock (Redis)
-    03 Partitioning & Sharding
-      Consistent Hashing
-        Ring Topology
-        Virtual Nodes
-      Range vs Hash Sharding
-        Hotspot Mitigation
-        Rebalancing & Resharding
-    04 Replication & Storage Engines
-      Replication Topologies
-        Single-Leader
-        Multi-Leader
-        Leaderless (Dynamo style)
-      Storage Primitives
-        LSM-Tree & SSTables (Write-heavy)
-        B+ Tree (Read-heavy)
-    05 Distributed Transactions
-      Two-Phase Commit (2PC)
-        Prepare & Commit Phases
-      Saga Pattern
-        Orchestration Saga
-        Choreography Saga
+graph TD
+    Root["Distributed Systems"]
+    
+    Foundations["01 Foundations"]
+    Root --> Foundations
+    Foundations --> CAP["CAP & PACELC Theorems"]
+    Foundations --> Consistency["Consistency Models (Linearizability, Causal, Eventual)"]
+    Foundations --> TimeOrder["Time & Ordering (Lamport, Vector Clocks, TrueTime)"]
+    
+    Consensus["02 Consensus & Coordination"]
+    Root --> Consensus
+    Consensus --> Raft["Raft Protocol (Leader Election, Log Replication)"]
+    Consensus --> Paxos["Paxos Protocol (Basic & Multi-Paxos)"]
+    Consensus --> Locks["Distributed Locks (Redlock, Zookeeper)"]
+    
+    Partitioning["03 Partitioning & Sharding"]
+    Root --> Partitioning
+    Partitioning --> ConsistentHash["Consistent Hashing (Virtual Nodes)"]
+    Partitioning --> RangeHash["Range vs Hash Sharding"]
+    
+    Storage["04 Replication & Storage Engines"]
+    Root --> Storage
+    Storage --> Replication["Replication Topologies (Leaderless Quorums, Multi-Leader)"]
+    Storage --> StorageEngines["LSM-Tree vs B+ Tree"]
+    
+    Transactions["05 Distributed Transactions"]
+    Root --> Transactions
+    Transactions --> TwoPC["Two-Phase Commit (2PC)"]
+    Transactions --> Sagas["Saga Pattern (Orchestration & Choreography)"]
 ```
 
 👉 **Full Mind Map & Taxonomy Guide:** [`00_MindMap_and_Taxonomy.md`](00_MindMap_and_Taxonomy.md)

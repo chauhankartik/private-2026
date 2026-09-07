@@ -7,58 +7,36 @@
 ## 🧠 Interactive Distributed Systems Mind Map (Mermaid Diagram)
 
 ```mermaid
-mindmap
-  root((Distributed Systems))
-    01 Foundations
-      CAP Theorem
-        CP Systems (HBase, MongoDB, etcd)
-        AP Systems (Cassandra, DynamoDB, CouchDB)
-      PACELC Theorem
-        If Partition (PA/PC)
-        Else Latency (EL/EC)
-      Consistency Models
-        Strict / Linearizability
-        Sequential Consistency
-        Causal Consistency
-        Eventual Consistency
-      Time & Ordering
-        NTP Physical Clocks (Skew/Drift)
-        Lamport Timestamps (Partial order)
-        Vector Clocks (Causal order)
-        TrueTime (Google Spanner Atomic Clocks)
-    02 Consensus & Coordination
-      Raft Consensus Protocol
-        Leader Election
-        Log Replication
-        Term Safety & Commit Index
-      Paxos Consensus Protocol
-        Basic Paxos (Prepare, Accept, Commit)
-        Multi-Paxos
-      Distributed Locking
-        Redis Redlock (DLM)
-        Zookeeper Fencing Tokens (Curator)
-    03 Partitioning & Sharding
-      Consistent Hashing
-        Hash Ring 0 to 2^32-1
-        Virtual Nodes (Hotspot distribution)
-      Sharding Topologies
-        Key-Range Sharding
-        Hash Key Sharding
-    04 Replication & Storage Engines
-      Replication Topologies
-        Single-Leader (Primary-Replica)
-        Multi-Leader (Multi-DC)
-        Leaderless (Sloppy Quorum R+W > N)
-      Storage Primitives
-        LSM-Tree & SSTables (Write-heavy)
-        B+ Tree (Read-heavy)
-    05 Distributed Transactions
-      Two-Phase Commit (2PC)
-        Phase 1 Prepare
-        Phase 2 Commit/Abort
-      Saga Pattern
-        Orchestration Saga (Central Coordinator)
-        Choreography Saga (Event-driven)
+graph TD
+    Root["Distributed Systems"]
+    
+    Foundations["01 Foundations"]
+    Root --> Foundations
+    Foundations --> CAP["CAP Theorem (CP vs AP)"]
+    Foundations --> PACELC["PACELC Theorem (Partition & Latency Trade-offs)"]
+    Foundations --> Consistency["Consistency Models (Linearizability, Causal, Eventual)"]
+    Foundations --> TimeOrder["Time & Ordering (Lamport, Vector Clocks, TrueTime)"]
+    
+    Consensus["02 Consensus & Coordination"]
+    Root --> Consensus
+    Consensus --> Raft["Raft Protocol (Leader Election, Log Replication)"]
+    Consensus --> Paxos["Paxos Protocol (Basic & Multi-Paxos)"]
+    Consensus --> Locks["Distributed Locks (Redlock, Zookeeper)"]
+    
+    Partitioning["03 Partitioning & Sharding"]
+    Root --> Partitioning
+    Partitioning --> ConsistentHash["Consistent Hashing (Virtual Nodes)"]
+    Partitioning --> Sharding["Range vs Hash Key Sharding"]
+    
+    Storage["04 Replication & Storage Engines"]
+    Root --> Storage
+    Storage --> Replication["Replication Topologies (Leaderless Quorums, Multi-Leader)"]
+    Storage --> Engines["LSM-Tree vs B+ Tree"]
+    
+    Transactions["05 Distributed Transactions"]
+    Root --> Transactions
+    Transactions --> TwoPC["Two-Phase Commit (2PC)"]
+    Transactions --> Sagas["Saga Pattern (Orchestration & Choreography)"]
 ```
 
 ---
