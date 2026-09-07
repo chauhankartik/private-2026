@@ -42,6 +42,13 @@ Welcome to the **2026 Software Engineering Master Study Repository**. This repos
   * Custom Collector & Parallel Spliterator (`04_custom_collector_spliterator.java`)
   * Monadic Optional Composition (`05_optional_monadic_composition.java`)
   * Functional Design Patterns (`06_functional_design_patterns.java`)
+* **[`java/interview/`](java/interview/README.md)** — Comprehensive Java Interview Tricky Gotchas & Edge Cases Suite:
+  * Syntax, Primitives & String Pool Traps (`01_syntax_types_gotchas.java`)
+  * OOP, Inheritance & Polymorphic Initialization Traps (`02_oop_inheritance_override_traps.java`)
+  * Control Flow, Exceptions & Suppressed Exceptions (`03_control_flow_exceptions_edge_cases.java`)
+  * Collections & Concurrency Interview Gotchas (`04_collections_concurrency_gotchas.java`)
+  * Memory, Reference Types & ClassLoader Traps (`05_memory_gc_classloader_traps.java`)
+  * FAANG Staff Engineer Java Puzzle Suite (`06_staff_interview_puzzle_suite.java`)
 * **[`java/concurrency/`](java/concurrency/README.md)** — Comprehensive Java Concurrency & Multithreading Study Suite:
   * Threads & Monitors (`01_threads_sync.java`)
   * Locks & Executors (`02_locks_executors.java`)
