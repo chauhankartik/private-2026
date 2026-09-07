@@ -51,7 +51,8 @@ lld/
 └── 03_system_designs/
     ├── infrastructure/
     │   ├── logging_framework/                        — LLD: Log4j Logging Framework
-    │   └── cache/                                    — LLD: In-Memory Cache (O(1) Eviction)
+    │   ├── cache/                                    — LLD: In-Memory Cache (O(1) Eviction)
+    │   └── rate_limiter/                             — LLD: Rate Limiter (Token/Leaky Bucket, Sliding Log/Counter)
     ├── resource_booking/
     │   ├── parking_lot/                              — LLD: Parking Lot System
     │   └── movie_booking_system/                     — LLD: Movie Booking System (BookMyShow)
@@ -86,6 +87,7 @@ lld/
 #### Infrastructure & Storage ([`infrastructure/`](03_system_designs/infrastructure/))
 - **Logging Framework** ([`logging_framework/`](03_system_designs/infrastructure/logging_framework/)): Log4j-style filtering pipeline with Chain of Responsibility, Formatters, and Async Appenders.
 - **In-Memory Cache** ([`cache/`](03_system_designs/infrastructure/cache/)): Production $O(1)$ cache supporting pluggable LRU, LFU, FIFO eviction policies and thread-safe TTL.
+- **Distributed Rate Limiter** ([`rate_limiter/`](03_system_designs/infrastructure/rate_limiter/)): High-throughput rate limiter implementing 5 core algorithms (Token Bucket, Leaky Bucket, Fixed Window, Sliding Window Log, and Sliding Window Counter) with multithreaded thread safety.
 
 #### Resource & Reservation Systems ([`resource_booking/`](03_system_designs/resource_booking/))
 - **Parking Lot System** ([`parking_lot/`](03_system_designs/resource_booking/parking_lot/)): Multi-floor vehicle-to-spot matching, Strategy-based fee calculation, and real-time display boards.

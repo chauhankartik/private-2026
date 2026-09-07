@@ -39,6 +39,9 @@ mindmap
         In-Memory Cache
           Strategy (Eviction: LRU/LFU/FIFO)
           ReadWriteLock (Concurrent storage)
+        Distributed Rate Limiter
+          Strategy (5 Core Algorithms)
+          Factory (RateLimiterFactory)
       Resource Booking & Space
         Parking Lot System
           Strategy (Fee calculation)
@@ -113,7 +116,8 @@ lld/
 └── 03_system_designs/
     ├── infrastructure/
     │   ├── logging_framework/                <-- Infrastructure: Log4j pipeline (Chain, Formatter, Appender)
-    │   └── cache/                            <-- Infrastructure: O(1) Cache with LRU/LFU/FIFO + TTL
+    │   ├── cache/                            <-- Infrastructure: O(1) Cache with LRU/LFU/FIFO + TTL
+    │   └── rate_limiter/                     <-- Infrastructure: Rate Limiter (Token Bucket, Leaky Bucket, Sliding Window)
     ├── resource_booking/
     │   ├── parking_lot/                      <-- Reservation: Parking floor, spot matching & fee strategy
     │   └── movie_booking_system/             <-- Reservation: BookMyShow (SeatLockManager TTL, Payment)
