@@ -50,6 +50,10 @@ mindmap
           Facade (Service orchestrator)
           ReentrantLock (SeatLockManager TTL)
           Factory (Payment processors)
+        Elevator Control System
+          State (Elevator & Door states)
+          Strategy (LOOK/SCAN Elevator Algorithm)
+          Observer (Display indicators)
       Concurrency & Scheduling
         OS Task Scheduler
           PriorityQueue (Min-Heap FCFS/SJF/RR)
@@ -120,7 +124,8 @@ lld/
     │   └── rate_limiter/                     <-- Infrastructure: Rate Limiter (Token Bucket, Leaky Bucket, Sliding Window)
     ├── resource_booking/
     │   ├── parking_lot/                      <-- Reservation: Parking floor, spot matching & fee strategy
-    │   └── movie_booking_system/             <-- Reservation: BookMyShow (SeatLockManager TTL, Payment)
+    │   ├── movie_booking_system/             <-- Reservation: BookMyShow (SeatLockManager TTL, Payment)
+    │   └── elevator_system/                  <-- Reservation: Multi-Elevator Control System (LOOK/SCAN Algorithm)
     └── concurrency_scheduling/
         └── task_scheduler/                   <-- Concurrency: CPU Dispatcher & MLFQ Scheduling Algorithms
 ```
