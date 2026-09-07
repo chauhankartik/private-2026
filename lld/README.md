@@ -18,6 +18,7 @@ lld/
 ├── cache/              — LLD: In-Memory Cache with Eviction Policies
 ├── parking_lot/        — LLD: Parking Lot System
 ├── task_scheduler/     — LLD: OS Task Scheduler (FCFS/SJF/SRTF/RR/Priority/MLFQ)
+├── movie_booking_system/ — LLD: Movie Booking System (BookMyShow / Fandango)
 └── README.md           — This file
 ```
 
@@ -174,6 +175,25 @@ Design and simulate an OS CPU Scheduler. All 6 classic algorithms implemented wi
 | **Pattern knowledge** | Can you identify and apply the right pattern? |
 | **Trade-off discussion** | Can you articulate WHY you chose a particular design? |
 | **Code quality** | Naming, readability, separation of concerns |
+
+### 9. Movie Booking System LLD — `movie_booking_system/`
+
+Classic Google/Amazon LLD interview question (BookMyShow / Fandango). Implements thread-safe seat locking with TTL auto-expiration, multi-city/theatre search, dynamic pricing, and payment gateways.
+
+**Patterns:** Facade, Strategy, Singleton, State, Observer, Factory Method  
+**SOLID:** All 5 principles · **Concurrency:** `ReentrantLock` + `ScheduledExecutorService` for TTL  
+
+| File | Level | Focus |
+|---|---|---|
+| [00_Theory_and_Design.md](movie_booking_system/00_Theory_and_Design.md) | Theory | Problem statement, UML, locking strategy, trade-offs |
+| [Enums.java](movie_booking_system/Enums.java) | Core | Enums for City, Genre, SeatType, SeatStatus, ShowFormat, etc. |
+| [CoreModels.java](movie_booking_system/CoreModels.java) | Core | Movie, City, Theatre, Screen, Seat, Show, ShowSeat models |
+| [SeatLockManager.java](movie_booking_system/SeatLockManager.java) | Concurrency | Thread-safe seat locking with TTL auto-expiration worker |
+| [PricingStrategy.java](movie_booking_system/PricingStrategy.java) | Strategy | Default & WeekendSurge pricing strategies + Coupon discounts |
+| [Payment.java](movie_booking_system/Payment.java) | Factory | UPI & Card Payment Processors + Refund management |
+| [BookingAndTicket.java](movie_booking_system/BookingAndTicket.java) | Core/Observer | Booking lifecycle, Ticket formatting, Notification service |
+| [MovieBookingService.java](movie_booking_system/MovieBookingService.java) | Facade | Central orchestrator for search, locking, payment & booking |
+| [Demo.java](movie_booking_system/Demo.java) | Demo | 7 end-to-end scenarios (search, booking, concurrency, TTL, refund) |
 
 ---
 
