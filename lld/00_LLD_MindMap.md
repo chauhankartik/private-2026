@@ -7,57 +7,42 @@
 ## 🧠 Interactive LLD Mind Map (Mermaid Diagram)
 
 ```mermaid
-graph TD
-    Root["LLD Mastery"]
-    
-    Foundations["01 Foundations"]
-    Root --> Foundations
-    Foundations --> SOLID["SOLID Principles (SRP, OCP, LSP, ISP, DIP)"]
-    
-    DesignPatterns["02 Design Patterns"]
-    Root --> DesignPatterns
-    
-    Creational["Creational Patterns"]
-    DesignPatterns --> Creational
-    Creational --> Singleton["Singleton"]
-    Creational --> Factory["Factory Method / Abstract Factory"]
-    Creational --> Builder["Builder"]
-    
-    Structural["Structural Patterns"]
-    DesignPatterns --> Structural
-    Structural --> Decorator["Decorator (Dynamic Wrapper)"]
-    Structural --> Facade["Facade (Unified Interface)"]
-    Structural --> Adapter["Adapter (Interface Compatibility)"]
-    
-    Behavioral["Behavioral Patterns"]
-    DesignPatterns --> Behavioral
-    Behavioral --> Observer["Observer (Event Notification)"]
-    Behavioral --> State["State (State Machine Transitions)"]
-    Behavioral --> Strategy["Strategy (Pluggable Algorithms)"]
-    Behavioral --> Chain["Chain of Responsibility (Filtering Pipeline)"]
-    
-    SystemDesigns["03 System Designs"]
-    Root --> SystemDesigns
-    
-    Infrastructure["Infrastructure & Storage"]
-    SystemDesigns --> Infrastructure
-    Infrastructure --> Logging["Logging Framework (Log4j Pipeline)"]
-    Infrastructure --> Cache["In-Memory Cache (LRU/LFU/FIFO O(1))"]
-    Infrastructure --> RateLimiter["Distributed Rate Limiter (5 Algorithms)"]
-    
-    ResourceBooking["Resource Booking & Space"]
-    SystemDesigns --> ResourceBooking
-    ResourceBooking --> ParkingLot["Parking Lot System"]
-    ResourceBooking --> MovieBooking["Movie Booking System (BookMyShow TTL)"]
-    ResourceBooking --> Elevator["Elevator Control System (LOOK Algorithm)"]
-    
-    Finance["Finance & Expense Management"]
-    SystemDesigns --> Finance
-    Finance --> Splitwise["Splitwise Expense Sharing (Min Cash Flow)"]
-    
-    Concurrency["Concurrency & Scheduling"]
-    SystemDesigns --> Concurrency
-    Concurrency --> TaskScheduler["OS Task Scheduler (MLFQ Algorithm)"]
+mindmap
+  root(("LLD Mastery"))
+    "01 Foundations"
+      "SOLID Principles"
+        "Single Responsibility (SRP)"
+        "Open/Closed (OCP)"
+        "Liskov Substitution (LSP)"
+        "Interface Segregation (ISP)"
+        "Dependency Inversion (DIP)"
+    "02 Design Patterns"
+      "Creational"
+        "Singleton"
+        "Factory Method / Abstract Factory"
+        "Builder"
+      "Structural"
+        "Decorator (Dynamic wrapper)"
+        "Facade (Unified interface)"
+        "Adapter (Interface compatibility)"
+      "Behavioral"
+        "Observer (Event notification)"
+        "State (State machine transitions)"
+        "Strategy (Pluggable algorithms)"
+        "Chain of Responsibility (Filtering pipeline)"
+    "03 System Designs"
+      "Infrastructure & Storage"
+        "Logging Framework (Chain, Formatter, Appender)"
+        "In-Memory Cache (LRU, LFU, FIFO)"
+        "Distributed Rate Limiter (5 Algorithms)"
+      "Resource Booking & Space"
+        "Parking Lot System"
+        "Movie Booking System (BookMyShow TTL)"
+        "Elevator Control System (LOOK Algorithm)"
+      "Finance & Expense Management"
+        "Splitwise Expense Sharing (Min Cash Flow)"
+      "Concurrency & Scheduling"
+        "OS Task Scheduler (MLFQ Algorithm)"
 ```
 
 ---

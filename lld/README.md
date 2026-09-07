@@ -7,48 +7,31 @@
 ## 🧠 Interactive LLD Mind Map
 
 ```mermaid
-graph TD
-    Root["LLD Mastery"]
-    
-    Foundations["01 Foundations"]
-    Root --> Foundations
-    Foundations --> SOLID["SOLID Principles (SRP / OCP / LSP / ISP / DIP)"]
-    
-    DesignPatterns["02 Design Patterns"]
-    Root --> DesignPatterns
-    
-    Structural["Structural Patterns"]
-    DesignPatterns --> Structural
-    Structural --> Decorator["Decorator (Dynamic Behavior)"]
-    Structural --> Facade["Facade (Subsystem Entrance)"]
-    
-    Behavioral["Behavioral Patterns"]
-    DesignPatterns --> Behavioral
-    Behavioral --> Observer["Observer (Event-Driven)"]
-    Behavioral --> State["State (State Machine)"]
-    
-    SystemDesigns["03 System Designs"]
-    Root --> SystemDesigns
-    
-    Infrastructure["Infrastructure"]
-    SystemDesigns --> Infrastructure
-    Infrastructure --> Logging["Logging Framework (Log4j Pipeline)"]
-    Infrastructure --> Cache["In-Memory Cache (LRU/LFU/FIFO O(1))"]
-    Infrastructure --> RateLimiter["Rate Limiter (Token/Leaky Bucket, Sliding Window)"]
-    
-    ResourceBooking["Resource Booking"]
-    SystemDesigns --> ResourceBooking
-    ResourceBooking --> ParkingLot["Parking Lot (Spot Allocation)"]
-    ResourceBooking --> MovieBooking["Movie Booking (BookMyShow TTL Seat Lock)"]
-    ResourceBooking --> Elevator["Elevator System (LOOK Algorithm)"]
-    
-    Finance["Finance"]
-    SystemDesigns --> Finance
-    Finance --> Splitwise["Expense Sharing (Splitwise Min Cash Flow)"]
-    
-    Concurrency["Concurrency & Scheduling"]
-    SystemDesigns --> Concurrency
-    Concurrency --> TaskScheduler["OS Task Scheduler (MLFQ)"]
+mindmap
+  root(("LLD Mastery"))
+    "01 Foundations"
+      "SOLID Principles"
+        "SRP, OCP, LSP, ISP, DIP"
+    "02 Design Patterns"
+      "Structural Patterns"
+        "Decorator (Dynamic behavior)"
+        "Facade (Subsystem entrance)"
+      "Behavioral Patterns"
+        "Observer (Event-driven)"
+        "State (State machine)"
+    "03 System Designs"
+      "Infrastructure"
+        "Logging Framework (Log4j)"
+        "In-Memory Cache (LRU, LFU, FIFO)"
+        "Rate Limiter (5 Algorithms)"
+      "Resource Booking"
+        "Parking Lot (Spot allocation)"
+        "Movie Booking (BookMyShow TTL)"
+        "Elevator System (LOOK Algorithm)"
+      "Finance"
+        "Expense Sharing (Splitwise Min Cash Flow)"
+      "Concurrency"
+        "OS Task Scheduler (MLFQ)"
 ```
 
 👉 **Full Mind Map & Taxonomy Guide:** [`00_LLD_MindMap.md`](00_LLD_MindMap.md)

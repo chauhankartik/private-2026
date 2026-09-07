@@ -7,36 +7,53 @@
 ## 🧠 Interactive Distributed Systems Mind Map (Mermaid Diagram)
 
 ```mermaid
-graph TD
-    Root["Distributed Systems"]
-    
-    Foundations["01 Foundations"]
-    Root --> Foundations
-    Foundations --> CAP["CAP Theorem (CP vs AP)"]
-    Foundations --> PACELC["PACELC Theorem (Partition & Latency Trade-offs)"]
-    Foundations --> Consistency["Consistency Models (Linearizability, Causal, Eventual)"]
-    Foundations --> TimeOrder["Time & Ordering (Lamport, Vector Clocks, TrueTime)"]
-    
-    Consensus["02 Consensus & Coordination"]
-    Root --> Consensus
-    Consensus --> Raft["Raft Protocol (Leader Election, Log Replication)"]
-    Consensus --> Paxos["Paxos Protocol (Basic & Multi-Paxos)"]
-    Consensus --> Locks["Distributed Locks (Redlock, Zookeeper)"]
-    
-    Partitioning["03 Partitioning & Sharding"]
-    Root --> Partitioning
-    Partitioning --> ConsistentHash["Consistent Hashing (Virtual Nodes)"]
-    Partitioning --> Sharding["Range vs Hash Key Sharding"]
-    
-    Storage["04 Replication & Storage Engines"]
-    Root --> Storage
-    Storage --> Replication["Replication Topologies (Leaderless Quorums, Multi-Leader)"]
-    Storage --> Engines["LSM-Tree vs B+ Tree"]
-    
-    Transactions["05 Distributed Transactions"]
-    Root --> Transactions
-    Transactions --> TwoPC["Two-Phase Commit (2PC)"]
-    Transactions --> Sagas["Saga Pattern (Orchestration & Choreography)"]
+mindmap
+  root(("Distributed Systems"))
+    "01 Foundations"
+      "CAP Theorem"
+        "CP Systems (HBase, MongoDB, etcd)"
+        "AP Systems (Cassandra, DynamoDB)"
+      "PACELC Theorem"
+        "If Partition (PA / PC)"
+        "Else Latency (EL / EC)"
+      "Consistency Models"
+        "Strict / Linearizability"
+        "Sequential Consistency"
+        "Causal Consistency"
+        "Eventual Consistency"
+      "Time & Ordering"
+        "NTP Physical Clocks"
+        "Lamport Timestamps"
+        "Vector Clocks"
+        "Google TrueTime"
+    "02 Consensus & Coordination"
+      "Raft Consensus Protocol"
+        "Leader Election"
+        "Log Replication"
+      "Paxos Protocol"
+        "Basic Paxos"
+        "Multi-Paxos"
+      "Distributed Locking"
+        "Redis Redlock"
+        "Zookeeper Curator"
+    "03 Partitioning & Sharding"
+      "Consistent Hashing"
+        "Hash Ring"
+        "Virtual Nodes"
+      "Sharding Topologies"
+        "Key-Range Sharding"
+        "Hash Key Sharding"
+    "04 Replication & Storage Engines"
+      "Replication Topologies"
+        "Single-Leader"
+        "Multi-Leader"
+        "Leaderless Quorums"
+      "Storage Primitives"
+        "LSM-Tree & SSTables"
+        "B+ Tree"
+    "05 Distributed Transactions"
+      "Two-Phase Commit (2PC)"
+      "Saga Pattern"
 ```
 
 ---

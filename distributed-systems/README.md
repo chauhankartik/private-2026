@@ -7,35 +7,45 @@
 ## 🧠 Interactive Distributed Systems Mind Map
 
 ```mermaid
-graph TD
-    Root["Distributed Systems"]
-    
-    Foundations["01 Foundations"]
-    Root --> Foundations
-    Foundations --> CAP["CAP & PACELC Theorems"]
-    Foundations --> Consistency["Consistency Models (Linearizability, Causal, Eventual)"]
-    Foundations --> TimeOrder["Time & Ordering (Lamport, Vector Clocks, TrueTime)"]
-    
-    Consensus["02 Consensus & Coordination"]
-    Root --> Consensus
-    Consensus --> Raft["Raft Protocol (Leader Election, Log Replication)"]
-    Consensus --> Paxos["Paxos Protocol (Basic & Multi-Paxos)"]
-    Consensus --> Locks["Distributed Locks (Redlock, Zookeeper)"]
-    
-    Partitioning["03 Partitioning & Sharding"]
-    Root --> Partitioning
-    Partitioning --> ConsistentHash["Consistent Hashing (Virtual Nodes)"]
-    Partitioning --> RangeHash["Range vs Hash Sharding"]
-    
-    Storage["04 Replication & Storage Engines"]
-    Root --> Storage
-    Storage --> Replication["Replication Topologies (Leaderless Quorums, Multi-Leader)"]
-    Storage --> StorageEngines["LSM-Tree vs B+ Tree"]
-    
-    Transactions["05 Distributed Transactions"]
-    Root --> Transactions
-    Transactions --> TwoPC["Two-Phase Commit (2PC)"]
-    Transactions --> Sagas["Saga Pattern (Orchestration & Choreography)"]
+mindmap
+  root(("Distributed Systems"))
+    "01 Foundations"
+      "CAP & PACELC Theorems"
+      "Consistency Models"
+        "Linearizability"
+        "Sequential Consistency"
+        "Causal Consistency"
+        "Eventual Consistency"
+      "Time & Ordering"
+        "Lamport Timestamps"
+        "Vector Clocks"
+        "TrueTime (Google Spanner)"
+    "02 Consensus & Coordination"
+      "Raft Consensus Protocol"
+        "Leader Election"
+        "Log Replication"
+      "Paxos Protocol"
+        "Basic Paxos"
+        "Multi-Paxos"
+      "Distributed Locking"
+        "Redlock (Redis)"
+        "Zookeeper Curator"
+    "03 Partitioning & Sharding"
+      "Consistent Hashing"
+        "Ring Topology"
+        "Virtual Nodes"
+      "Range vs Hash Sharding"
+    "04 Replication & Storage Engines"
+      "Replication Topologies"
+        "Single-Leader"
+        "Multi-Leader"
+        "Leaderless Quorums"
+      "Storage Primitives"
+        "LSM-Tree & SSTables"
+        "B+ Tree"
+    "05 Distributed Transactions"
+      "Two-Phase Commit (2PC)"
+      "Saga Pattern"
 ```
 
 👉 **Full Mind Map & Taxonomy Guide:** [`00_MindMap_and_Taxonomy.md`](00_MindMap_and_Taxonomy.md)
