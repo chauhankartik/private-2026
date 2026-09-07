@@ -1,0 +1,5 @@
+[2026-06-20 09:16:02] [INFO] [com.myapp.EventService] [main] - Async event #1 enqueued
+[2026-06-20 09:16:02] [INFO] [com.myapp.EventService] [main] - Async event #2 enqueued
+[2026-06-20 09:16:02] [INFO] [com.myapp.EventService] [main] - Async event #3 enqueued
+[2026-06-20 09:16:02] [INFO] [com.myapp.EventService] [main] - Async event #4 enqueued
+[2026-06-20 09:16:02] [INFO] [com.myapp.EventService] [main] - Async event #5 enqueued

@@ -1,0 +1,2 @@
+[2026-06-20T03:46:02.279284Z] [WARN] [com.myapp.UserService] → Cache miss — falling back to DB
+[2026-06-20T03:46:02.280053Z] [ERROR] [com.myapp.UserService] → DB connection timeout for userId=42
