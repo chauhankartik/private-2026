@@ -28,6 +28,13 @@ Welcome to the **2026 Software Engineering Master Study Repository**. This repos
   * Type Erasure & Synthetic Bridge Methods (`04_type_erasure_bridge_methods.java`)
   * Reflection & Super Type Tokens (`05_reflection_type_tokens.java`)
   * Project Valhalla Primitive Generics Preview (`06_project_valhalla_preview.md`)
+* **[`java/io/`](java/io/README.md)** — Comprehensive Java File I/O, NIO & NIO.2 Study Suite:
+  * Classic Byte & Character Streams (`01_classic_io_streams.java`)
+  * NIO Channels & Buffers (`02_nio_channels_buffers.java`)
+  * Memory-Mapped Files & Zero-Copy (`03_memory_mapped_zero_copy.java`)
+  * NIO.2 Path, Files & WatchService (`04_nio2_path_files_watchservice.java`)
+  * Concurrent File Locks & Async I/O (`05_file_locking_async_io.java`)
+  * Object Serialization & Security (`06_serialization_deep_dive.java`)
 * **[`java/concurrency/`](java/concurrency/README.md)** — Comprehensive Java Concurrency & Multithreading Study Suite:
   * Threads & Monitors (`01_threads_sync.java`)
   * Locks & Executors (`02_locks_executors.java`)

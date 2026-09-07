@@ -50,11 +50,12 @@ mindmap
   * Line Sweep algorithms for interval overlap and geometry problems (`dsa/linesweep`).
 * **Deliverable:** Complete graph traversal & DP state formulation exercises.
 
-#### Week 3: Java Core Internals, Concurrency & FAANG SQL Masterclass
-* **Target Modules:** [`java/`](java/), [`concurrency/`](concurrency/), [`sql/`](sql/README.md)
+#### Week 3: Java Core Internals, File I/O, Concurrency & FAANG SQL Masterclass
+* **Target Modules:** [`java/`](java/), [`java/generics/`](java/generics/README.md), [`java/io/`](java/io/README.md), [`java/concurrency/`](java/concurrency/README.md), [`sql/`](sql/README.md)
 * **Focus Topics:**
-  * Java Memory Model (`java/memorymodel`), Garbage Collection tuning, Reflection (`java/reflection`), Generics (`java/generics`), & Collections (`java/collections`).
-  * Threading primitives: Locks, ReentrantLock, CAS, Volatile, & Producer-Consumer patterns (`java/producerconsumer`, `concurrency/`).
+  * Java Memory Model (`java/memorymodel`), Reflection (`java/reflection`), Generics (`java/generics/README.md`), & Collections (`java/collections`).
+  * Modern Java File I/O & NIO.2 (`java/io/README.md`): Streams vs Channels, `MappedByteBuffer` (`mmap`), Kernel Zero-Copy (`transferTo`/`sendfile`), POSIX permissions, `WatchService`, `FileLock`, & Deserialization Security.
+  * Threading primitives: Locks, ReentrantLock, Virtual Threads (`java/concurrency/06_virtual_threads_loom.java`), Lock-Free Atomics (`07_lock_free_atomics_aba.java`), Synchronizers (`08_synchronizers_phaser_barrier.java`), ForkJoin Pool (`09_forkjoin_work_stealing.java`), & Flow Reactive Streams (`10_reactive_streams_flow.java`).
   * Advanced SQL syntax (`sql/00_syntax_cheatsheet.md`), Window Functions (`ROW_NUMBER`, `DENSE_RANK`, `ROWS BETWEEN`), & FAANG Staff SQL Interview Patterns (`sql/05_faang_staff_interview_patterns.sql`):
     * Gaps & Islands, User Sessionization (30-min threshold), Cohort Retention, Recursive CTE Org Trees, Exact Medians, & Overlapping Intervals.
 * **Deliverable:** Master Java concurrency primitives and solve all 6 FAANG Staff SQL interview patterns.
