@@ -67,6 +67,7 @@ mindmap
 | **[Chapter 5](ch05_transactions_isolation_savepoints.md)** | Transactions, Isolation & Savepoints | Auto-commit mode, ANSI SQL isolation levels, `Savepoint` partial rollbacks |
 | **[Chapter 6](ch06_batch_processing_xa_transactions.md)** | Batch Processing & XA 2PC | JDBC `executeBatch()`, `rewriteBatchedStatements`, `XADataSource`, 2-Phase Commit distributed transactions |
 | **[Chapter 7](ch07_performance_tuning_leak_detection.md)** | Diagnostics, Leak Detection & Tuning | HikariCP `leakDetectionThreshold`, query/socket timeouts, JDBC proxy logging (`p6spy`, `log4jdbc`) |
+| **[Chapter 8](ch08_multi_db_connection_pooling_zeyt.md)** | Multi-DB Connection Pooling (`zeyt`, `zeyt_ta_data`, `zeyt_deleted`) | Multi-database connection pool architecture, workload-tailored HikariCP pool sizing, schema handling across 100s of tables, Spring Boot Java configuration |
 
 ---
 
