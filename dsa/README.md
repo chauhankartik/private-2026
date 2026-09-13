@@ -17,8 +17,9 @@ Each module follows the same proven structure:
 |---|---|---|
 | [Array](./array/) | Two Pointers, Prefix Sum, Kadane's, Binary Search, Intervals, Matrix | 7 files |
 | [Hashing](./hashing/) | Frequency Count, Complement Lookup, Prefix+HashMap, Grouping, Design | 7 files |
-| [Graph](./graph/) | BFS/DFS, Topological Sort, Dijkstra, Union-Find, MST, Tarjan's | 7 files |
 | [Sliding Window](./sliding_window/) | Fixed Window, Variable Window, Counting, Monotonic Deque, DP+Deque | 7 files |
+| [Greedy](./greedy/) | Interval Scheduling, Two-Pointer Greedy, Heap Greedy, Monotonic Stack, Two-Pass | 7 files |
+| [Graph](./graph/) | BFS/DFS, Topological Sort, Dijkstra, Union-Find, MST, Tarjan's | 7 files |
 
 ---
 
@@ -45,7 +46,8 @@ Work through modules in this order for maximum concept transfer:
 1. Array          → Foundation of all other topics (memory, pointers, sorting)
 2. Hashing        → Complements arrays; unlocks O(1) lookup patterns
 3. Sliding Window → Builds on arrays + hashing; unlocks O(n) subarray patterns
-4. Graph          → Brings everything together (BFS uses queues, Dijkstra uses heaps)
+4. Greedy         → Interval scheduling, monotonic stack, local optimization proofs
+5. Graph          → Brings everything together (BFS uses queues, Dijkstra uses heaps)
 ```
 
 Within each module, follow the **Phase order** in `06_top50_problems.md`:
