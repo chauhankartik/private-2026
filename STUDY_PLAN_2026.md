@@ -53,9 +53,10 @@ mindmap
 * **Deliverable:** Complete graph traversal & DP state formulation exercises.
 
 #### Week 3: Java Core Internals, Functional Programming, File I/O, Concurrency, Interview Edge Cases & FAANG SQL Masterclass
-* **Target Modules:** [`java/`](java/), [`java/generics/`](java/generics/README.md), [`java/collections/`](java/collections/README.md), [`java/functional/`](java/functional/README.md), [`java/io/`](java/io/README.md), [`java/concurrency/`](java/concurrency/README.md), [`java/interview/`](java/interview/README.md), [`sql/`](sql/README.md)
+* **Target Modules:** [`java/`](java/), [`java/classloader/`](java/classloader/README.md), [`java/generics/`](java/generics/README.md), [`java/collections/`](java/collections/README.md), [`java/functional/`](java/functional/README.md), [`java/io/`](java/io/README.md), [`java/concurrency/`](java/concurrency/README.md), [`java/interview/`](java/interview/README.md), [`sql/`](sql/README.md)
 * **Focus Topics:**
-  * Java Memory Model (`java/memorymodel`), Reflection (`java/reflection`), Generics (`java/generics/README.md`), & Collections (`java/collections/README.md`).
+  * Java Memory Model (`java/memorymodel`), Reflection (`java/reflection`), ClassLoader Architecture & Internals (`java/classloader/README.md`), Generics (`java/generics/README.md`), & Collections (`java/collections/README.md`).
+  * JVM Class Loading Lifecycle: Delegation Hierarchy (Parent-First vs Child-First WebApp ClassLoaders), On-The-Fly Bytecode Decryption, Bytecode Instrumentation (`java.lang.instrument`), & Metaspace Leak Diagnostics (`java/classloader`).
   * Functional Programming & Stream API (`java/functional/README.md`): Functional Interfaces, Lambdas & `invokedynamic`, Stream execution pipeline, Collectors (`groupingBy`, `partitioningBy`), Custom `Collector` / `Spliterator`, Monadic `Optional`, & FP design patterns.
   * Modern Java File I/O & NIO.2 (`java/io/README.md`): Streams vs Channels, `MappedByteBuffer` (`mmap`), Kernel Zero-Copy (`transferTo`/`sendfile`), POSIX permissions, `WatchService`, `FileLock`, & Deserialization Security.
   * Java Interview Tricky Gotchas & Edge Cases (`java/interview/README.md`): Integer Cache limits, String Pool, Overload resolution hierarchy, Overridden method calls in super constructors, Exception swallowing in `finally`, `ThreadLocal` leaks, & Staff Interview Puzzle Suite.
