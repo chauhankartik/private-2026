@@ -35,12 +35,14 @@ mindmap
 ### Phase 1: Core Foundations — Algorithms, Languages & SQL (Weeks 1–3)
 
 #### Week 1: Data Structures & Algorithms Core Patterns
-* **Target Modules:** [`dsa/`](dsa/README.md), [`dsa/Linear-Data-Structures-Masterclass`](dsa/Linear-Data-Structures-Masterclass), [`interviewbit/`](interviewbit/)
+* **Target Modules:** [`dsa/`](dsa/README.md), [`dsa/greedy`](dsa/greedy/00_theory.md), [`dsa/trie`](dsa/trie/00_theory.md), [`dsa/Linear-Data-Structures-Masterclass`](dsa/Linear-Data-Structures-Masterclass), [`interviewbit/`](interviewbit/)
 * **Focus Topics:**
   * Arrays, Two Pointers, & Sliding Window techniques (`dsa/array`, `dsa/twopointers`, `dsa/sliding_window`).
   * Linked Lists, Stacks, Queues, & Hashing mechanics (`dsa/linkedlist`, `dsa/stack`, `dsa/queue`, `dsa/hashing`).
+  * Greedy Algorithms & Formal Proofs: Exchange Arguments, Stays Ahead Proofs, Interval Scheduling, Heap Greedy, & Monotonic Stack (`dsa/greedy`, `interviewbit/greedy`).
+  * Trie (Prefix Trees): Array vs HashMap Node Layouts, Bitwise XOR Tries, Reverse Suffix Tries, & Autocomplete Engine Design (`dsa/trie`).
   * Monotonic Stack & Queue applications.
-* **Deliverable:** Solve 15 classic medium/hard problem patterns from `dsa/` and `interviewbit/`.
+* **Deliverable:** Solve 20 classic medium/hard problem patterns from `dsa/` and `interviewbit/`.
 
 #### Week 2: Advanced Graph Algorithms & Dynamic Programming
 * **Target Modules:** [`dsa/Graph-Algorithms-Masterclass`](dsa/Graph-Algorithms-Masterclass), [`dsa/graph`](dsa/graph), [`dsa/dynamicprogramming`](dsa/dynamicprogramming), [`dsa/linesweep`](dsa/linesweep)
@@ -183,7 +185,7 @@ mindmap
 
 | Domain Folder | Description | Key Modules Included |
 | :--- | :--- | :--- |
-| **[`dsa/`](dsa/README.md)** | Algorithms & Data Structures | Graph/Linear Masterclasses, Arrays, DP, Line Sweep, Trees, Hashing |
+| **[`dsa/`](dsa/README.md)** | Algorithms & Data Structures | Graph/Linear Masterclasses, Arrays, Greedy, Trie, DP, Line Sweep, Trees, Hashing |
 | **[`java/`](java/) & [`concurrency/`](concurrency/)** | Java Core & Concurrency | Collections, Memory Model, Reflection, Generics, Locks, Producer-Consumer |
 | **[`sql/`](sql/README.md)** | SQL Query Masterclass | Easy, Medium, Hard, Google-level, & FAANG Staff Interview Patterns (`05_faang_staff_interview_patterns.sql`) |
 | **[`lld/`](lld/README.md)** | Low-Level System Design | SOLID Foundations, GoF Design Patterns, 5 Production LLD Systems |
@@ -191,4 +193,4 @@ mindmap
 | **[`ddia_book_study/`](ddia_book_study/README.md)** | Data-Intensive Applications | Storage Engines, Replication, Sharding, Batch/Stream Processing |
 | **[`distributed-systems/`](distributed-systems/README.md)** | Distributed Systems Theory | Raft/Paxos Consensus, Consistent Hashing, 2PC Transactions, CAP |
 | **[`tech-stack/`](tech-stack/README.md)** | Infrastructure Tech-Stack | 16 Modules (Redis, Postgres, JDBC, Mongo, Cassandra, ES, Object Storage, Kafka, K8s, etc.) |
-| **[`interviewbit/`](interviewbit/)** | Problem Practice Sets | Real-world interview coding problem collections |
+| **[`interviewbit/`](interviewbit/)** | Problem Practice Sets | Array, Greedy (Gas Station, Majority Element) & real-world interview problem collections |
