@@ -33,6 +33,8 @@ mindmap
       Consensus Raft Paxos distributed systems
       Understanding Distributed Systems understanding_distributed_systems
       MIT 6.5840 6.824 Distributed Systems mit_6_5840_distributed_systems
+      Stanford CS244B Advanced Distributed Systems stanford_cs244b_distributed_systems
+      CMU 15-418 Parallel Computer Architecture cmu_15418_parallel_programming
     Phase 4 Infrastructure Tech Stack & Security
       Data Tier Redis Postgres JDBC Storage
       Streaming Kafka Edge Gateways Tomcat Netty
@@ -149,8 +151,8 @@ mindmap
     * **Link & Physical Layer**: Framing, Error Detection (CRC Modulo-2 Math), Multiple Access (CSMA/CD Ethernet Exponential Backoff, CSMA/CA WiFi 802.11 RTS/CTS), Address Resolution Protocol (ARP), L2 Self-Learning Switches vs L3 Routers, VLANs (`05_link_and_physical_layer/`).
 * **Deliverable:** Master kernel syscalls, LDE protocol, Linux `epoll`, TCP state transitions, CIDR subnetting, and BGP routing mechanics.
 
-#### Week 9: Database System Concepts, Database Internals, Distributed Systems, UDS & MIT 6.5840
-* **Target Modules:** [`database_system_concepts/`](database_system_concepts/README.md), [`database_internals/`](database_internals/README.md), [`ddia_book_study/`](ddia_book_study/README.md), [`distributed-systems/`](distributed-systems/README.md), [`understanding_distributed_systems/`](understanding_distributed_systems/README.md), [`mit_6_5840_distributed_systems/`](mit_6_5840_distributed_systems/README.md)
+#### Week 9: Database System Concepts, Database Internals, Distributed Systems, UDS, MIT 6.5840, Stanford CS244B & CMU 15-418
+* **Target Modules:** [`database_system_concepts/`](database_system_concepts/README.md), [`database_internals/`](database_internals/README.md), [`ddia_book_study/`](ddia_book_study/README.md), [`distributed-systems/`](distributed-systems/README.md), [`understanding_distributed_systems/`](understanding_distributed_systems/README.md), [`mit_6_5840_distributed_systems/`](mit_6_5840_distributed_systems/README.md), [`stanford_cs244b_distributed_systems/`](stanford_cs244b_distributed_systems/README.md), [`cmu_15418_parallel_programming/`](cmu_15418_parallel_programming/README.md)
 * **Focus Topics:**
   * **Database System Concepts (DBSC)** [`database_system_concepts/`](database_system_concepts/README.md):
     * **Relational Model & SQL**: Relational Algebra ($\sigma, \pi, \bowtie, \div$), SQL AST Parsing, Logical & Physical Execution Tree, Triggers, Views (`01_relational_model_and_sql/`).
@@ -176,8 +178,16 @@ mindmap
     * Fault-Tolerant Key-Value Service with Duplicate Request Table (`ClientId` + `SeqNum`).
     * Sharded KV Service (Lab 4: Shard Controller Reconfigurations & Cross-Group Data Migration).
     * Apache ZooKeeper (Zab protocol, Linearizable writes, FIFO client order) & Google Spanner (TrueTime, 2PC + Paxos).
+  * **Stanford CS244B Advanced Distributed Systems** [`stanford_cs244b_distributed_systems/`](stanford_cs244b_distributed_systems/README.md):
+    * Chord DHT Finger Tables ($O(\log N)$ routing, stabilize, fix_fingers) & Kademlia XOR metric routing ($d(x,y) = x \oplus y$, k-buckets, parallel $\alpha=3$ lookups).
+    * Practical Byzantine Fault Tolerance (PBFT: Pre-Prepare, Prepare, Commit 3-phase algorithm, $f < \frac{N-1}{3}$) & Stellar Federated Byzantine Agreement (FBA: Quorum Slices, Quorum Intersection).
+    * Total Order Broadcast via Vector Clocks & Shamir's Secret Sharing ($(k,n)$ threshold scheme, Lagrange Polynomial Interpolation).
+  * **CMU 15-418 / 618 Parallel Computer Architecture** [`cmu_15418_parallel_programming/`](cmu_15418_parallel_programming/README.md):
+    * Multi-core SIMD vectorization, CUDA GPU SIMT execution model (Warp Divergence, Shared Memory Bank Conflicts), Work-Stealing schedulers (Cilk deque, C++ engine).
+    * Hardware Cache Coherence Protocols: MESI & MOESI 4/5-state machines, Invalidating vs Updating, Bus Snooping vs Directory-Based Coherence, Memory Consistency Models (Sequential Consistency, Total Store Order / TSO, Relaxed Consistency, Memory Barriers).
+    * Interconnect Topologies (Crossbar, 2D Torus, Hypercube, Fat-Tree bisection bandwidth) & Lock-Free Data Structures (Michael-Scott Lock-Free Queue with CAS & ABA prevention via generational pointers).
   * **Distributed Systems Theory & DDIA** [`distributed-systems/`](distributed-systems/README.md), [`ddia_book_study/`](ddia_book_study/README.md): CAP Theorem, PACELC Theorem, Consistent Hashing (Murmur3, Token Rings, vnodes), 2PC vs Saga Pattern, Batch Processing (MapReduce, Spark) & Stream Processing (Kafka Streams, Flink).
-* **Deliverable:** Master B+ Tree vs LSM-Tree trade-offs, Volcano execution, ARIES recovery, Raft consensus, Spanner TrueTime, Vector Clocks, Circuit Breakers, Saga Orchestration, and complete MIT 6.5840 Labs 1–4 implementations.
+* **Deliverable:** Master B+ Tree vs LSM-Tree trade-offs, Volcano execution, ARIES recovery, Raft consensus, Spanner TrueTime, PBFT phase transitions, Kademlia XOR routing, MESI/MOESI cache coherence, Lock-Free queues, and complete MIT 6.5840 Labs 1–4 implementations.
 
 ---
 
@@ -264,4 +274,6 @@ mindmap
 | **[`understanding_distributed_systems/`](understanding_distributed_systems/README.md)** | Understanding Distributed Systems | PACELC, Vector Clocks, Consistent Hashing, Raft Consensus, Circuit Breakers, Sagas, Tracing |
 | **[`high_throughput_data_pipelines/`](high_throughput_data_pipelines/README.md)** | High-Throughput Data Pipelines | Kappa/Lambda, Kafka Batching, Flink Streaming, Parquet Columnar, Zero-Copy, Chandy-Lamport, 2PC Sink |
 | **[`mit_6_5840_distributed_systems/`](mit_6_5840_distributed_systems/README.md)** | MIT 6.5840 (6.824) Distributed Systems | Labs 1-4: MapReduce, VMware FT, Raft Consensus, Fault-Tolerant KV, Sharded KV, ZooKeeper, Spanner |
+| **[`stanford_cs244b_distributed_systems/`](stanford_cs244b_distributed_systems/README.md)** | Stanford CS244B Advanced Distributed Systems | P2P DHTs (Chord/Kademlia), BFT & Stellar FBA (PBFT/FBA), Atomic Broadcast & Shamir Secret Sharing |
+| **[`cmu_15418_parallel_programming/`](cmu_15418_parallel_programming/README.md)** | CMU 15-418/618 Parallel Programming | SIMD/GPU SIMT/Work-Stealing, MESI/MOESI Cache Coherence & Memory Models, Interconnects & Lock-Free Queues |
 | **[`interviewbit/`](interviewbit/)** | Problem Practice Sets | Array, Greedy (Gas Station, Majority Element) & real-world interview problem collections |
