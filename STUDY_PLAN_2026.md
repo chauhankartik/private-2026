@@ -32,6 +32,7 @@ mindmap
       Designing Data Intensive Applications ddia
       Consensus Raft Paxos distributed systems
       Understanding Distributed Systems understanding_distributed_systems
+      MIT 6.5840 6.824 Distributed Systems mit_6_5840_distributed_systems
     Phase 4 Infrastructure Tech Stack & Security
       Data Tier Redis Postgres JDBC Storage
       Streaming Kafka Edge Gateways Tomcat Netty
@@ -148,8 +149,8 @@ mindmap
     * **Link & Physical Layer**: Framing, Error Detection (CRC Modulo-2 Math), Multiple Access (CSMA/CD Ethernet Exponential Backoff, CSMA/CA WiFi 802.11 RTS/CTS), Address Resolution Protocol (ARP), L2 Self-Learning Switches vs L3 Routers, VLANs (`05_link_and_physical_layer/`).
 * **Deliverable:** Master kernel syscalls, LDE protocol, Linux `epoll`, TCP state transitions, CIDR subnetting, and BGP routing mechanics.
 
-#### Week 9: Database System Concepts, Database Internals, Distributed Systems & UDS
-* **Target Modules:** [`database_system_concepts/`](database_system_concepts/README.md), [`database_internals/`](database_internals/README.md), [`ddia_book_study/`](ddia_book_study/README.md), [`distributed-systems/`](distributed-systems/README.md), [`understanding_distributed_systems/`](understanding_distributed_systems/README.md)
+#### Week 9: Database System Concepts, Database Internals, Distributed Systems, UDS & MIT 6.5840
+* **Target Modules:** [`database_system_concepts/`](database_system_concepts/README.md), [`database_internals/`](database_internals/README.md), [`ddia_book_study/`](ddia_book_study/README.md), [`distributed-systems/`](distributed-systems/README.md), [`understanding_distributed_systems/`](understanding_distributed_systems/README.md), [`mit_6_5840_distributed_systems/`](mit_6_5840_distributed_systems/README.md)
 * **Focus Topics:**
   * **Database System Concepts (DBSC)** [`database_system_concepts/`](database_system_concepts/README.md):
     * **Relational Model & SQL**: Relational Algebra ($\sigma, \pi, \bowtie, \div$), SQL AST Parsing, Logical & Physical Execution Tree, Triggers, Views (`01_relational_model_and_sql/`).
@@ -169,8 +170,14 @@ mindmap
     * Replication topologies, Raft Consensus state machine & log matching invariants.
     * Resiliency patterns: Circuit Breakers (CLOSED, OPEN, HALF_OPEN), Exponential Backoff with Decorrelated Jitter, Bulkheads, Idempotency keys.
     * Distributed Transactions (2PC vs Saga Orchestration/Choreography), Distributed Observability (Prometheus Metrics, W3C `traceparent` tracing context).
+  * **MIT 6.5840 (6.824) Distributed Systems (Robert Morris)** [`mit_6_5840_distributed_systems/`](mit_6_5840_distributed_systems/README.md):
+    * MapReduce Coordinator/Worker architecture, VMware FT Primary-Backup Deterministic Replay & Output Rule.
+    * Raft Consensus State Machine (Labs 2 & 3: Leader Election, Log Replication, Persistence, Snapshots).
+    * Fault-Tolerant Key-Value Service with Duplicate Request Table (`ClientId` + `SeqNum`).
+    * Sharded KV Service (Lab 4: Shard Controller Reconfigurations & Cross-Group Data Migration).
+    * Apache ZooKeeper (Zab protocol, Linearizable writes, FIFO client order) & Google Spanner (TrueTime, 2PC + Paxos).
   * **Distributed Systems Theory & DDIA** [`distributed-systems/`](distributed-systems/README.md), [`ddia_book_study/`](ddia_book_study/README.md): CAP Theorem, PACELC Theorem, Consistent Hashing (Murmur3, Token Rings, vnodes), 2PC vs Saga Pattern, Batch Processing (MapReduce, Spark) & Stream Processing (Kafka Streams, Flink).
-* **Deliverable:** Master B+ Tree vs LSM-Tree trade-offs, Volcano execution, ARIES recovery, Raft consensus, Spanner TrueTime, Vector Clocks, Circuit Breakers, and Saga Orchestration patterns.
+* **Deliverable:** Master B+ Tree vs LSM-Tree trade-offs, Volcano execution, ARIES recovery, Raft consensus, Spanner TrueTime, Vector Clocks, Circuit Breakers, Saga Orchestration, and complete MIT 6.5840 Labs 1–4 implementations.
 
 ---
 
@@ -256,4 +263,5 @@ mindmap
 | **[`api_security_in_action/`](api_security_in_action/README.md)** | API Security in Action | OWASP Top 10, OAuth2/PKCE, OIDC, JWT, TLS 1.3, mTLS, HTTP Signatures, Gateways, SPIFFE/SPIRE |
 | **[`understanding_distributed_systems/`](understanding_distributed_systems/README.md)** | Understanding Distributed Systems | PACELC, Vector Clocks, Consistent Hashing, Raft Consensus, Circuit Breakers, Sagas, Tracing |
 | **[`high_throughput_data_pipelines/`](high_throughput_data_pipelines/README.md)** | High-Throughput Data Pipelines | Kappa/Lambda, Kafka Batching, Flink Streaming, Parquet Columnar, Zero-Copy, Chandy-Lamport, 2PC Sink |
+| **[`mit_6_5840_distributed_systems/`](mit_6_5840_distributed_systems/README.md)** | MIT 6.5840 (6.824) Distributed Systems | Labs 1-4: MapReduce, VMware FT, Raft Consensus, Fault-Tolerant KV, Sharded KV, ZooKeeper, Spanner |
 | **[`interviewbit/`](interviewbit/)** | Problem Practice Sets | Array, Greedy (Gas Station, Majority Element) & real-world interview problem collections |
