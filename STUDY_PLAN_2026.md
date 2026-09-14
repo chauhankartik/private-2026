@@ -28,6 +28,7 @@ mindmap
       Database Internals B-Trees LSM Raft database_internals
       Designing Data Intensive Applications ddia
       Consensus Raft Paxos distributed systems
+      Understanding Distributed Systems understanding_distributed_systems
     Phase 4 Infrastructure Tech Stack & Security
       Data Tier Redis Postgres JDBC Storage
       Streaming Kafka Edge Gateways Tomcat Netty
@@ -138,8 +139,8 @@ mindmap
     * **Link & Physical Layer**: Framing, Error Detection (CRC Modulo-2 Math), Multiple Access (CSMA/CD Ethernet Exponential Backoff, CSMA/CA WiFi 802.11 RTS/CTS), Address Resolution Protocol (ARP), L2 Self-Learning Switches vs L3 Routers, VLANs (`05_link_and_physical_layer/`).
 * **Deliverable:** Master kernel syscalls, LDE protocol, Linux `epoll`, TCP state transitions, CIDR subnetting, and BGP routing mechanics.
 
-#### Week 9: Database System Concepts, Database Internals & Distributed Systems (DDIA)
-* **Target Modules:** [`database_system_concepts/`](database_system_concepts/README.md), [`database_internals/`](database_internals/README.md), [`ddia_book_study/`](ddia_book_study/README.md), [`distributed-systems/`](distributed-systems/README.md)
+#### Week 9: Database System Concepts, Database Internals, Distributed Systems & UDS
+* **Target Modules:** [`database_system_concepts/`](database_system_concepts/README.md), [`database_internals/`](database_internals/README.md), [`ddia_book_study/`](ddia_book_study/README.md), [`distributed-systems/`](distributed-systems/README.md), [`understanding_distributed_systems/`](understanding_distributed_systems/README.md)
 * **Focus Topics:**
   * **Database System Concepts (DBSC)** [`database_system_concepts/`](database_system_concepts/README.md):
     * **Relational Model & SQL**: Relational Algebra ($\sigma, \pi, \bowtie, \div$), SQL AST Parsing, Logical & Physical Execution Tree, Triggers, Views (`01_relational_model_and_sql/`).
@@ -152,8 +153,15 @@ mindmap
     * **Storage Engines**: $B^{\text{link}}$ Trees with right-sibling pointers, Latching Crabbing (Coupled Latching), LSM-Tree Architecture, MemTable SkipList, WAL, SSTable Binary Format (Data, Index, Bloom, Summary, Footer), Bloom Filter Math ($k = \frac{m}{n} \ln 2$), Size-Tiered vs Leveled Compaction (LCS), Read/Write/Space Amplification trade-offs (`01_storage_engines/`).
     * **Distributed Storage & Consensus**: Leader/Leaderless Replication, Quorum Consistency ($R + W > N$, Read Repair, Hinted Handoff), Vector Clocks, Hybrid Logical Clocks (HLC), Raft Consensus Deep Dive (Leader Election, RequestVote, AppendEntries, Log Matching Property, Safety Invariants) (`02_distributed_storage/`).
     * **Distributed Transactions & Isolation**: Two-Phase Commit (2PC), Three-Phase Commit (3PC), Distributed Snapshot Isolation, Google Spanner Architecture & TrueTime API ($\epsilon$ uncertainty, Commit Wait Rule), Deterministic Transaction Engines (Calvin Architecture) (`03_distributed_transactions/`).
+  * **Understanding Distributed Systems (Roberto Vitillo)** [`understanding_distributed_systems/`](understanding_distributed_systems/README.md):
+    * TCP/UDP, HTTP/2 multiplexing, gRPC & Protobuf vs JSON serialization.
+    * Physical Clocks (NTP, TrueTime) vs Logical Clocks (Lamport Timestamps, Vector Clocks).
+    * Consistent Hashing with Virtual Nodes & Rendezvous Hashing.
+    * Replication topologies, Raft Consensus state machine & log matching invariants.
+    * Resiliency patterns: Circuit Breakers (CLOSED, OPEN, HALF_OPEN), Exponential Backoff with Decorrelated Jitter, Bulkheads, Idempotency keys.
+    * Distributed Transactions (2PC vs Saga Orchestration/Choreography), Distributed Observability (Prometheus Metrics, W3C `traceparent` tracing context).
   * **Distributed Systems Theory & DDIA** [`distributed-systems/`](distributed-systems/README.md), [`ddia_book_study/`](ddia_book_study/README.md): CAP Theorem, PACELC Theorem, Consistent Hashing (Murmur3, Token Rings, vnodes), 2PC vs Saga Pattern, Batch Processing (MapReduce, Spark) & Stream Processing (Kafka Streams, Flink).
-* **Deliverable:** Master B+ Tree vs LSM-Tree trade-offs, Volcano execution, ARIES recovery, Raft consensus, Spanner TrueTime, and 2PC protocols.
+* **Deliverable:** Master B+ Tree vs LSM-Tree trade-offs, Volcano execution, ARIES recovery, Raft consensus, Spanner TrueTime, Vector Clocks, Circuit Breakers, and Saga Orchestration patterns.
 
 ---
 
@@ -231,4 +239,5 @@ mindmap
 | **[`distributed-systems/`](distributed-systems/README.md)** | Distributed Systems Theory | Raft/Paxos Consensus, Consistent Hashing, 2PC Transactions, CAP |
 | **[`tech-stack/`](tech-stack/README.md)** | Infrastructure Tech-Stack | 18 Modules (Redis, Postgres, JDBC, Tomcat, Netty, Mongo, Cassandra, ES, Object Storage, Kafka, K8s, etc.) |
 | **[`api_security_in_action/`](api_security_in_action/README.md)** | API Security in Action | OWASP Top 10, OAuth2/PKCE, OIDC, JWT, TLS 1.3, mTLS, HTTP Signatures, Gateways, SPIFFE/SPIRE |
+| **[`understanding_distributed_systems/`](understanding_distributed_systems/README.md)** | Understanding Distributed Systems | PACELC, Vector Clocks, Consistent Hashing, Raft Consensus, Circuit Breakers, Sagas, Tracing |
 | **[`interviewbit/`](interviewbit/)** | Problem Practice Sets | Array, Greedy (Gas Station, Majority Element) & real-world interview problem collections |
