@@ -35,6 +35,7 @@ mindmap
     Phase 4 Infrastructure Tech Stack & Security
       Data Tier Redis Postgres JDBC Storage
       Streaming Kafka Edge Gateways Tomcat Netty
+      High Throughput Data Pipelines high_throughput_data_pipelines
       Containers Orchestration Kubernetes
       API Security in Action OWASP OAuth2 SPIFFE api_security_in_action
 ```
@@ -185,15 +186,18 @@ mindmap
   * MongoDB WiredTiger B-Tree/cache, Replica Set Raft consensus, Oplog, Sharding balancer.
 * **Deliverable:** Deep-dive operational mastery of relational, driver, and document databases.
 
-#### Week 11: NoSQL Wide-Column, Search, Object Storage & Messaging
-* **Target Modules:** [`tech-stack/cassandra/`](tech-stack/cassandra/README.md), [`tech-stack/elasticsearch/`](tech-stack/elasticsearch/README.md), [`tech-stack/object-storage/`](tech-stack/object-storage/README.md), [`tech-stack/kafka/`](tech-stack/kafka/README.md), [`tech-stack/gateways-proxies-loadbalancers/`](tech-stack/gateways-proxies-loadbalancers/README.md)
+#### Week 11: NoSQL Wide-Column, Search, Object Storage, Messaging & High-Throughput Pipelines
+* **Target Modules:** [`tech-stack/cassandra/`](tech-stack/cassandra/README.md), [`tech-stack/elasticsearch/`](tech-stack/elasticsearch/README.md), [`tech-stack/object-storage/`](tech-stack/object-storage/README.md), [`tech-stack/kafka/`](tech-stack/kafka/README.md), [`tech-stack/gateways-proxies-loadbalancers/`](tech-stack/gateways-proxies-loadbalancers/README.md), [`high_throughput_data_pipelines/`](high_throughput_data_pipelines/README.md)
 * **Focus Topics:**
   * Cassandra masterless P2P ring, Gossip, $\Phi$ Accrual, LSM engine, SSTables, Bloom filters, $R+W>N$ quorums.
   * Elasticsearch Lucene inverted index, FST, FOR/Roaring posting lists, 2-phase search, DocValues vs Fielddata, 32GB JVM heap limit.
   * Distributed Object Storage (S3/Ceph/MinIO) flat namespace, CRUSH algorithm, Reed-Solomon Erasure Coding ($K+M$), Multipart uploads, WORM locks.
   * Kafka distributed log segments, Zero-Copy transfer, consumer group rebalancing, ISR replicas.
   * Gateways & Proxies: NGINX, HAProxy, Envoy, Layer 4 vs Layer 7 load balancing algorithms, TLS termination.
-* **Deliverable:** Master wide-column stores, full-text search, object storage, & messaging backbones.
+  * High-Throughput Data Pipelines: Lambda vs Kappa Architecture, Kafka producer batch tuning (`batch.size`, `linger.ms`, `snappy`), Flink stream DAG & windowing (Tumbling/Sliding/Session), Parquet columnar storage (Dictionary, RLE, Bit-packing), Linux kernel zero-copy (`sendfile`/`splice`), Chandy-Lamport checkpoint barriers, Flink 2PC sink, and Key Salting for partition skew mitigation.
+* **Deliverable:** Master wide-column stores, full-text search, object storage, messaging backbones, and 1M+ QPS data pipeline engineering.
+
+---
 
 #### Week 12: Containers, Orchestration, Observability, Frameworks & API Security
 * **Target Modules:** [`tech-stack/docker/`](tech-stack/docker/README.md), [`tech-stack/kubernetes/`](tech-stack/kubernetes/README.md), [`tech-stack/grafana/`](tech-stack/grafana/README.md), [`tech-stack/splunk/`](tech-stack/splunk/README.md), [`tech-stack/spring-boot/`](tech-stack/spring-boot/README.md), [`tech-stack/git/`](tech-stack/git/README.md), [`api_security_in_action/`](api_security_in_action/README.md)
@@ -251,4 +255,5 @@ mindmap
 | **[`tech-stack/`](tech-stack/README.md)** | Infrastructure Tech-Stack | 18 Modules (Redis, Postgres, JDBC, Tomcat, Netty, Mongo, Cassandra, ES, Object Storage, Kafka, K8s, etc.) |
 | **[`api_security_in_action/`](api_security_in_action/README.md)** | API Security in Action | OWASP Top 10, OAuth2/PKCE, OIDC, JWT, TLS 1.3, mTLS, HTTP Signatures, Gateways, SPIFFE/SPIRE |
 | **[`understanding_distributed_systems/`](understanding_distributed_systems/README.md)** | Understanding Distributed Systems | PACELC, Vector Clocks, Consistent Hashing, Raft Consensus, Circuit Breakers, Sagas, Tracing |
+| **[`high_throughput_data_pipelines/`](high_throughput_data_pipelines/README.md)** | High-Throughput Data Pipelines | Kappa/Lambda, Kafka Batching, Flink Streaming, Parquet Columnar, Zero-Copy, Chandy-Lamport, 2PC Sink |
 | **[`interviewbit/`](interviewbit/)** | Problem Practice Sets | Array, Greedy (Gas Station, Majority Element) & real-world interview problem collections |
