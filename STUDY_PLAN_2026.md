@@ -28,10 +28,11 @@ mindmap
       Database Internals B-Trees LSM Raft database_internals
       Designing Data Intensive Applications ddia
       Consensus Raft Paxos distributed systems
-    Phase 4 Infrastructure Tech Stack
+    Phase 4 Infrastructure Tech Stack & Security
       Data Tier Redis Postgres JDBC Storage
-      Streaming Kafka Edge Gateways
+      Streaming Kafka Edge Gateways Tomcat Netty
       Containers Orchestration Kubernetes
+      API Security in Action OWASP OAuth2 SPIFFE api_security_in_action
 ```
 
 ---
@@ -178,8 +179,8 @@ mindmap
   * Gateways & Proxies: NGINX, HAProxy, Envoy, Layer 4 vs Layer 7 load balancing algorithms, TLS termination.
 * **Deliverable:** Master wide-column stores, full-text search, object storage, & messaging backbones.
 
-#### Week 12: Containers, Orchestration, Observability & Frameworks
-* **Target Modules:** [`tech-stack/docker/`](tech-stack/docker/README.md), [`tech-stack/kubernetes/`](tech-stack/kubernetes/README.md), [`tech-stack/grafana/`](tech-stack/grafana/README.md), [`tech-stack/splunk/`](tech-stack/splunk/README.md), [`tech-stack/spring-boot/`](tech-stack/spring-boot/README.md), [`tech-stack/git/`](tech-stack/git/README.md)
+#### Week 12: Containers, Orchestration, Observability, Frameworks & API Security
+* **Target Modules:** [`tech-stack/docker/`](tech-stack/docker/README.md), [`tech-stack/kubernetes/`](tech-stack/kubernetes/README.md), [`tech-stack/grafana/`](tech-stack/grafana/README.md), [`tech-stack/splunk/`](tech-stack/splunk/README.md), [`tech-stack/spring-boot/`](tech-stack/spring-boot/README.md), [`tech-stack/git/`](tech-stack/git/README.md), [`api_security_in_action/`](api_security_in_action/README.md)
 * **Focus Topics:**
   * Docker Linux namespaces, cgroups, Overlay2 storage driver, multi-stage builds.
   * Kubernetes Control Plane (kube-apiserver, etcd, kube-scheduler, kube-controller-manager), Pods, Deployments, Services, CNI networking, Ingress.
@@ -187,7 +188,8 @@ mindmap
   * Splunk log indexing pipeline, SPL search processing language.
   * Spring Boot auto-configuration mechanics, IoC container, Bean lifecycle, Actuator diagnostics.
   * Git Directed Acyclic Graph (DAG), Object Store (blob, tree, commit, tag), Packfiles, Rebase vs Merge mechanics.
-* **Deliverable:** Complete full-stack infrastructure review and final mock preparation.
+  * API Security in Action: OWASP API Top 10 (BOLA/BFLA), Sliding Window Redis rate limiting, OAuth 2.1 / PKCE, OIDC, JWT vs Macaroons, TLS 1.3 & mTLS, HTTP Message Signing, RFC 8693 Token Exchange, SPIFFE/SPIRE Zero Trust, Envoy & OPA sidecar authorization.
+* **Deliverable:** Complete full-stack infrastructure & API security review and final mock preparation.
 
 ---
 
@@ -228,4 +230,5 @@ mindmap
 | **[`ddia_book_study/`](ddia_book_study/README.md)** | Data-Intensive Applications | Storage Engines, Replication, Sharding, Batch/Stream Processing |
 | **[`distributed-systems/`](distributed-systems/README.md)** | Distributed Systems Theory | Raft/Paxos Consensus, Consistent Hashing, 2PC Transactions, CAP |
 | **[`tech-stack/`](tech-stack/README.md)** | Infrastructure Tech-Stack | 18 Modules (Redis, Postgres, JDBC, Tomcat, Netty, Mongo, Cassandra, ES, Object Storage, Kafka, K8s, etc.) |
+| **[`api_security_in_action/`](api_security_in_action/README.md)** | API Security in Action | OWASP Top 10, OAuth2/PKCE, OIDC, JWT, TLS 1.3, mTLS, HTTP Signatures, Gateways, SPIFFE/SPIRE |
 | **[`interviewbit/`](interviewbit/)** | Problem Practice Sets | Array, Greedy (Gas Station, Majority Element) & real-world interview problem collections |
