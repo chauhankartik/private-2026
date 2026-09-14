@@ -21,6 +21,8 @@ mindmap
       GoF Design Patterns lld
       High Level System Design HLD
       4 Step Framework and Capacity Math
+      System Design Interview Vol 1 and 2 system_design_interview
+      Fundamentals of Software Architecture fundamentals_of_software_architecture
     Phase 3 Systems & Database Engineering
       Operating Systems Three Easy Pieces ostep
       Computer Networks 5 Layer Stack computer_networks
@@ -108,17 +110,18 @@ mindmap
   * Concurrency safety, thread-safe data structures, lock granularities, and error handling in LLD implementations.
 * **Deliverable:** End-to-end implementation of 5 full LLD interview systems.
 
-#### Week 7: High-Level System Design (HLD) Framework & Core Architectures
-* **Target Modules:** [`hld/`](hld/README.md), [`hld/01_system_design_interview_framework.md`](hld/01_system_design_interview_framework.md) to [`hld/07_video_streaming_youtube.md`](hld/07_video_streaming_youtube.md)
+#### Week 7: High-Level System Design (HLD), Alex Xu (Vol 1 & 2) & Software Architecture
+* **Target Modules:** [`hld/`](hld/README.md), [`system_design_interview/`](system_design_interview/README.md), [`fundamentals_of_software_architecture/`](fundamentals_of_software_architecture/README.md)
 * **Focus Topics:**
   * **The 4-Step System Design Interview Framework:** Scope clarification, 99.99% availability math, QPS, 5-year storage capacity math, and 80/20 RAM cache sizing.
-  * **System Design 1:** Distributed Unique ID Generator (Twitter Snowflake - 64-bit layout, timestamp epoch, worker bits, clock drift safeguards) (`hld/02_distributed_id_generator_snowflake.md`).
-  * **System Design 2:** Distributed Rate Limiter (Token Bucket vs Sliding Window Counter, Redis + Lua scripts) (`hld/03_distributed_rate_limiter.md`).
-  * **System Design 3:** Scalable URL Shortener (TinyURL / Base62 vs KGS + ZooKeeper) (`hld/04_url_shortener_tinyurl.md`).
-  * **System Design 4:** Distributed Web Crawler (URL Frontier priority/politeness queues, SimHash deduplication) (`hld/05_distributed_web_crawler.md`).
-  * **System Design 5:** Real-Time Chat System (WhatsApp / WebSockets, Cassandra history, Redis presence) (`hld/06_chat_messaging_system_whatsapp.md`).
-  * **System Design 6:** Video Streaming Platform (YouTube / ABR HLS, Transcoding DAG pipeline, Multi-CDN edge delivery) (`hld/07_video_streaming_youtube.md`).
-* **Deliverable:** Master back-of-the-envelope calculations and architect 6 end-to-end HLD systems.
+  * **System Design Interview – An Insider's Guide (Vol 1 & 2)** [`system_design_interview/`](system_design_interview/README.md):
+    * Rate Limiter, Consistent Hashing with V-Nodes, Dynamo-Style Quorum KV Store, Twitter Snowflake 64-bit ID, TinyURL, Web Crawler URL Frontier, Trie Autocomplete, Real-Time WebSocket Chat, YouTube Transcoding DAG, Google Drive Chunking.
+    * Proximity Service (Geohash / Quadtree / S2), Google Maps Routing A*, Distributed Message Queue (Kafka Broker & Zero-Copy), Metrics Monitoring (Prometheus TSDB), Ad Click Aggregation (MapReduce), Hotel Reservation Optimistic Locking, Payment Double-Entry Ledger, Digital Wallet, Stock Exchange Matching Engine (LMAX Disruptor Ring Buffer).
+  * **Fundamentals of Software Architecture** [`fundamentals_of_software_architecture/`](fundamentals_of_software_architecture/README.md):
+    * Architecture vs Design, 4 Expectations of an Architect, Measuring Characteristics ("-ilities"), Afferent ($C_a$) / Efferent ($C_e$) Coupling & Instability ($I = \frac{C_e}{C_a + C_e}$), Distance from Main Sequence ($D = |A + I - 1|$).
+    * Architecture Styles: Monolithic (Layered, Pipeline, Microkernel/Plugin) vs Distributed (Service-Based, Event-Driven Broker vs Mediator, Space-Based, Microservices).
+    * Governance & Techniques: Architectural Decision Records (ADR format), Automated Architectural Fitness Functions (ArchUnit CI/CD gates), Risk Analysis Matrix.
+* **Deliverable:** Master back-of-the-envelope calculations, architect all 28 Alex Xu systems, implement ArchUnit fitness functions, and balance architectural trade-offs.
 
 ---
 
@@ -235,6 +238,8 @@ mindmap
 | **[`sql/`](sql/README.md)** | SQL Query Masterclass | Easy, Medium, Hard, Google-level, & FAANG Staff Interview Patterns (`05_faang_staff_interview_patterns.sql`) |
 | **[`lld/`](lld/README.md)** | Low-Level System Design | SOLID Foundations, GoF Design Patterns, 5 Production LLD Systems |
 | **[`hld/`](hld/README.md)** | High-Level System Design | 4-Step Framework, Estimation Math, 6 System Design Architectures (Snowflake, Rate Limiter, TinyURL, Web Crawler, Chat, YouTube) |
+| **[`system_design_interview/`](system_design_interview/README.md)** | System Design Interview (Vol 1 & 2) | Alex Xu 28 System Designs: Rate Limiter, Snowflake, Geohash, Kafka, Metrics, Payment Ledger, Stock Exchange |
+| **[`fundamentals_of_software_architecture/`](fundamentals_of_software_architecture/README.md)** | Fundamentals of Software Architecture | Architecture Characteristics ("-ilities"), Coupling Math, Monolithic vs Distributed Styles, ADRs, ArchUnit |
 | **[`ddia_book_study/`](ddia_book_study/README.md)** | Data-Intensive Applications | Storage Engines, Replication, Sharding, Batch/Stream Processing |
 | **[`distributed-systems/`](distributed-systems/README.md)** | Distributed Systems Theory | Raft/Paxos Consensus, Consistent Hashing, 2PC Transactions, CAP |
 | **[`tech-stack/`](tech-stack/README.md)** | Infrastructure Tech-Stack | 18 Modules (Redis, Postgres, JDBC, Tomcat, Netty, Mongo, Cassandra, ES, Object Storage, Kafka, K8s, etc.) |
