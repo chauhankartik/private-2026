@@ -215,7 +215,7 @@ mindmap
 | :--- | :--- | :--- |
 | **[`dsa/`](dsa/README.md)** | Algorithms & Data Structures | Graph/Linear Masterclasses, Arrays, Greedy, Trie, Backtracking, DP, Line Sweep |
 | **[`cses/`](cses/README.md)** | Competitive Programming Tracker | CSES Problem Set 300+ problem roadmap & progress tracker (`00_progress_tracker.md`) |
-| **[`java/`](java/)** | Advanced Java Core | Collections, Memory Model, ClassLoader, Reflection, Generics, Functional, File I/O, Edge Cases |
+| **[`java/`](java/README.md)** | Advanced Java Core | Collections, Memory Model, ClassLoader, Reflection, Generics, Functional, File I/O, IoC & Servlet Containers, Edge Cases |
 | **[`effective_java/`](effective_java/README.md)** | Effective Java (3rd Edition) | 12 Chapters, 90 Item Guides, Modern Java 11-21 updates & 30-Second Cheatsheet |
 | **[`java_concurrency_in_practice/`](java_concurrency_in_practice/README.md)** | Java Concurrency in Practice | 16 Chapters across 5 Parts: Thread Safety, Executors, AQS, JMM, Virtual Threads, Mermaid Diagrams |
 | **[`ostep/`](ostep/README.md)** | Operating Systems: Three Easy Pieces | Virtualization (LDE, MLFQ, Paging, TLB), Concurrency (Threads, Futex, Epoll), Persistence (DMA, VSFS, WAL) |
