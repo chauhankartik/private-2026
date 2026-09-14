@@ -20,6 +20,7 @@ Each module follows the same proven structure:
 | [Sliding Window](./sliding_window/) | Fixed Window, Variable Window, Counting, Monotonic Deque, DP+Deque | 7 files |
 | [Greedy](./greedy/) | Interval Scheduling, Two-Pointer Greedy, Heap Greedy, Monotonic Stack, Two-Pass | 7 files |
 | [Trie](./trie/) | Prefix Trees, Bitwise XOR Trie, Reverse Suffix Trie, Trie+Backtracking, Autocomplete | 7 files |
+| [Backtracking](./backtracking/) | Subsets, Permutations, Duplicate Pruning, Grid DFS, Bitmask Queens, Sudoku | 7 files |
 | [Graph](./graph/) | BFS/DFS, Topological Sort, Dijkstra, Union-Find, MST, Tarjan's | 7 files |
 
 ---
@@ -49,7 +50,8 @@ Work through modules in this order for maximum concept transfer:
 3. Sliding Window → Builds on arrays + hashing; unlocks O(n) subarray patterns
 4. Greedy         → Interval scheduling, monotonic stack, local optimization proofs
 5. Trie           → Fast prefix matching, Bitwise XOR Trie, autocomplete design
-6. Graph          → Brings everything together (BFS uses queues, Dijkstra uses heaps)
+6. Backtracking   → State-space tree search, Choose-Explore-Unchoose, pruning, grid DFS
+7. Graph          → Brings everything together (BFS uses queues, Dijkstra uses heaps)
 ```
 
 Within each module, follow the **Phase order** in `06_top50_problems.md`:
