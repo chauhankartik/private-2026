@@ -37,6 +37,7 @@ mindmap
       CMU 15-418 Parallel Computer Architecture cmu_15418_parallel_programming
       Stanford EE382C Advanced Computer Architecture stanford_ee382c_advanced_computer_architecture
       MIT 6.1060 6.172 Performance Engineering mit_61060_performance_engineering
+      UC Berkeley CS267 Parallel Computing berkeley_cs267_parallel_computing
     Phase 4 Infrastructure Tech Stack & Security
       Data Tier Redis Postgres JDBC Storage
       Streaming Kafka Edge Gateways Tomcat Netty
@@ -153,8 +154,8 @@ mindmap
     * **Link & Physical Layer**: Framing, Error Detection (CRC Modulo-2 Math), Multiple Access (CSMA/CD Ethernet Exponential Backoff, CSMA/CA WiFi 802.11 RTS/CTS), Address Resolution Protocol (ARP), L2 Self-Learning Switches vs L3 Routers, VLANs (`05_link_and_physical_layer/`).
 * **Deliverable:** Master kernel syscalls, LDE protocol, Linux `epoll`, TCP state transitions, CIDR subnetting, and BGP routing mechanics.
 
-#### Week 9: Database System Concepts, Database Internals, Distributed Systems, UDS, MIT 6.5840, Stanford CS244B, CMU 15-418, Stanford EE382C & MIT 6.1060
-* **Target Modules:** [`database_system_concepts/`](database_system_concepts/README.md), [`database_internals/`](database_internals/README.md), [`ddia_book_study/`](ddia_book_study/README.md), [`distributed-systems/`](distributed-systems/README.md), [`understanding_distributed_systems/`](understanding_distributed_systems/README.md), [`mit_6_5840_distributed_systems/`](mit_6_5840_distributed_systems/README.md), [`stanford_cs244b_distributed_systems/`](stanford_cs244b_distributed_systems/README.md), [`cmu_15418_parallel_programming/`](cmu_15418_parallel_programming/README.md), [`stanford_ee382c_advanced_computer_architecture/`](stanford_ee382c_advanced_computer_architecture/README.md), [`mit_61060_performance_engineering/`](mit_61060_performance_engineering/README.md)
+#### Week 9: Database System Concepts, Database Internals, Distributed Systems, UDS, MIT 6.5840, Stanford CS244B, CMU 15-418, Stanford EE382C, MIT 6.1060 & UC Berkeley CS267
+* **Target Modules:** [`database_system_concepts/`](database_system_concepts/README.md), [`database_internals/`](database_internals/README.md), [`ddia_book_study/`](ddia_book_study/README.md), [`distributed-systems/`](distributed-systems/README.md), [`understanding_distributed_systems/`](understanding_distributed_systems/README.md), [`mit_6_5840_distributed_systems/`](mit_6_5840_distributed_systems/README.md), [`stanford_cs244b_distributed_systems/`](stanford_cs244b_distributed_systems/README.md), [`cmu_15418_parallel_programming/`](cmu_15418_parallel_programming/README.md), [`stanford_ee382c_advanced_computer_architecture/`](stanford_ee382c_advanced_computer_architecture/README.md), [`mit_61060_performance_engineering/`](mit_61060_performance_engineering/README.md), [`berkeley_cs267_parallel_computing/`](berkeley_cs267_parallel_computing/README.md)
 * **Focus Topics:**
   * **Database System Concepts (DBSC)** [`database_system_concepts/`](database_system_concepts/README.md):
     * **Relational Model & SQL**: Relational Algebra ($\sigma, \pi, \bowtie, \div$), SQL AST Parsing, Logical & Physical Execution Tree, Triggers, Views (`01_relational_model_and_sql/`).
@@ -196,8 +197,12 @@ mindmap
     * Bit Leapery & compiler vectorization: Branchless programming, SWAR popcount, GCC/Clang diagnostic flags (`-O3`, `-march=native`), AVX2/AVX-512 FMA vector intrinsics (`_mm256_fmadd_ps`).
     * Cache blocking & Cache-Oblivious algorithms: Stride access penalties, Matrix Tiling, Recursive Divide & Conquer matrix multiplication ($O(N^3/\sqrt{Z})$ optimal cache misses across all hierarchy levels).
     * Cilk Work/Span model & profiling: DAG strand model, Work ($T_1$), Span ($T_\infty$), Greedy scheduler ($T_P \le T_1/P + T_\infty$), Cilksan SP-Bags data race detection algorithm, Linux `perf` & Flame Graphs.
+  * **UC Berkeley CS267 Applications of Parallel Computers** [`berkeley_cs267_parallel_computing/`](berkeley_cs267_parallel_computing/README.md):
+    * Programming models: Distributed-memory MPI (ISend/IRecv halo exchange), OpenMP work-sharing, PGAS (UPC++) one-sided Remote Memory Access (RMA).
+    * Communication-avoiding algorithms: 2D SUMMA & Cannon's algorithms ($O(N^2/\sqrt{P})$ communication lower bounds), Compressed Sparse Row (CSR) SpMV, Parallel Conjugate Gradient (CG) solver.
+    * Spatial & Graph algorithms: Barnes-Hut $O(N \log N)$ Octree spatial decomposition, Graph 500 parallel BFS ($y = A^T x$ semiring vector-matrix multiply), Space-Filling curves (Hilbert / Morton Z-order) & METIS graph partitioning.
   * **Distributed Systems Theory & DDIA** [`distributed-systems/`](distributed-systems/README.md), [`ddia_book_study/`](ddia_book_study/README.md): CAP Theorem, PACELC Theorem, Consistent Hashing (Murmur3, Token Rings, vnodes), 2PC vs Saga Pattern, Batch Processing (MapReduce, Spark) & Stream Processing (Kafka Streams, Flink).
-* **Deliverable:** Master B+ Tree vs LSM-Tree trade-offs, Volcano execution, ARIES recovery, Raft consensus, Spanner TrueTime, PBFT phase transitions, Kademlia XOR routing, MESI/MOESI cache coherence, Tomasulo OoO ROB commit, Wormhole VC routing, Cache-Oblivious divide & conquer, Cilk Work/Span SP-Bags race detection, and complete MIT 6.5840 Labs 1–4 implementations.
+* **Deliverable:** Master B+ Tree vs LSM-Tree trade-offs, Volcano execution, ARIES recovery, Raft consensus, Spanner TrueTime, PBFT phase transitions, Kademlia XOR routing, MESI/MOESI cache coherence, Tomasulo OoO ROB commit, Wormhole VC routing, Cache-Oblivious divide & conquer, Cilk Work/Span SP-Bags race detection, 2D SUMMA communication bounds, Barnes-Hut Octree force evaluation, and complete MIT 6.5840 Labs 1–4 implementations.
 
 ---
 
@@ -288,4 +293,5 @@ mindmap
 | **[`cmu_15418_parallel_programming/`](cmu_15418_parallel_programming/README.md)** | CMU 15-418/618 Parallel Programming | SIMD/GPU SIMT/Work-Stealing, MESI/MOESI Cache Coherence & Memory Models, Interconnects & Lock-Free Queues |
 | **[`stanford_ee382c_advanced_computer_architecture/`](stanford_ee382c_advanced_computer_architecture/README.md)** | Stanford EE382C Advanced Computer Architecture | Tomasulo OoO & ROB, TAGE Predictor, MSHR Non-blocking Caches, Directory Coherence, Dally Wormhole VC Router, Systolic Arrays |
 | **[`mit_61060_performance_engineering/`](mit_61060_performance_engineering/README.md)** | MIT 6.1060 (6.172) Performance Engineering | Bit Hacks & AVX SIMD, Matrix Tiling & Cache-Oblivious Algorithms, Cilk Work/Span & SP-Bags Race Detection, `perf` |
+| **[`berkeley_cs267_parallel_computing/`](berkeley_cs267_parallel_computing/README.md)** | UC Berkeley CS267 Parallel Computing | MPI/OpenMP/PGAS Hybrid, 2D SUMMA & CSR SpMV, Barnes-Hut Octree & Graph 500 BFS, Space-Filling Curves |
 | **[`interviewbit/`](interviewbit/)** | Problem Practice Sets | Array, Greedy (Gas Station, Majority Element) & real-world interview problem collections |
