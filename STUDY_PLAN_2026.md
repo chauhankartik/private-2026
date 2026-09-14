@@ -16,6 +16,7 @@ mindmap
       Effective Java 90 Items effective_java
       Java Concurrency in Practice jcip
       SQL Query Masterclass and FAANG Patterns sql
+      C Programming A Modern Approach c_programming_a_modern_approach
     Phase 2 System Design LLD and HLD
       SOLID Principles and Clean Architecture
       GoF Design Patterns lld
@@ -40,6 +41,7 @@ mindmap
       UC Berkeley CS267 Parallel Computing berkeley_cs267_parallel_computing
       Information Retrieval Search Engines information_retrieval_and_search_engines
       Relevant Search Solr Elasticsearch relevant_search_solr_elasticsearch
+      Lucene in Action lucene_in_action
     Phase 4 Infrastructure Tech Stack & Security
       Data Tier Redis Postgres JDBC Storage
       Streaming Kafka Edge Gateways Tomcat Netty
@@ -54,11 +56,15 @@ mindmap
 
 ### Phase 1: Core Foundations — Algorithms, Languages, Books & SQL (Weeks 1–3)
 
-#### Week 1: Data Structures, Algorithms & CSES Problem Set Foundations
-* **Target Modules:** [`dsa/`](dsa/README.md), [`dsa/greedy`](dsa/greedy/00_theory.md), [`dsa/trie`](dsa/trie/00_theory.md), [`dsa/backtracking`](dsa/backtracking/00_theory.md), [`cses/`](cses/README.md), [`interviewbit/`](interviewbit/)
+#### Week 1: Data Structures, Algorithms, CSES Problem Set & C Programming (K. N. King)
+* **Target Modules:** [`dsa/`](dsa/README.md), [`dsa/greedy`](dsa/greedy/00_theory.md), [`dsa/trie`](dsa/trie/00_theory.md), [`dsa/backtracking`](dsa/backtracking/00_theory.md), [`cses/`](cses/README.md), [`interviewbit/`](interviewbit/), [`c_programming_a_modern_approach/`](c_programming_a_modern_approach/README.md)
 * **Focus Topics:**
   * Arrays, Two Pointers, & Sliding Window techniques (`dsa/array`, `dsa/twopointers`, `dsa/sliding_window`).
   * Linked Lists, Stacks, Queues, & Hashing mechanics (`dsa/linkedlist`, `dsa/stack`, `dsa/queue`, `dsa/hashing`).
+  * **C Programming: A Modern Approach (K. N. King)** [`c_programming_a_modern_approach/`](c_programming_a_modern_approach/README.md):
+    * Fixed-width types (`<stdint.h>`), sequence points, side effects, C99 Variable-Length Arrays (VLAs), storage classes & linkage (`static` vs `extern`).
+    * Pointers & pointer arithmetic, function pointers (`void (*fn)()` ), `malloc`/`calloc`/`realloc`/`free`, custom Arena/Region allocators, struct alignment padding (`offsetof`), bit-fields, tagged unions.
+    * Preprocessor metaprogramming (`#`, `##`, `__VA_ARGS__`), `<stdio.h>` buffered streams, `memcpy` vs `memmove` overlapping safety, C99 designated initializers, `restrict`, C11 `_Generic` type-generic macros.
   * Greedy Algorithms & Formal Proofs: Exchange Arguments, Stays Ahead Proofs, Interval Scheduling, Heap Greedy, & Monotonic Stack (`dsa/greedy`, `interviewbit/greedy`).
   * Trie (Prefix Trees): Array vs HashMap Node Layouts, Bitwise XOR Tries, Reverse Suffix Tries, & Autocomplete Engine Design (`dsa/trie`).
   * Recursion & Backtracking (`dsa/backtracking`): State-Space Tree search, Choose-Explore-Unchoose 3-step paradigm, Branch-and-Bound pruning, duplicate handling, N-Queens, Sudoku, & CSES Grid Paths (48-step path counting).
@@ -156,8 +162,8 @@ mindmap
     * **Link & Physical Layer**: Framing, Error Detection (CRC Modulo-2 Math), Multiple Access (CSMA/CD Ethernet Exponential Backoff, CSMA/CA WiFi 802.11 RTS/CTS), Address Resolution Protocol (ARP), L2 Self-Learning Switches vs L3 Routers, VLANs (`05_link_and_physical_layer/`).
 * **Deliverable:** Master kernel syscalls, LDE protocol, Linux `epoll`, TCP state transitions, CIDR subnetting, and BGP routing mechanics.
 
-#### Week 9: Database System Concepts, Database Internals, Distributed Systems, UDS, MIT 6.5840, Stanford CS244B, CMU 15-418, Stanford EE382C, MIT 6.1060, UC Berkeley CS267, Information Retrieval & Relevant Search
-* **Target Modules:** [`database_system_concepts/`](database_system_concepts/README.md), [`database_internals/`](database_internals/README.md), [`ddia_book_study/`](ddia_book_study/README.md), [`distributed-systems/`](distributed-systems/README.md), [`understanding_distributed_systems/`](understanding_distributed_systems/README.md), [`mit_6_5840_distributed_systems/`](mit_6_5840_distributed_systems/README.md), [`stanford_cs244b_distributed_systems/`](stanford_cs244b_distributed_systems/README.md), [`cmu_15418_parallel_programming/`](cmu_15418_parallel_programming/README.md), [`stanford_ee382c_advanced_computer_architecture/`](stanford_ee382c_advanced_computer_architecture/README.md), [`mit_61060_performance_engineering/`](mit_61060_performance_engineering/README.md), [`berkeley_cs267_parallel_computing/`](berkeley_cs267_parallel_computing/README.md), [`information_retrieval_and_search_engines/`](information_retrieval_and_search_engines/README.md), [`relevant_search_solr_elasticsearch/`](relevant_search_solr_elasticsearch/README.md)
+#### Week 9: Database System Concepts, Database Internals, Distributed Systems, UDS, MIT 6.5840, Stanford CS244B, CMU 15-418, Stanford EE382C, MIT 6.1060, UC Berkeley CS267, Information Retrieval, Relevant Search & Lucene in Action
+* **Target Modules:** [`database_system_concepts/`](database_system_concepts/README.md), [`database_internals/`](database_internals/README.md), [`ddia_book_study/`](ddia_book_study/README.md), [`distributed-systems/`](distributed-systems/README.md), [`understanding_distributed_systems/`](understanding_distributed_systems/README.md), [`mit_6_5840_distributed_systems/`](mit_6_5840_distributed_systems/README.md), [`stanford_cs244b_distributed_systems/`](stanford_cs244b_distributed_systems/README.md), [`cmu_15418_parallel_programming/`](cmu_15418_parallel_programming/README.md), [`stanford_ee382c_advanced_computer_architecture/`](stanford_ee382c_advanced_computer_architecture/README.md), [`mit_61060_performance_engineering/`](mit_61060_performance_engineering/README.md), [`berkeley_cs267_parallel_computing/`](berkeley_cs267_parallel_computing/README.md), [`information_retrieval_and_search_engines/`](information_retrieval_and_search_engines/README.md), [`relevant_search_solr_elasticsearch/`](relevant_search_solr_elasticsearch/README.md), [`lucene_in_action/`](lucene_in_action/README.md)
 * **Focus Topics:**
   * **Database System Concepts (DBSC)** [`database_system_concepts/`](database_system_concepts/README.md):
     * **Relational Model & SQL**: Relational Algebra ($\sigma, \pi, \bowtie, \div$), SQL AST Parsing, Logical & Physical Execution Tree, Triggers, Views (`01_relational_model_and_sql/`).
@@ -211,8 +217,12 @@ mindmap
     * Query parsing & boosting: Filter vs Scoring boundaries, DisMax `best_fields` tie-breaking ($0.3$), `cross_fields` matching, Function Score Gaussian decay functions.
     * Phrase slop & hybrid search: Match phrase `slop` proximity, Query-time `synonym_graph` expansion, Dense Vector k-NN + BM25 Hybrid Search via Reciprocal Rank Fusion (RRF).
     * Relevance analytics: QuePID judgment collections, Position Bias DBN click models, Automated CI/CD relevance regression test gates.
+  * **Lucene in Action (McCandless et al.)** [`lucene_in_action/`](lucene_in_action/README.md):
+    * Directory & Segment Lifecycle: `MMapDirectory` zero-copy mmap kernel page cache, `IndexWriter` buffer flushing, `TieredMergePolicy`, Commit points (`segments_N`), Near-Real-Time (NRT) Readers.
+    * Analysis & BKD Points: `Analyzer`, `Tokenizer`, `TokenFilter` chain, Reusable `TokenStream` attributes (`CharTermAttribute`, `PayloadAttribute`), Block K-d (BKD) Tree spatial indexing.
+    * Searchers, Collectors & DocValues: `IndexSearcher`, `Weight`, `Scorer` iterator (`nextDoc()`), Custom `Collector` API (`TopScoreDocCollector`), Columnar `DocValues` (`SortedDocValues`), Taxonomy & SortedSet Faceting.
   * **Distributed Systems Theory & DDIA** [`distributed-systems/`](distributed-systems/README.md), [`ddia_book_study/`](ddia_book_study/README.md): CAP Theorem, PACELC Theorem, Consistent Hashing (Murmur3, Token Rings, vnodes), 2PC vs Saga Pattern, Batch Processing (MapReduce, Spark) & Stream Processing (Kafka Streams, Flink).
-* **Deliverable:** Master B+ Tree vs LSM-Tree trade-offs, Volcano execution, ARIES recovery, Raft consensus, Spanner TrueTime, PBFT phase transitions, Kademlia XOR routing, MESI/MOESI cache coherence, Tomasulo OoO ROB commit, Wormhole VC routing, Cache-Oblivious divide & conquer, Cilk Work/Span SP-Bags race detection, 2D SUMMA communication bounds, Barnes-Hut Octree force evaluation, Okapi BM25 scoring, NDCG@K search evaluation, PageRank power iteration, DisMax tie-breaking, Reciprocal Rank Fusion, and complete MIT 6.5840 Labs 1–4 implementations.
+* **Deliverable:** Master B+ Tree vs LSM-Tree trade-offs, Volcano execution, ARIES recovery, Raft consensus, Spanner TrueTime, PBFT phase transitions, Kademlia XOR routing, MESI/MOESI cache coherence, Tomasulo OoO ROB commit, Wormhole VC routing, Cache-Oblivious divide & conquer, Cilk Work/Span SP-Bags race detection, 2D SUMMA communication bounds, Barnes-Hut Octree force evaluation, Okapi BM25 scoring, NDCG@K search evaluation, PageRank power iteration, DisMax tie-breaking, Reciprocal Rank Fusion, Lucene segment merging, BKD spatial queries, Columnar DocValues faceting, and complete MIT 6.5840 Labs 1–4 implementations.
 
 ---
 
@@ -305,5 +315,7 @@ mindmap
 | **[`mit_61060_performance_engineering/`](mit_61060_performance_engineering/README.md)** | MIT 6.1060 (6.172) Performance Engineering | Bit Hacks & AVX SIMD, Matrix Tiling & Cache-Oblivious Algorithms, Cilk Work/Span & SP-Bags Race Detection, `perf` |
 | **[`berkeley_cs267_parallel_computing/`](berkeley_cs267_parallel_computing/README.md)** | UC Berkeley CS267 Parallel Computing | MPI/OpenMP/PGAS Hybrid, 2D SUMMA & CSR SpMV, Barnes-Hut Octree & Graph 500 BFS, Space-Filling Curves |
 | **[`information_retrieval_and_search_engines/`](information_retrieval_and_search_engines/README.md)** | Information Retrieval & Search Engines | Inverted Index & VB Compression, Okapi BM25 & NDCG@K Evaluation, PageRank & SimHash Deduplication |
+| **[`c_programming_a_modern_approach/`](c_programming_a_modern_approach/README.md)** | C Programming: A Modern Approach (K. N. King) | Fixed-Width Types, Sequence Points, VLAs, Arena Allocators, Struct Padding (`offsetof`), `memmove`, `_Generic` |
 | **[`relevant_search_solr_elasticsearch/`](relevant_search_solr_elasticsearch/README.md)** | Relevant Search Solr & Elasticsearch | DisMax Multi-Match & Gaussian Decay, Query-Time Graph Synonyms, Hybrid Vector/BM25 RRF, QuePID |
+| **[`lucene_in_action/`](lucene_in_action/README.md)** | Lucene in Action | `MMapDirectory` zero-copy mmap, `IndexWriter` Segment Merging, TokenStream attributes, BKD Spatial Trees, Columnar DocValues |
 | **[`interviewbit/`](interviewbit/)** | Problem Practice Sets | Array, Greedy (Gas Station, Majority Element) & real-world interview problem collections |
