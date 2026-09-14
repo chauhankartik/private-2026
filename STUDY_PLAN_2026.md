@@ -23,6 +23,7 @@ mindmap
       4 Step Framework and Capacity Math
       System Design Interview Vol 1 and 2 system_design_interview
       Fundamentals of Software Architecture fundamentals_of_software_architecture
+      Monolith to Microservices monolith_to_microservices
     Phase 3 Systems & Database Engineering
       Operating Systems Three Easy Pieces ostep
       Computer Networks 5 Layer Stack computer_networks
@@ -110,8 +111,8 @@ mindmap
   * Concurrency safety, thread-safe data structures, lock granularities, and error handling in LLD implementations.
 * **Deliverable:** End-to-end implementation of 5 full LLD interview systems.
 
-#### Week 7: High-Level System Design (HLD), Alex Xu (Vol 1 & 2) & Software Architecture
-* **Target Modules:** [`hld/`](hld/README.md), [`system_design_interview/`](system_design_interview/README.md), [`fundamentals_of_software_architecture/`](fundamentals_of_software_architecture/README.md)
+#### Week 7: High-Level System Design (HLD), Alex Xu (Vol 1 & 2), Software Architecture & Microservices Refactoring
+* **Target Modules:** [`hld/`](hld/README.md), [`system_design_interview/`](system_design_interview/README.md), [`fundamentals_of_software_architecture/`](fundamentals_of_software_architecture/README.md), [`monolith_to_microservices/`](monolith_to_microservices/README.md)
 * **Focus Topics:**
   * **The 4-Step System Design Interview Framework:** Scope clarification, 99.99% availability math, QPS, 5-year storage capacity math, and 80/20 RAM cache sizing.
   * **System Design Interview – An Insider's Guide (Vol 1 & 2)** [`system_design_interview/`](system_design_interview/README.md):
@@ -121,7 +122,11 @@ mindmap
     * Architecture vs Design, 4 Expectations of an Architect, Measuring Characteristics ("-ilities"), Afferent ($C_a$) / Efferent ($C_e$) Coupling & Instability ($I = \frac{C_e}{C_a + C_e}$), Distance from Main Sequence ($D = |A + I - 1|$).
     * Architecture Styles: Monolithic (Layered, Pipeline, Microkernel/Plugin) vs Distributed (Service-Based, Event-Driven Broker vs Mediator, Space-Based, Microservices).
     * Governance & Techniques: Architectural Decision Records (ADR format), Automated Architectural Fitness Functions (ArchUnit CI/CD gates), Risk Analysis Matrix.
-* **Deliverable:** Master back-of-the-envelope calculations, architect all 28 Alex Xu systems, implement ArchUnit fitness functions, and balance architectural trade-offs.
+  * **Monolith to Microservices (Sam Newman)** [`monolith_to_microservices/`](monolith_to_microservices/README.md):
+    * Strangler Fig pattern, Branch by Abstraction, Parallel Run verification, UI Micro Frontends.
+    * 5-Step Database Split Pattern, Transactional Outbox Pattern, Change Data Capture (CDC / Debezium), Saga pattern.
+    * API Gateway Canary Traffic Routing, Protobuf/Avro schema evolution, Cross-boundary distributed tracing context propagation.
+* **Deliverable:** Master back-of-the-envelope calculations, architect all 28 Alex Xu systems, implement ArchUnit fitness functions, and execute non-breaking monolithic database refactoring strategies.
 
 ---
 
@@ -240,6 +245,7 @@ mindmap
 | **[`hld/`](hld/README.md)** | High-Level System Design | 4-Step Framework, Estimation Math, 6 System Design Architectures (Snowflake, Rate Limiter, TinyURL, Web Crawler, Chat, YouTube) |
 | **[`system_design_interview/`](system_design_interview/README.md)** | System Design Interview (Vol 1 & 2) | Alex Xu 28 System Designs: Rate Limiter, Snowflake, Geohash, Kafka, Metrics, Payment Ledger, Stock Exchange |
 | **[`fundamentals_of_software_architecture/`](fundamentals_of_software_architecture/README.md)** | Fundamentals of Software Architecture | Architecture Characteristics ("-ilities"), Coupling Math, Monolithic vs Distributed Styles, ADRs, ArchUnit |
+| **[`monolith_to_microservices/`](monolith_to_microservices/README.md)** | Monolith to Microservices | Strangler Fig, Branch by Abstraction, 5-Step DB Split, Transactional Outbox, CDC, Canary Traffic Routing |
 | **[`ddia_book_study/`](ddia_book_study/README.md)** | Data-Intensive Applications | Storage Engines, Replication, Sharding, Batch/Stream Processing |
 | **[`distributed-systems/`](distributed-systems/README.md)** | Distributed Systems Theory | Raft/Paxos Consensus, Consistent Hashing, 2PC Transactions, CAP |
 | **[`tech-stack/`](tech-stack/README.md)** | Infrastructure Tech-Stack | 18 Modules (Redis, Postgres, JDBC, Tomcat, Netty, Mongo, Cassandra, ES, Object Storage, Kafka, K8s, etc.) |
