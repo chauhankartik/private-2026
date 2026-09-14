@@ -1,6 +1,6 @@
 # Master Study Plan 2026: Staff & Principal Software Engineer Preparation
 
-Welcome to the **2026 Master Study Plan**. This comprehensive preparation roadmap synthesizes all technical modules across this repository into a structured **12-Week Intensive Curriculum** designed for Staff Software Engineers, Senior Systems Architects, and Tech Leads preparing for top-tier system design, algorithms, infrastructure, and database engineering interviews.
+Welcome to the **2026 Master Study Plan**. This comprehensive preparation roadmap synthesizes all technical modules across this repository into a structured **12-Week Intensive Curriculum** designed for Staff Software Engineers, Senior Systems Architects, and Tech Leads preparing for top-tier system design, algorithms, infrastructure, database engineering, and operating systems interviews.
 
 ---
 
@@ -11,17 +11,23 @@ mindmap
   root((2026 Study Plan))
     Phase 1 Core Foundations
       Data Structures and Algorithms dsa
-      Advanced Java Internals java
+      CSES Problem Set Roadmap cses
+      Advanced Java Core java
+      Effective Java 90 Items effective_java
+      Java Concurrency in Practice jcip
       SQL Query Masterclass and FAANG Patterns sql
     Phase 2 System Design LLD and HLD
       SOLID Principles and Clean Architecture
       GoF Design Patterns lld
       High Level System Design HLD
       4 Step Framework and Capacity Math
-    Phase 3 Distributed Systems Theory
+    Phase 3 Systems & Database Engineering
+      Operating Systems Three Easy Pieces ostep
+      Computer Networks 5 Layer Stack computer_networks
+      Database System Concepts dbsc
+      Database Internals B-Trees LSM Raft database_internals
       Designing Data Intensive Applications ddia
       Consensus Raft Paxos distributed systems
-      Sharding Replication 2PC Transactions
     Phase 4 Infrastructure Tech Stack
       Data Tier Redis Postgres JDBC Storage
       Streaming Kafka Edge Gateways
@@ -32,38 +38,46 @@ mindmap
 
 ## 2. Weekly Curriculum Schedule
 
-### Phase 1: Core Foundations — Algorithms, Languages & SQL (Weeks 1–3)
+### Phase 1: Core Foundations — Algorithms, Languages, Books & SQL (Weeks 1–3)
 
-#### Week 1: Data Structures & Algorithms Core Patterns
-* **Target Modules:** [`dsa/`](dsa/README.md), [`dsa/greedy`](dsa/greedy/00_theory.md), [`dsa/trie`](dsa/trie/00_theory.md), [`dsa/Linear-Data-Structures-Masterclass`](dsa/Linear-Data-Structures-Masterclass), [`interviewbit/`](interviewbit/)
+#### Week 1: Data Structures, Algorithms & CSES Problem Set Foundations
+* **Target Modules:** [`dsa/`](dsa/README.md), [`dsa/greedy`](dsa/greedy/00_theory.md), [`dsa/trie`](dsa/trie/00_theory.md), [`dsa/backtracking`](dsa/backtracking/00_theory.md), [`cses/`](cses/README.md), [`interviewbit/`](interviewbit/)
 * **Focus Topics:**
   * Arrays, Two Pointers, & Sliding Window techniques (`dsa/array`, `dsa/twopointers`, `dsa/sliding_window`).
   * Linked Lists, Stacks, Queues, & Hashing mechanics (`dsa/linkedlist`, `dsa/stack`, `dsa/queue`, `dsa/hashing`).
   * Greedy Algorithms & Formal Proofs: Exchange Arguments, Stays Ahead Proofs, Interval Scheduling, Heap Greedy, & Monotonic Stack (`dsa/greedy`, `interviewbit/greedy`).
   * Trie (Prefix Trees): Array vs HashMap Node Layouts, Bitwise XOR Tries, Reverse Suffix Tries, & Autocomplete Engine Design (`dsa/trie`).
-  * Monotonic Stack & Queue applications.
-* **Deliverable:** Solve 20 classic medium/hard problem patterns from `dsa/` and `interviewbit/`.
+  * Recursion & Backtracking (`dsa/backtracking`): State-Space Tree search, Choose-Explore-Unchoose 3-step paradigm, Branch-and-Bound pruning, duplicate handling, N-Queens, Sudoku, & CSES Grid Paths (48-step path counting).
+  * CSES Problem Set introductory, sorting, and searching modules (`cses/01_introductory`, `cses/02_sorting_and_searching`).
+* **Deliverable:** Solve 20 classic medium/hard problem patterns from `dsa/` and track CSES progress in `cses/00_progress_tracker.md`.
 
-#### Week 2: Advanced Graph Algorithms & Dynamic Programming
-* **Target Modules:** [`dsa/Graph-Algorithms-Masterclass`](dsa/Graph-Algorithms-Masterclass), [`dsa/graph`](dsa/graph), [`dsa/dynamicprogramming`](dsa/dynamicprogramming), [`dsa/linesweep`](dsa/linesweep)
+#### Week 2: Advanced Graph Algorithms, Dynamic Programming & CSES Mastery
+* **Target Modules:** [`dsa/Graph-Algorithms-Masterclass`](dsa/Graph-Algorithms-Masterclass), [`dsa/graph`](dsa/graph), [`dsa/dynamicprogramming`](dsa/dynamicprogramming), [`dsa/linesweep`](dsa/linesweep), [`cses/`](cses/README.md)
 * **Focus Topics:**
   * BFS, DFS, Topological Sort (Kahn's algorithm), Dijkstra, Bellman-Ford, & Union-Find / Disjoint Set Union (DSU).
   * 1D/2D Dynamic Programming (Knapsack, LCS, LIS, Interval DP).
   * Line Sweep algorithms for interval overlap and geometry problems (`dsa/linesweep`).
-* **Deliverable:** Complete graph traversal & DP state formulation exercises.
+  * Advanced CSES modules: Dynamic Programming, Graph Algorithms, Range Queries, & Tree Algorithms (`cses/03_dynamic_programming`, `cses/04_graph_algorithms`, `cses/05_range_queries`, `cses/06_tree_algorithms`).
+* **Deliverable:** Complete graph traversal & DP state formulation exercises across DSA and CSES problem sets.
 
-#### Week 3: Java Core Internals, Functional Programming, File I/O, Concurrency, Interview Edge Cases & FAANG SQL Masterclass
-* **Target Modules:** [`java/`](java/), [`java/classloader/`](java/classloader/README.md), [`java/generics/`](java/generics/README.md), [`java/collections/`](java/collections/README.md), [`java/functional/`](java/functional/README.md), [`java/io/`](java/io/README.md), [`java/concurrency/`](java/concurrency/README.md), [`java/interview/`](java/interview/README.md), [`sql/`](sql/README.md)
+#### Week 3: Java Internals, Effective Java (90 Items), Java Concurrency in Practice & FAANG SQL Masterclass
+* **Target Modules:** [`java/`](java/), [`effective_java/`](effective_java/README.md), [`java_concurrency_in_practice/`](java_concurrency_in_practice/README.md), [`sql/`](sql/README.md)
 * **Focus Topics:**
-  * Java Memory Model (`java/memorymodel`), Reflection (`java/reflection`), ClassLoader Architecture & Internals (`java/classloader/README.md`), Generics (`java/generics/README.md`), & Collections (`java/collections/README.md`).
-  * JVM Class Loading Lifecycle: Delegation Hierarchy (Parent-First vs Child-First WebApp ClassLoaders), On-The-Fly Bytecode Decryption, Bytecode Instrumentation (`java.lang.instrument`), & Metaspace Leak Diagnostics (`java/classloader`).
-  * Functional Programming & Stream API (`java/functional/README.md`): Functional Interfaces, Lambdas & `invokedynamic`, Stream execution pipeline, Collectors (`groupingBy`, `partitioningBy`), Custom `Collector` / `Spliterator`, Monadic `Optional`, & FP design patterns.
-  * Modern Java File I/O & NIO.2 (`java/io/README.md`): Streams vs Channels, `MappedByteBuffer` (`mmap`), Kernel Zero-Copy (`transferTo`/`sendfile`), POSIX permissions, `WatchService`, `FileLock`, & Deserialization Security.
-  * Java Interview Tricky Gotchas & Edge Cases (`java/interview/README.md`): Integer Cache limits, String Pool, Overload resolution hierarchy, Overridden method calls in super constructors, Exception swallowing in `finally`, `ThreadLocal` leaks, & Staff Interview Puzzle Suite.
-  * Threading primitives: Locks, ReentrantLock, Virtual Threads (`java/concurrency/06_virtual_threads_loom.java`), Lock-Free Atomics (`07_lock_free_atomics_aba.java`), Synchronizers (`08_synchronizers_phaser_barrier.java`), ForkJoin Pool (`09_forkjoin_work_stealing.java`), & Flow Reactive Streams (`10_reactive_streams_flow.java`).
-  * Advanced SQL syntax (`sql/00_syntax_cheatsheet.md`), Window Functions (`ROW_NUMBER`, `DENSE_RANK`, `ROWS BETWEEN`), & FAANG Staff SQL Interview Patterns (`sql/05_faang_staff_interview_patterns.sql`):
-    * Gaps & Islands, User Sessionization (30-min threshold), Cohort Retention, Recursive CTE Org Trees, Exact Medians, & Overlapping Intervals.
-* **Deliverable:** Master Java concurrency primitives and solve all 6 FAANG Staff SQL interview patterns.
+  * **Effective Java (3rd Edition)** [`effective_java/`](effective_java/README.md): Master all 12 Chapters and 90 Items:
+    * Static Factory Methods, Builder Pattern, Enum Singletons, Try-With-Resources (Items 1–9).
+    * `equals()`, `hashCode()`, `toString()`, Copy Constructors over `clone()`, `Comparable` (Items 10–14).
+    * Encapsulation, Immutability & Java 17 Records, Composition over Inheritance, Sealed Classes, Static Member Classes (Items 15–25).
+    * Raw Types avoidance, Lists vs Arrays, PECS Rule (`Producer Extends Consumer Super`), `@SafeVarargs`, Typesafe Heterogeneous Containers (Items 26–33).
+    * Enums, `EnumSet`, `EnumMap`, Functional Interfaces, Streams Best Practices, Side-Effect Free Collectors (Items 34–48).
+    * Parameter Validation, Defensive Copies, Method Signatures, Optionals, `BigDecimal`, Exceptions, Serialization (Items 49–90).
+  * **Java Concurrency in Practice** [`java_concurrency_in_practice/`](java_concurrency_in_practice/README.md):
+    * Thread Safety, Atomicity, Race Conditions, Reentrancy, Volatile Memory Barriers, `ThreadLocal`, Java Monitor Pattern (`01_fundamentals/`).
+    * Executor Framework, Thread Pools, Futures, Interruption Policy, Thread Pool Sizing ($N_{\text{CPU}} \times U_{\text{CPU}} \times (1 + W/C)$), Saturation Policies (`02_structuring_applications/`).
+    * Deadlocks, Open Calls, Lock Scope Narrowing, Lock Striping, JMH Microbenchmarking (`03_liveness_performance_testing/`).
+    * `ReentrantLock`, `ReadWriteLock`, `StampedLock` Optimistic Reading, Condition Queues, AbstractQueuedSynchronizer (AQS) internal state & CLH queue, Hardware CAS, Treiber Stack, Java Memory Model (JMM) Happens-Before Rules (`04_advanced_topics/`).
+    * Modern Java 21 Concurrency: Project Loom Virtual Threads, Carrier OS Threads, Carrier Thread Pinning hazards, `StructuredTaskScope` (`05_modern_java_concurrency/`).
+  * **FAANG Staff SQL Masterclass** [`sql/`](sql/README.md): Window Functions (`ROW_NUMBER`, `DENSE_RANK`, `ROWS BETWEEN`), Gaps & Islands, User Sessionization, Cohort Retention, Recursive CTE Org Trees, & Exact Medians (`sql/05_faang_staff_interview_patterns.sql`).
+* **Deliverable:** Review all 90 Effective Java items, master AQS & JMM mechanics, and solve all 6 FAANG Staff SQL interview patterns.
 
 ---
 
@@ -106,26 +120,39 @@ mindmap
 
 ---
 
-### Phase 3: Distributed Systems Theory & Data-Intensive Architecture (Weeks 8–9)
+### Phase 3: Systems, Networking, Database Engineering & Distributed Systems (Weeks 8–9)
 
-#### Week 8: Foundations of Data-Intensive Applications & Consensus (DDIA)
-* **Target Modules:** [`ddia_book_study/`](ddia_book_study/README.md), [`distributed-systems/`](distributed-systems/README.md), [`distributed-systems/01_foundations`](distributed-systems/01_foundations), [`distributed-systems/02_consensus_and_coordination`](distributed-systems/02_consensus_and_coordination)
+#### Week 8: Operating Systems (OSTEP) & Computer Networks (5-Layer Stack)
+* **Target Modules:** [`ostep/`](ostep/README.md), [`computer_networks/`](computer_networks/README.md)
 * **Focus Topics:**
-  * Data Models & Storage Engines: B-Trees vs LSM-Trees (WAL, Memtable, SSTable).
-  * Encoding Formats: Protocol Buffers, Avro, Thrift, JSON/BSON.
-  * CAP Theorem, PACELC, Vector Clocks, & Logical vs Physical Time (Lamport Timestamps, TrueTime).
-  * Distributed Consensus: Raft Protocol (Leader Election, Log Replication) & Paxos.
-  * Partitioning & Sharding: Range-based vs Hash-based (Consistent Hashing, Murmur3, Token Rings, vnodes).
-* **Deliverable:** Complete Raft state transitions and consistent hashing algorithm mechanics.
+  * **Operating Systems: Three Easy Pieces (OSTEP)** [`ostep/`](ostep/README.md):
+    * **Virtualization**: Process API (`fork`, `exec`, `wait`), PCB (`struct proc`), Context Switching, Limited Direct Execution (LDE) Protocol, FIFO, SJF, STCF, Round Robin, Multi-Level Feedback Queue (MLFQ) 5 rules, Stride Scheduling, Base & Bound, Multi-Level Page Tables, Hardware TLB, Swap Space, Page Fault Handler, Clock Second-Chance Algorithm, Thrashing (`01_virtualization/`).
+    * **Concurrency**: POSIX Threads (`pthread`), Mutual Exclusion, Hardware TAS/CAS, Linux Futex (`sys_futex`) two-phase locks, Condition Variables (`pthread_cond_wait`), Bounded Buffer Producer-Consumer, Semaphores (`sem_t`), Reader-Writer Locks, Concurrency Bugs (Atomicity/Order violations, Deadlock 4 conditions), Event-Based Concurrency & Linux `epoll` (`02_concurrency/`).
+    * **Persistence**: I/O Controllers, Polling vs Interrupts, DMA (Direct Memory Access), HDD Scheduling (SSTF, SCAN, C-SCAN), SSD NAND Flash, Flash Translation Layer (FTL), Wear Leveling, File APIs (`open`, `read`, `write`, `fsync`), Inode Structure, Slotted-Page Layout, Very Simple File System (VSFS), Crash Consistency, Write-Ahead Logging (WAL / Journaling), Log-Structured File Systems (LFS) (`03_persistence/`).
+  * **Computer Networks (Top-Down Approach)** [`computer_networks/`](computer_networks/README.md):
+    * **Application Layer**: HTTP/1.1 Pipelining vs HTTP/2 Binary Streams vs HTTP/3 QUIC (UDP), DNS Hierarchy & Iterative/Recursive Resolution, CDN Edge Networks, Socket Programming in C & Python (TCP Concurrent Server vs UDP Echo Server) (`01_application_layer/`).
+    * **Transport Layer**: UDP Checksum, Reliable Data Transfer (RDT 3.0, Go-Back-N, Selective Repeat), TCP Header Specs, 3-Way Handshake & 4-Way Teardown State Machine, Flow Control (`rwnd`), Congestion Control (Slow Start, Congestion Avoidance, Fast Retransmit, Fast Recovery, AIMD, TCP Tahoe vs Reno vs BBR) (`02_transport_layer/`).
+    * **Network Layer Data Plane**: Router Architecture, Longest Prefix Match (LPM) Trie, IPv4/IPv6 Headers, CIDR Subnetting Math, NAT Traversal, DHCP, ICMP (`03_network_layer_data_plane/`).
+    * **Network Layer Control Plane**: Link-State Routing (Dijkstra), Distance-Vector Routing (Bellman-Ford & Poison Reverse), Hierarchical AS Routing, Intra-AS (OSPF), Inter-AS (BGP Path Vector, AS-PATH, Next-Hop), Software-Defined Networking (SDN OpenFlow) (`04_network_layer_control_plane/`).
+    * **Link & Physical Layer**: Framing, Error Detection (CRC Modulo-2 Math), Multiple Access (CSMA/CD Ethernet Exponential Backoff, CSMA/CA WiFi 802.11 RTS/CTS), Address Resolution Protocol (ARP), L2 Self-Learning Switches vs L3 Routers, VLANs (`05_link_and_physical_layer/`).
+* **Deliverable:** Master kernel syscalls, LDE protocol, Linux `epoll`, TCP state transitions, CIDR subnetting, and BGP routing mechanics.
 
-#### Week 9: Distributed Transactions, Replication & Derived Data
-* **Target Modules:** [`distributed-systems/04_replication_and_storage`](distributed-systems/04_replication_and_storage), [`distributed-systems/05_distributed_transactions`](distributed-systems/05_distributed_transactions), [`ddia_book_study/part3_derived_data`](ddia_book_study/part3_derived_data)
+#### Week 9: Database System Concepts, Database Internals & Distributed Systems (DDIA)
+* **Target Modules:** [`database_system_concepts/`](database_system_concepts/README.md), [`database_internals/`](database_internals/README.md), [`ddia_book_study/`](ddia_book_study/README.md), [`distributed-systems/`](distributed-systems/README.md)
 * **Focus Topics:**
-  * Two-Phase Commit (2PC) & Three-Phase Commit (3PC) Protocols.
-  * Saga Pattern (Choreography vs Orchestration) for microservices.
-  * Single-Leader, Multi-Leader, & Leaderless Replication (Dynamo-style quorums).
-  * Batch Processing (MapReduce, Spark) & Stream Processing (Kafka Streams, Flink).
-* **Deliverable:** Compare 2PC vs Saga trade-offs across microservices boundaries.
+  * **Database System Concepts (DBSC)** [`database_system_concepts/`](database_system_concepts/README.md):
+    * **Relational Model & SQL**: Relational Algebra ($\sigma, \pi, \bowtie, \div$), SQL AST Parsing, Logical & Physical Execution Tree, Triggers, Views (`01_relational_model_and_sql/`).
+    * **Database Normalization**: Functional Dependencies ($F^+$), Canonical Cover, 1NF, 2NF, 3NF, BCNF, 4NF, Lossless-Join Decomposition Proofs (`02_database_design_and_normalization/`).
+    * **Storage & Indexing**: Slotted-Page Page Architecture, Buffer Pool Manager (LRU/Clock, Pin Count, Dirty Pages), B+ Tree Search/Insert/Delete & Node Splitting, Dynamic Hash Indexing (`03_storage_and_indexing/`).
+    * **Query Execution & Optimization**: Volcano Iterator Model (`open`/`next`/`close`), External Merge Sort, Join Algorithms (Nested Loop, Hash Join, Grace Hash Join, Sort-Merge Join), System R Cost-Based Dynamic Programming Optimizer (`04_query_processing_and_optimization/`).
+    * **Concurrency Control**: ACID Properties, Conflict Serializability, Precedence Graphs, Lock-Based Protocols (Shared/Exclusive Locks, 2PL, Strict 2PL, Rigorous 2PL), Multiple Granularity Intent Locks (IS, IX, SIX), Multiversion Concurrency Control (MVCC) Version Chains, Deadlocks & Wait-For Graphs (`05_transactions_and_concurrency/`).
+    * **Recovery System**: Write-Ahead Logging (WAL), Steal/No-Force Policies, ARIES 3-Phase Recovery (Analysis, Redo / Repeating History, Undo / CLRs), Fuzzy Checkpointing (`06_recovery_system/`).
+  * **Database Internals (Alex Petrov)** [`database_internals/`](database_internals/README.md):
+    * **Storage Engines**: $B^{\text{link}}$ Trees with right-sibling pointers, Latching Crabbing (Coupled Latching), LSM-Tree Architecture, MemTable SkipList, WAL, SSTable Binary Format (Data, Index, Bloom, Summary, Footer), Bloom Filter Math ($k = \frac{m}{n} \ln 2$), Size-Tiered vs Leveled Compaction (LCS), Read/Write/Space Amplification trade-offs (`01_storage_engines/`).
+    * **Distributed Storage & Consensus**: Leader/Leaderless Replication, Quorum Consistency ($R + W > N$, Read Repair, Hinted Handoff), Vector Clocks, Hybrid Logical Clocks (HLC), Raft Consensus Deep Dive (Leader Election, RequestVote, AppendEntries, Log Matching Property, Safety Invariants) (`02_distributed_storage/`).
+    * **Distributed Transactions & Isolation**: Two-Phase Commit (2PC), Three-Phase Commit (3PC), Distributed Snapshot Isolation, Google Spanner Architecture & TrueTime API ($\epsilon$ uncertainty, Commit Wait Rule), Deterministic Transaction Engines (Calvin Architecture) (`03_distributed_transactions/`).
+  * **Distributed Systems Theory & DDIA** [`distributed-systems/`](distributed-systems/README.md), [`ddia_book_study/`](ddia_book_study/README.md): CAP Theorem, PACELC Theorem, Consistent Hashing (Murmur3, Token Rings, vnodes), 2PC vs Saga Pattern, Batch Processing (MapReduce, Spark) & Stream Processing (Kafka Streams, Flink).
+* **Deliverable:** Master B+ Tree vs LSM-Tree trade-offs, Volcano execution, ARIES recovery, Raft consensus, Spanner TrueTime, and 2PC protocols.
 
 ---
 
@@ -173,7 +200,7 @@ mindmap
  +-----------------------------------------------------------------------------------+
  | Duration | Focus Activity                                                         |
  +----------+------------------------------------------------------------------------+
- | 45 Mins  | Theory & Architecture Reading (Module Chapters / Whitepapers)          |
+ | 45 Mins  | Theory & Architecture Reading (Book Modules / System Call Specs)       |
  | 75 Mins  | Hands-on Coding / Problem Solving / Diagramming (DSA / LLD / HLD / SQL)|
  | 40 Mins  | Operational Diagnostics & System Trade-off Analysis                   |
  | 20 Mins  | Review & Flashcard / Notes Consolidation                               |
@@ -186,8 +213,15 @@ mindmap
 
 | Domain Folder | Description | Key Modules Included |
 | :--- | :--- | :--- |
-| **[`dsa/`](dsa/README.md)** | Algorithms & Data Structures | Graph/Linear Masterclasses, Arrays, Greedy, Trie, DP, Line Sweep, Trees, Hashing |
-| **[`java/`](java/) & [`concurrency/`](concurrency/)** | Java Core & Concurrency | Collections, Memory Model, Reflection, Generics, Locks, Producer-Consumer |
+| **[`dsa/`](dsa/README.md)** | Algorithms & Data Structures | Graph/Linear Masterclasses, Arrays, Greedy, Trie, Backtracking, DP, Line Sweep |
+| **[`cses/`](cses/README.md)** | Competitive Programming Tracker | CSES Problem Set 300+ problem roadmap & progress tracker (`00_progress_tracker.md`) |
+| **[`java/`](java/)** | Advanced Java Core | Collections, Memory Model, ClassLoader, Reflection, Generics, Functional, File I/O, Edge Cases |
+| **[`effective_java/`](effective_java/README.md)** | Effective Java (3rd Edition) | 12 Chapters, 90 Item Guides, Modern Java 11-21 updates & 30-Second Cheatsheet |
+| **[`java_concurrency_in_practice/`](java_concurrency_in_practice/README.md)** | Java Concurrency in Practice | 16 Chapters across 5 Parts: Thread Safety, Executors, AQS, JMM, Virtual Threads, Mermaid Diagrams |
+| **[`ostep/`](ostep/README.md)** | Operating Systems: Three Easy Pieces | Virtualization (LDE, MLFQ, Paging, TLB), Concurrency (Threads, Futex, Epoll), Persistence (DMA, VSFS, WAL) |
+| **[`computer_networks/`](computer_networks/README.md)** | Computer Networks | 5 TCP/IP Layers: HTTP/QUIC, TCP/UDP Flow & Congestion Control, IP/CIDR/NAT, OSPF/BGP, Ethernet/WiFi/ARP |
+| **[`database_system_concepts/`](database_system_concepts/README.md)** | Database System Concepts | 7 Core DB Pillars: Relational Algebra, Normalization, B+ Trees, Cost Optimizer, 2PL/MVCC, ARIES, 2PC/LSM |
+| **[`database_internals/`](database_internals/README.md)** | Database Internals | Storage Engines ($B^{\text{link}}$ Trees, LSM/Compaction), Distributed Consensus (Raft/Paxos), Spanner TrueTime, Calvin |
 | **[`sql/`](sql/README.md)** | SQL Query Masterclass | Easy, Medium, Hard, Google-level, & FAANG Staff Interview Patterns (`05_faang_staff_interview_patterns.sql`) |
 | **[`lld/`](lld/README.md)** | Low-Level System Design | SOLID Foundations, GoF Design Patterns, 5 Production LLD Systems |
 | **[`hld/`](hld/README.md)** | High-Level System Design | 4-Step Framework, Estimation Math, 6 System Design Architectures (Snowflake, Rate Limiter, TinyURL, Web Crawler, Chat, YouTube) |
@@ -195,4 +229,3 @@ mindmap
 | **[`distributed-systems/`](distributed-systems/README.md)** | Distributed Systems Theory | Raft/Paxos Consensus, Consistent Hashing, 2PC Transactions, CAP |
 | **[`tech-stack/`](tech-stack/README.md)** | Infrastructure Tech-Stack | 16 Modules (Redis, Postgres, JDBC, Mongo, Cassandra, ES, Object Storage, Kafka, K8s, etc.) |
 | **[`interviewbit/`](interviewbit/)** | Problem Practice Sets | Array, Greedy (Gas Station, Majority Element) & real-world interview problem collections |
-| **[`cses/`](cses/README.md)** | Competitive Programming Tracker | CSES Problem Set 300+ problem roadmap & progress tracker (`00_progress_tracker.md`) |
