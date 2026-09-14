@@ -20,3 +20,5 @@ Master index of staff-engineer level study guides, architecture mind maps, and o
 14. **[Grafana Observability & Metrics Dashboarding](grafana/README.md)**
 15. **[Splunk Enterprise Log Management](splunk/README.md)**
 16. **[Hibernate & Java Persistence API (JPA)](hibernate/README.md)**
+17. **[Apache Tomcat Web Server & Servlet Engine](tomcat/README.md)**
+18. **[Netty Asynchronous Networking Framework](netty/README.md)**
