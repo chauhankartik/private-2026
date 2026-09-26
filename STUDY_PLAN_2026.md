@@ -1,6 +1,6 @@
 # Master Study Plan 2026: Staff & Principal Software Engineer Preparation
 
-Welcome to the **2026 Master Study Plan**. This comprehensive preparation roadmap synthesizes all technical modules across this repository into a structured **12-Week Intensive Curriculum** designed for Staff Software Engineers, Senior Systems Architects, and Tech Leads preparing for top-tier system design, algorithms, infrastructure, database engineering, and operating systems interviews.
+Welcome to the **2026 Master Study Plan**. This comprehensive preparation roadmap synthesizes all technical modules across this repository into a structured **13-Week Intensive Curriculum** designed for Staff Software Engineers, Senior Systems Architects, and Tech Leads preparing for top-tier system design, algorithms, infrastructure, database engineering, and operating systems interviews.
 
 ---
 
@@ -17,6 +17,12 @@ mindmap
       Java Concurrency in Practice jcip
       SQL Query Masterclass and FAANG Patterns sql
       C Programming A Modern Approach c_programming_a_modern_approach
+      The C++ Programming Language cpp_programming_language
+      A Tour of C++ tour_of_cpp
+      Effective Modern C++ effective_modern_cpp
+      C++ Concurrency in Action cpp_concurrency_in_action
+      C++ Standard Template Library cpp_stl
+      Java vs C++ Mind Map java_vs_cpp
     Phase 2 System Design LLD and HLD
       SOLID Principles and Clean Architecture
       GoF Design Patterns lld
@@ -27,6 +33,7 @@ mindmap
       Monolith to Microservices monolith_to_microservices
     Phase 3 Systems & Database Engineering
       Operating Systems Three Easy Pieces ostep
+      UIUC CS341 System Programming uiuc_cs341_system_programming
       Computer Networks 5 Layer Stack computer_networks
       Database System Concepts dbsc
       Database Internals B-Trees LSM Raft database_internals
@@ -54,7 +61,7 @@ mindmap
 
 ## 2. Weekly Curriculum Schedule
 
-### Phase 1: Core Foundations — Algorithms, Languages, Books & SQL (Weeks 1–3)
+### Phase 1: Core Foundations — Algorithms, Languages, Books & SQL (Weeks 1–4)
 
 #### Week 1: Data Structures, Algorithms, CSES Problem Set & C Programming (K. N. King)
 * **Target Modules:** [`dsa/`](dsa/README.md), [`dsa/greedy`](dsa/greedy/00_theory.md), [`dsa/trie`](dsa/trie/00_theory.md), [`dsa/backtracking`](dsa/backtracking/00_theory.md), [`cses/`](cses/README.md), [`interviewbit/`](interviewbit/), [`c_programming_a_modern_approach/`](c_programming_a_modern_approach/README.md)
@@ -101,9 +108,21 @@ mindmap
 
 ---
 
-### Phase 2: System Design — Low-Level (LLD) & High-Level (HLD) (Weeks 4–7)
+#### Week 4: Advanced C++, STL, and Modern Concurrency
+* **Target Modules:** [`cpp_programming_language/`](cpp_programming_language/README.md), [`tour_of_cpp/`](tour_of_cpp/README.md), [`effective_modern_cpp/`](effective_modern_cpp/README.md), [`cpp_concurrency_in_action/`](cpp_concurrency_in_action/README.md), [`cpp_stl/`](cpp_stl/README.md), [`java_vs_cpp/`](java_vs_cpp/README.md)
+* **Focus Topics:**
+  * **The C++ Programming Language & A Tour of C++**: Memory model, RAII, move semantics, references vs pointers, `constexpr`, and template metaprogramming basics.
+  * **Effective Modern C++**: Smart pointers (`std::unique_ptr`, `std::shared_ptr`), type deduction (`auto`, `decltype`), perfect forwarding (`std::forward`), lambda expressions.
+  * **C++ Concurrency in Action**: `std::thread`, `std::atomic`, `memory_order_acquire`/`release`, lock-free queues, and thread pools.
+  * **C++ STL**: Sequence/associative containers, iterators, `<algorithm>`, custom allocators, time complexities.
+  * **Java vs C++ Mind Map**: Side-by-side comparison of GC vs RAII, generics vs templates, JVM threads vs `std::thread`, interfaces vs virtual functions.
+* **Deliverable:** Master C++ memory management, construct STL-compliant custom allocators, implement lock-free concurrency patterns, and thoroughly contrast C++ mechanics with Java.
 
-#### Week 4: Object-Oriented Analysis, Design Principles & SOLID
+---
+
+### Phase 2: System Design — Low-Level (LLD) & High-Level (HLD) (Weeks 5–8)
+
+#### Week 5: Object-Oriented Analysis, Design Principles & SOLID
 * **Target Modules:** [`lld/README.md`](lld/README.md), [`lld/01_foundations`](lld/01_foundations)
 * **Focus Topics:**
   * SOLID Principles (Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion).
@@ -111,7 +130,7 @@ mindmap
   * Class Diagrams, Sequence Diagrams, & Object-Oriented Domain Modeling.
 * **Deliverable:** Diagram and code domain models for complex real-world entities.
 
-#### Week 5: Gang of Four (GoF) Design Patterns in Practice
+#### Week 6: Gang of Four (GoF) Design Patterns in Practice
 * **Target Modules:** [`lld/02_design_patterns`](lld/02_design_patterns)
 * **Focus Topics:**
   * **Creational:** Singleton, Factory Method, Abstract Factory, Builder, Prototype.
@@ -119,14 +138,14 @@ mindmap
   * **Behavioral:** Strategy, Observer, Command, State, Chain of Responsibility, Iterator, Mediator, Template Method.
 * **Deliverable:** Implement GoF design patterns in production-grade Java code without boilerplate.
 
-#### Week 6: Low-Level System Design (LLD) Production Systems
+#### Week 7: Low-Level System Design (LLD) Production Systems
 * **Target Modules:** [`lld/03_system_designs`](lld/03_system_designs)
 * **Focus Topics:**
   * Elevator System Design, LRU Cache, Parking Lot, Vending Machine, ATM System, Rate Limiter, & Logging Framework.
   * Concurrency safety, thread-safe data structures, lock granularities, and error handling in LLD implementations.
 * **Deliverable:** End-to-end implementation of 5 full LLD interview systems.
 
-#### Week 7: High-Level System Design (HLD), Alex Xu (Vol 1 & 2), Software Architecture & Microservices Refactoring
+#### Week 8: High-Level System Design (HLD), Alex Xu (Vol 1 & 2), Software Architecture & Microservices Refactoring
 * **Target Modules:** [`hld/`](hld/README.md), [`system_design_interview/`](system_design_interview/README.md), [`fundamentals_of_software_architecture/`](fundamentals_of_software_architecture/README.md), [`monolith_to_microservices/`](monolith_to_microservices/README.md)
 * **Focus Topics:**
   * **The 4-Step System Design Interview Framework:** Scope clarification, 99.99% availability math, QPS, 5-year storage capacity math, and 80/20 RAM cache sizing.
@@ -145,15 +164,18 @@ mindmap
 
 ---
 
-### Phase 3: Systems, Networking, Database Engineering & Distributed Systems (Weeks 8–9)
+### Phase 3: Systems, Networking, Database Engineering & Distributed Systems (Weeks 9–10)
 
-#### Week 8: Operating Systems (OSTEP) & Computer Networks (5-Layer Stack)
-* **Target Modules:** [`ostep/`](ostep/README.md), [`computer_networks/`](computer_networks/README.md)
+#### Week 9: Operating Systems (OSTEP), UIUC CS341 System Programming & Computer Networks (5-Layer Stack)
+* **Target Modules:** [`ostep/`](ostep/README.md), [`uiuc_cs341_system_programming/`](uiuc_cs341_system_programming/README.md), [`computer_networks/`](computer_networks/README.md)
 * **Focus Topics:**
   * **Operating Systems: Three Easy Pieces (OSTEP)** [`ostep/`](ostep/README.md):
     * **Virtualization**: Process API (`fork`, `exec`, `wait`), PCB (`struct proc`), Context Switching, Limited Direct Execution (LDE) Protocol, FIFO, SJF, STCF, Round Robin, Multi-Level Feedback Queue (MLFQ) 5 rules, Stride Scheduling, Base & Bound, Multi-Level Page Tables, Hardware TLB, Swap Space, Page Fault Handler, Clock Second-Chance Algorithm, Thrashing (`01_virtualization/`).
     * **Concurrency**: POSIX Threads (`pthread`), Mutual Exclusion, Hardware TAS/CAS, Linux Futex (`sys_futex`) two-phase locks, Condition Variables (`pthread_cond_wait`), Bounded Buffer Producer-Consumer, Semaphores (`sem_t`), Reader-Writer Locks, Concurrency Bugs (Atomicity/Order violations, Deadlock 4 conditions), Event-Based Concurrency & Linux `epoll` (`02_concurrency/`).
     * **Persistence**: I/O Controllers, Polling vs Interrupts, DMA (Direct Memory Access), HDD Scheduling (SSTF, SCAN, C-SCAN), SSD NAND Flash, Flash Translation Layer (FTL), Wear Leveling, File APIs (`open`, `read`, `write`, `fsync`), Inode Structure, Slotted-Page Layout, Very Simple File System (VSFS), Crash Consistency, Write-Ahead Logging (WAL / Journaling), Log-Structured File Systems (LFS) (`03_persistence/`).
+  * **UIUC CS341 System Programming** [`uiuc_cs341_system_programming/`](uiuc_cs341_system_programming/README.md):
+    * Asynchronous learning via course book and pre-recorded videos.
+    * Lecture handouts and example code.
   * **Computer Networks (Top-Down Approach)** [`computer_networks/`](computer_networks/README.md):
     * **Application Layer**: HTTP/1.1 Pipelining vs HTTP/2 Binary Streams vs HTTP/3 QUIC (UDP), DNS Hierarchy & Iterative/Recursive Resolution, CDN Edge Networks, Socket Programming in C & Python (TCP Concurrent Server vs UDP Echo Server) (`01_application_layer/`).
     * **Transport Layer**: UDP Checksum, Reliable Data Transfer (RDT 3.0, Go-Back-N, Selective Repeat), TCP Header Specs, 3-Way Handshake & 4-Way Teardown State Machine, Flow Control (`rwnd`), Congestion Control (Slow Start, Congestion Avoidance, Fast Retransmit, Fast Recovery, AIMD, TCP Tahoe vs Reno vs BBR) (`02_transport_layer/`).
@@ -162,7 +184,7 @@ mindmap
     * **Link & Physical Layer**: Framing, Error Detection (CRC Modulo-2 Math), Multiple Access (CSMA/CD Ethernet Exponential Backoff, CSMA/CA WiFi 802.11 RTS/CTS), Address Resolution Protocol (ARP), L2 Self-Learning Switches vs L3 Routers, VLANs (`05_link_and_physical_layer/`).
 * **Deliverable:** Master kernel syscalls, LDE protocol, Linux `epoll`, TCP state transitions, CIDR subnetting, and BGP routing mechanics.
 
-#### Week 9: Database System Concepts, Database Internals, Distributed Systems, UDS, MIT 6.5840, Stanford CS244B, CMU 15-418, Stanford EE382C, MIT 6.1060, UC Berkeley CS267, Information Retrieval, Relevant Search & Lucene in Action
+#### Week 10: Database System Concepts, Database Internals, Distributed Systems, UDS, MIT 6.5840, Stanford CS244B, CMU 15-418, Stanford EE382C, MIT 6.1060, UC Berkeley CS267, Information Retrieval, Relevant Search & Lucene in Action
 * **Target Modules:** [`database_system_concepts/`](database_system_concepts/README.md), [`database_internals/`](database_internals/README.md), [`ddia_book_study/`](ddia_book_study/README.md), [`distributed-systems/`](distributed-systems/README.md), [`understanding_distributed_systems/`](understanding_distributed_systems/README.md), [`mit_6_5840_distributed_systems/`](mit_6_5840_distributed_systems/README.md), [`stanford_cs244b_distributed_systems/`](stanford_cs244b_distributed_systems/README.md), [`cmu_15418_parallel_programming/`](cmu_15418_parallel_programming/README.md), [`stanford_ee382c_advanced_computer_architecture/`](stanford_ee382c_advanced_computer_architecture/README.md), [`mit_61060_performance_engineering/`](mit_61060_performance_engineering/README.md), [`berkeley_cs267_parallel_computing/`](berkeley_cs267_parallel_computing/README.md), [`information_retrieval_and_search_engines/`](information_retrieval_and_search_engines/README.md), [`relevant_search_solr_elasticsearch/`](relevant_search_solr_elasticsearch/README.md), [`lucene_in_action/`](lucene_in_action/README.md)
 * **Focus Topics:**
   * **Database System Concepts (DBSC)** [`database_system_concepts/`](database_system_concepts/README.md):
@@ -226,9 +248,9 @@ mindmap
 
 ---
 
-### Phase 4: Staff-Level Infrastructure & Tech-Stack Mastery (Weeks 10–12)
+### Phase 4: Staff-Level Infrastructure & Tech-Stack Mastery (Weeks 11–13)
 
-#### Week 10: In-Memory, Relational, Driver & Document Data Engines
+#### Week 11: In-Memory, Relational, Driver & Document Data Engines
 * **Target Modules:** [`tech-stack/redis/`](tech-stack/redis/README.md), [`tech-stack/relational-databases/`](tech-stack/relational-databases/README.md), [`tech-stack/jdbc/`](tech-stack/jdbc/README.md), [`tech-stack/hibernate/`](tech-stack/hibernate/README.md), [`tech-stack/mongodb/`](tech-stack/mongodb/README.md)
 * **Focus Topics:**
   * Redis single-threaded event loop, RESP protocol, data structures, sentinel, cluster sharding.
@@ -238,7 +260,7 @@ mindmap
   * MongoDB WiredTiger B-Tree/cache, Replica Set Raft consensus, Oplog, Sharding balancer.
 * **Deliverable:** Deep-dive operational mastery of relational, driver, and document databases.
 
-#### Week 11: NoSQL Wide-Column, Search, Object Storage, Messaging & High-Throughput Pipelines
+#### Week 12: NoSQL Wide-Column, Search, Object Storage, Messaging & High-Throughput Pipelines
 * **Target Modules:** [`tech-stack/cassandra/`](tech-stack/cassandra/README.md), [`tech-stack/elasticsearch/`](tech-stack/elasticsearch/README.md), [`tech-stack/object-storage/`](tech-stack/object-storage/README.md), [`tech-stack/kafka/`](tech-stack/kafka/README.md), [`tech-stack/gateways-proxies-loadbalancers/`](tech-stack/gateways-proxies-loadbalancers/README.md), [`high_throughput_data_pipelines/`](high_throughput_data_pipelines/README.md)
 * **Focus Topics:**
   * Cassandra masterless P2P ring, Gossip, $\Phi$ Accrual, LSM engine, SSTables, Bloom filters, $R+W>N$ quorums.
@@ -251,7 +273,7 @@ mindmap
 
 ---
 
-#### Week 12: Containers, Orchestration, Observability, Frameworks & API Security
+#### Week 13: Containers, Orchestration, Observability, Frameworks & API Security
 * **Target Modules:** [`tech-stack/docker/`](tech-stack/docker/README.md), [`tech-stack/kubernetes/`](tech-stack/kubernetes/README.md), [`tech-stack/grafana/`](tech-stack/grafana/README.md), [`tech-stack/splunk/`](tech-stack/splunk/README.md), [`tech-stack/spring-boot/`](tech-stack/spring-boot/README.md), [`tech-stack/git/`](tech-stack/git/README.md), [`api_security_in_action/`](api_security_in_action/README.md)
 * **Focus Topics:**
   * Docker Linux namespaces, cgroups, Overlay2 storage driver, multi-stage builds.
@@ -293,6 +315,7 @@ mindmap
 | **[`effective_java/`](effective_java/README.md)** | Effective Java (3rd Edition) | 12 Chapters, 90 Item Guides, Modern Java 11-21 updates & 30-Second Cheatsheet |
 | **[`java_concurrency_in_practice/`](java_concurrency_in_practice/README.md)** | Java Concurrency in Practice | 16 Chapters across 5 Parts: Thread Safety, Executors, AQS, JMM, Virtual Threads, Mermaid Diagrams |
 | **[`ostep/`](ostep/README.md)** | Operating Systems: Three Easy Pieces | Virtualization (LDE, MLFQ, Paging, TLB), Concurrency (Threads, Futex, Epoll), Persistence (DMA, VSFS, WAL) |
+| **[`uiuc_cs341_system_programming/`](uiuc_cs341_system_programming/README.md)** | UIUC CS341 System Programming | Coursebook, Pre-recorded Videos, Lecture Handouts, and System Programming concepts |
 | **[`computer_networks/`](computer_networks/README.md)** | Computer Networks | 5 TCP/IP Layers: HTTP/QUIC, TCP/UDP Flow & Congestion Control, IP/CIDR/NAT, OSPF/BGP, Ethernet/WiFi/ARP |
 | **[`database_system_concepts/`](database_system_concepts/README.md)** | Database System Concepts | 7 Core DB Pillars: Relational Algebra, Normalization, B+ Trees, Cost Optimizer, 2PL/MVCC, ARIES, 2PC/LSM |
 | **[`database_internals/`](database_internals/README.md)** | Database Internals | Storage Engines ($B^{\text{link}}$ Trees, LSM/Compaction), Distributed Consensus (Raft/Paxos), Spanner TrueTime, Calvin |
@@ -316,6 +339,12 @@ mindmap
 | **[`berkeley_cs267_parallel_computing/`](berkeley_cs267_parallel_computing/README.md)** | UC Berkeley CS267 Parallel Computing | MPI/OpenMP/PGAS Hybrid, 2D SUMMA & CSR SpMV, Barnes-Hut Octree & Graph 500 BFS, Space-Filling Curves |
 | **[`information_retrieval_and_search_engines/`](information_retrieval_and_search_engines/README.md)** | Information Retrieval & Search Engines | Inverted Index & VB Compression, Okapi BM25 & NDCG@K Evaluation, PageRank & SimHash Deduplication |
 | **[`c_programming_a_modern_approach/`](c_programming_a_modern_approach/README.md)** | C Programming: A Modern Approach (K. N. King) | Fixed-Width Types, Sequence Points, VLAs, Arena Allocators, Struct Padding (`offsetof`), `memmove`, `_Generic` |
+| **[`cpp_programming_language/`](cpp_programming_language/README.md)** | The C++ Programming Language | Memory model, RAII, move semantics, references vs pointers, `constexpr`, and template metaprogramming |
+| **[`tour_of_cpp/`](tour_of_cpp/README.md)** | A Tour of C++ | Modern C++ features, Concepts, Ranges, Modules, Coroutines |
+| **[`effective_modern_cpp/`](effective_modern_cpp/README.md)** | Effective Modern C++ | Type deduction, Smart Pointers, Perfect forwarding, Lambdas |
+| **[`cpp_concurrency_in_action/`](cpp_concurrency_in_action/README.md)** | C++ Concurrency in Action | Thread management, Atomics, Memory ordering, Lock-free data structures |
+| **[`cpp_stl/`](cpp_stl/README.md)** | C++ Standard Template Library | Sequence/Associative containers, Iterators, Custom allocators, Complexity |
+| **[`java_vs_cpp/`](java_vs_cpp/README.md)** | Java vs C++ Mind Map | JVM Threads vs `std::thread`, GC vs RAII, Interfaces vs Multiple Inheritance |
 | **[`relevant_search_solr_elasticsearch/`](relevant_search_solr_elasticsearch/README.md)** | Relevant Search Solr & Elasticsearch | DisMax Multi-Match & Gaussian Decay, Query-Time Graph Synonyms, Hybrid Vector/BM25 RRF, QuePID |
 | **[`lucene_in_action/`](lucene_in_action/README.md)** | Lucene in Action | `MMapDirectory` zero-copy mmap, `IndexWriter` Segment Merging, TokenStream attributes, BKD Spatial Trees, Columnar DocValues |
 | **[`interviewbit/`](interviewbit/)** | Problem Practice Sets | Array, Greedy (Gas Station, Majority Element) & real-world interview problem collections |
