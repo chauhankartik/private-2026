@@ -14,42 +14,42 @@ Welcome to the **2026 Software Engineering Master Study Repository**. This repos
 ## 2. Primary Repository Modules
 
 ### 1. Data Structures & Algorithms
-* **[`dsa/`](dsa/README.md)** — Comprehensive DSA implementations and masterclasses:
-  * **[`Linear-Data-Structures-Masterclass`](dsa/Linear-Data-Structures-Masterclass)** & **[`Graph-Algorithms-Masterclass`](dsa/Graph-Algorithms-Masterclass)**
+* **[`01_core_foundations/dsa/`](01_core_foundations/dsa/README.md)** — Comprehensive DSA implementations and masterclasses:
+  * **[`Linear-Data-Structures-Masterclass`](01_core_foundations/dsa/Linear-Data-Structures-Masterclass)** & **[`Graph-Algorithms-Masterclass`](01_core_foundations/dsa/Graph-Algorithms-Masterclass)**
   * Arrays, Two Pointers, Sliding Window, Linked Lists, Stacks, Queues, Hashing, Trees, Graphs, Dynamic Programming, and Line Sweep algorithms.
-* **[`interviewbit/`](interviewbit/)** — Real-world interview coding problem practice collections.
+* **[`01_core_foundations/interviewbit/`](01_core_foundations/interviewbit/)** — Real-world interview coding problem practice collections.
 
 ### 2. Core Java, Generics & Concurrency Masterclass
-* **[`java/`](java/)** — Deep-dive Java language internals: Collections, Memory Model, Reflection, Generics, and Interfaces.
-* **[`java/generics/`](java/generics/README.md)** — Comprehensive Java Generics Study Suite:
+* **[`01_core_foundations/java/`](01_core_foundations/java/)** — Deep-dive Java language internals: Collections, Memory Model, Reflection, Generics, and Interfaces.
+* **[`01_core_foundations/java/generics/`](01_core_foundations/java/generics/README.md)** — Comprehensive Java Generics Study Suite:
   * Basics & Bounded Types (`01_basics.java`)
   * Wildcards & PECS (`02_wildcards_pecs.java`)
   * Advanced Generic Patterns (`03_advanced.java`)
   * Type Erasure & Synthetic Bridge Methods (`04_type_erasure_bridge_methods.java`)
   * Reflection & Super Type Tokens (`05_reflection_type_tokens.java`)
   * Project Valhalla Primitive Generics Preview (`06_project_valhalla_preview.md`)
-* **[`java/io/`](java/io/README.md)** — Comprehensive Java File I/O, NIO & NIO.2 Study Suite:
+* **[`01_core_foundations/java/io/`](01_core_foundations/java/io/README.md)** — Comprehensive Java File I/O, NIO & NIO.2 Study Suite:
   * Classic Byte & Character Streams (`01_classic_io_streams.java`)
   * NIO Channels & Buffers (`02_nio_channels_buffers.java`)
   * Memory-Mapped Files & Zero-Copy (`03_memory_mapped_zero_copy.java`)
   * NIO.2 Path, Files & WatchService (`04_nio2_path_files_watchservice.java`)
   * Concurrent File Locks & Async I/O (`05_file_locking_async_io.java`)
   * Object Serialization & Security (`06_serialization_deep_dive.java`)
-* **[`java/functional/`](java/functional/README.md)** — Comprehensive Java Functional Programming & Stream API Study Suite:
+* **[`01_core_foundations/java/functional/`](01_core_foundations/java/functional/README.md)** — Comprehensive Java Functional Programming & Stream API Study Suite:
   * Built-in & Custom Functional Interfaces (`01_functional_interfaces_lambdas.java`)
   * Stream API Foundations & Lazy Execution (`02_stream_api_foundations.java`)
   * Advanced Streams, FlatMap & Collectors (`03_advanced_streams_flatmap_collectors.java`)
   * Custom Collector & Parallel Spliterator (`04_custom_collector_spliterator.java`)
   * Monadic Optional Composition (`05_optional_monadic_composition.java`)
   * Functional Design Patterns (`06_functional_design_patterns.java`)
-* **[`java/interview/`](java/interview/README.md)** — Comprehensive Java Interview Tricky Gotchas & Edge Cases Suite:
+* **[`01_core_foundations/java/interview/`](01_core_foundations/java/interview/README.md)** — Comprehensive Java Interview Tricky Gotchas & Edge Cases Suite:
   * Syntax, Primitives & String Pool Traps (`01_syntax_types_gotchas.java`)
   * OOP, Inheritance & Polymorphic Initialization Traps (`02_oop_inheritance_override_traps.java`)
   * Control Flow, Exceptions & Suppressed Exceptions (`03_control_flow_exceptions_edge_cases.java`)
   * Collections & Concurrency Interview Gotchas (`04_collections_concurrency_gotchas.java`)
   * Memory, Reference Types & ClassLoader Traps (`05_memory_gc_classloader_traps.java`)
   * FAANG Staff Engineer Java Puzzle Suite (`06_staff_interview_puzzle_suite.java`)
-* **[`java/concurrency/`](java/concurrency/README.md)** — Comprehensive Java Concurrency & Multithreading Study Suite:
+* **[`01_core_foundations/java/concurrency/`](01_core_foundations/java/concurrency/README.md)** — Comprehensive Java Concurrency & Multithreading Study Suite:
   * Threads & Monitors (`01_threads_sync.java`)
   * Locks & Executors (`02_locks_executors.java`)
   * CompletableFuture Pipelines (`03_completablefuture.java`)
@@ -61,32 +61,32 @@ Welcome to the **2026 Software Engineering Master Study Repository**. This repos
   * Reactive Flow API (`10_reactive_streams_flow.java`)
 
 ### 3. Database Querying & SQL Masterclass
-* **[`sql/`](sql/README.md)** — Comprehensive SQL query benchmark and reference:
-  * **[`00_syntax_cheatsheet.md`](sql/00_syntax_cheatsheet.md)**, **[`00_SQL_MindMap.md`](sql/00_SQL_MindMap.md)**, **[`00_Recommended_Books_and_Resources.md`](sql/00_Recommended_Books_and_Resources.md)**
-  * **[`01_easy.sql`](sql/01_easy.sql)**, **[`02_medium.sql`](sql/02_medium.sql)**, **[`03_hard.sql`](sql/03_hard.sql)**, **[`04_google_level.sql`](sql/04_google_level.sql)**, **[`05_faang_staff_interview_patterns.sql`](sql/05_faang_staff_interview_patterns.sql)**.
+* **[`01_core_foundations/sql/`](01_core_foundations/sql/README.md)** — Comprehensive SQL query benchmark and reference:
+  * **[`00_syntax_cheatsheet.md`](01_core_foundations/sql/00_syntax_cheatsheet.md)**, **[`00_SQL_MindMap.md`](01_core_foundations/sql/00_SQL_MindMap.md)**, **[`00_Recommended_Books_and_Resources.md`](01_core_foundations/sql/00_Recommended_Books_and_Resources.md)**
+  * **[`01_easy.sql`](01_core_foundations/sql/01_easy.sql)**, **[`02_medium.sql`](01_core_foundations/sql/02_medium.sql)**, **[`03_hard.sql`](01_core_foundations/sql/03_hard.sql)**, **[`04_google_level.sql`](01_core_foundations/sql/04_google_level.sql)**, **[`05_faang_staff_interview_patterns.sql`](01_core_foundations/sql/05_faang_staff_interview_patterns.sql)**.
 
 ### 4. Low-Level System Design (LLD)
-* **[`lld/`](lld/README.md)** — Object-Oriented Analysis & Low-Level Design:
-  * **[`01_foundations`](lld/01_foundations)** — SOLID principles, OOP abstraction, and encapsulation.
-  * **[`02_design_patterns`](lld/02_design_patterns)** — Complete Gang of Four (GoF) Creational, Structural, and Behavioral design patterns.
-  * **[`03_system_designs`](lld/03_system_designs)** — Interactive case studies: Elevator System, LRU Cache, Parking Lot, Vending Machine, ATM System, and 9 1-Page PDF Revision Cards.
+* **[`02_system_design/lld/`](02_system_design/lld/README.md)** — Object-Oriented Analysis & Low-Level Design:
+  * **[`01_foundations`](02_system_design/lld/01_foundations)** — SOLID principles, OOP abstraction, and encapsulation.
+  * **[`02_design_patterns`](02_system_design/lld/02_design_patterns)** — Complete Gang of Four (GoF) Creational, Structural, and Behavioral design patterns.
+  * **[`03_system_designs`](02_system_design/lld/03_system_designs)** — Interactive case studies: Elevator System, LRU Cache, Parking Lot, Vending Machine, ATM System, and 9 1-Page PDF Revision Cards.
 
 ### 5. High-Level System Design (HLD)
-* **[`hld/`](hld/README.md)** — Staff-level High-Level System Design & Architecture:
-  * **[`01_system_design_interview_framework.md`](hld/01_system_design_interview_framework.md)** — 4-Step Framework & Back-of-the-Envelope Capacity Estimation.
-  * **[`02_distributed_id_generator_snowflake.md`](hld/02_distributed_id_generator_snowflake.md)** — Distributed Unique ID Generator (Twitter Snowflake).
-  * **[`03_distributed_rate_limiter.md`](hld/03_distributed_rate_limiter.md)** — Distributed Rate Limiter (Token Bucket / Sliding Window).
-  * **[`04_url_shortener_tinyurl.md`](hld/04_url_shortener_tinyurl.md)** — Scalable URL Shortener (TinyURL / KGS).
-  * **[`05_distributed_web_crawler.md`](hld/05_distributed_web_crawler.md)** — Distributed Web Crawler (URL Frontier / SimHash).
-  * **[`06_chat_messaging_system_whatsapp.md`](hld/06_chat_messaging_system_whatsapp.md)** — Real-Time Chat System (WhatsApp / WebSockets).
-  * **[`07_video_streaming_youtube.md`](hld/07_video_streaming_youtube.md)** — Video Streaming Platform (YouTube / ABR HLS).
+* **[`02_system_design/hld/`](02_system_design/hld/README.md)** — Staff-level High-Level System Design & Architecture:
+  * **[`01_system_design_interview_framework.md`](02_system_design/hld/01_system_design_interview_framework.md)** — 4-Step Framework & Back-of-the-Envelope Capacity Estimation.
+  * **[`02_distributed_id_generator_snowflake.md`](02_system_design/hld/02_distributed_id_generator_snowflake.md)** — Distributed Unique ID Generator (Twitter Snowflake).
+  * **[`03_distributed_rate_limiter.md`](02_system_design/hld/03_distributed_rate_limiter.md)** — Distributed Rate Limiter (Token Bucket / Sliding Window).
+  * **[`04_url_shortener_tinyurl.md`](02_system_design/hld/04_url_shortener_tinyurl.md)** — Scalable URL Shortener (TinyURL / KGS).
+  * **[`05_distributed_web_crawler.md`](02_system_design/hld/05_distributed_web_crawler.md)** — Distributed Web Crawler (URL Frontier / SimHash).
+  * **[`06_chat_messaging_system_whatsapp.md`](02_system_design/hld/06_chat_messaging_system_whatsapp.md)** — Real-Time Chat System (WhatsApp / WebSockets).
+  * **[`07_video_streaming_youtube.md`](02_system_design/hld/07_video_streaming_youtube.md)** — Video Streaming Platform (YouTube / ABR HLS).
 
 ### 6. Distributed Systems & Data-Intensive Architecture
-* **[`ddia_book_study/`](ddia_book_study/README.md)** — Comprehensive deep dive based on *Designing Data-Intensive Applications* (DDIA).
-* **[`distributed-systems/`](distributed-systems/README.md)** — Staff-level distributed systems theory (CAP, Raft/Paxos, Sharding, Replication, 2PC).
+* **[`03_systems_and_databases/ddia_book_study/`](03_systems_and_databases/ddia_book_study/README.md)** — Comprehensive deep dive based on *Designing Data-Intensive Applications* (DDIA).
+* **[`03_systems_and_databases/distributed-systems/`](03_systems_and_databases/distributed-systems/README.md)** — Staff-level distributed systems theory (CAP, Raft/Paxos, Sharding, Replication, 2PC).
 
 ### 7. Infrastructure Tech-Stack Deep Dives
-* **[`tech-stack/`](tech-stack/README.md)** — 16 staff-level technology study guides (Redis, Postgres, JDBC, Mongo, Cassandra, ES, S3, Kafka, Gateways, Docker, K8s, Git, Spring Boot, Grafana, Splunk, Hibernate).
+* **[`04_infrastructure/tech-stack/`](04_infrastructure/tech-stack/README.md)** — 16 staff-level technology study guides (Redis, Postgres, JDBC, Mongo, Cassandra, ES, S3, Kafka, Gateways, Docker, K8s, Git, Spring Boot, Grafana, Splunk, Hibernate).
 
 ---
 
